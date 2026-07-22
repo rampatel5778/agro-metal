@@ -149,11 +149,13 @@ function initTextAnim(): void {
 }
 
 export function initHomeAnimations(): void {
-  if (!document.body.classList.contains('page-home')) return;
+  const isHome = document.body.classList.contains('page-home');
+  const isProducts = document.body.classList.contains('page-products');
+  if (!isHome && !isProducts) return;
   if (prefersReducedMotion()) return;
 
   initWow();
-  initAboutImageAnimations();
+  if (isHome) initAboutImageAnimations();
 
   waitForGlobals(() => {
     initTextAnim();

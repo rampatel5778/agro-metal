@@ -222,6 +222,13 @@ export interface HomeProductCardsProps {
   class?: string;
 }
 
+/** Products hub — Agriva section-title intro above product cards */
+export interface ProductsRangeIntroProps {
+  title: string;
+  description: string;
+  class?: string;
+}
+
 export interface HomeStatsCounterItem {
   value: number;
   suffix?: string;

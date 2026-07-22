@@ -1,10 +1,24 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('products');
+/**
+ * Products hub — /products/
+ * 1. Agriva breadcrumb hero
+ * 2. Our Product Range intro + home product cards (as-is)
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import ProductsRangeIntro from '@components/sections/ProductsRangeIntro.astro';
+import HomeProductCards from '@components/sections/HomeProductCards.astro';
+import HomePageScripts from '@components/layout/HomePageScripts.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import { productsHero, productsRangeIntro } from '@data/pages/products.js';
+import { homeProductCards } from '@data/pages/home.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-products">
+  <AgrivaBreadcrumbHero {...productsHero} />
+  <ProductsRangeIntro {...productsRangeIntro} />
+  <HomeProductCards {...homeProductCards} />
+  <HomePageScripts slot="scripts" />
+</BaseLayout>

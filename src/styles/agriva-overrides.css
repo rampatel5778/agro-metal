@@ -38,14 +38,14 @@
   font-family: "Inter", sans-serif;
 }
 
-/* About / History breadcrumb ? keep new photo, restore Agriva mint title shape */
-.page-about .breadcrumb-wrapper {
+/* Breadcrumb hero ? photo + Agriva mint title shape (all inner pages) */
+.breadcrumb-wrapper:has(.breadcrumb-photo) {
   position: relative;
   background-color: #e8f3e6;
   background-image: none !important;
 }
 
-.page-about .breadcrumb-wrapper .breadcrumb-photo {
+.breadcrumb-wrapper .breadcrumb-photo {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -65,7 +65,7 @@
 }
 
 /* Soft top scrim so white menu stays readable over the photo */
-.page-about .breadcrumb-wrapper::before {
+.breadcrumb-wrapper:has(.breadcrumb-photo)::before {
   content: "";
   position: absolute;
   inset: 0 0 auto;
@@ -80,71 +80,71 @@
   );
 }
 
-.page-about .breadcrumb-wrapper .container {
+.breadcrumb-wrapper:has(.breadcrumb-photo) .container {
   position: relative;
   z-index: 3;
 }
 
-.page-about .breadcrumb-wrapper .page-heading h1 {
+.breadcrumb-wrapper:has(.breadcrumb-photo) .page-heading h1 {
   text-transform: capitalize;
 }
 
 /* Desktop: dark title on mint shape (Agriva) */
 @media (min-width: 1400px) {
-  .page-about .breadcrumb-wrapper .page-heading h1 {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .page-heading h1 {
     color: var(--header) !important;
     text-shadow: none;
   }
 
-  .page-about .breadcrumb-wrapper .breadcrumb-items {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items {
     border-color: rgba(47, 47, 47, 0.2);
     background: transparent;
     backdrop-filter: none;
   }
 
-  .page-about .breadcrumb-wrapper .breadcrumb-items li {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li {
     color: var(--theme3) !important;
   }
 
-  .page-about .breadcrumb-wrapper .breadcrumb-items li a {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li a {
     color: var(--header) !important;
   }
 
-  .page-about .breadcrumb-wrapper .breadcrumb-items li a i {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li a i {
     color: var(--theme3) !important;
   }
 
-  .page-about .breadcrumb-wrapper .breadcrumb-items li a:hover {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li a:hover {
     color: var(--theme3) !important;
   }
 }
 
 /* Tablet / mobile: full-bleed photo, white title (Agriva) */
 @media (max-width: 1399px) {
-  .page-about .breadcrumb-wrapper .breadcrumb-photo {
+  .breadcrumb-wrapper .breadcrumb-photo {
     opacity: 0;
     visibility: hidden;
   }
 
-  .page-about .breadcrumb-wrapper .page-heading h1 {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .page-heading h1 {
     color: var(--white) !important;
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
   }
 
-  .page-about .breadcrumb-wrapper .breadcrumb-items {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items {
     border-color: rgba(255, 255, 255, 0.35);
     background: rgba(0, 0, 0, 0.28);
     backdrop-filter: blur(4px);
   }
 
-  .page-about .breadcrumb-wrapper .breadcrumb-items li,
-  .page-about .breadcrumb-wrapper .breadcrumb-items li a,
-  .page-about .breadcrumb-wrapper .breadcrumb-items li a i {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li,
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li a,
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li a i {
     color: var(--white) !important;
   }
 
-  .page-about .breadcrumb-wrapper .breadcrumb-items li:last-child,
-  .page-about .breadcrumb-wrapper .breadcrumb-items li a:hover {
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li:last-child,
+  .breadcrumb-wrapper:has(.breadcrumb-photo) .breadcrumb-items li a:hover {
     color: var(--theme3) !important;
   }
 }
@@ -536,6 +536,17 @@ body.home-video-modal-open {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.home-product-cards__link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.home-product-cards__link:focus-visible {
+  outline: 2px solid var(--theme);
+  outline-offset: 4px;
 }
 
 .home-product-cards .service-card-items-2 .service-image {
@@ -1736,4 +1747,40 @@ body.page-home {
   .page-trading-logistics .trading-supply-chain__image img {
     min-height: 280px;
   }
+}
+
+/* Products hub ? Our Product Range intro (Agriva section-title split) */
+.page-products .products-range-intro {
+  font-family: "DM Sans", sans-serif;
+  padding-bottom: 20px;
+  background: var(--white);
+}
+
+.page-products .products-range-intro .section-title h2 {
+  text-transform: capitalize;
+  max-width: 12ch;
+}
+
+.page-products .products-range-intro__text {
+  margin: 0;
+  max-width: 36rem;
+  margin-left: auto;
+  color: rgb(80, 98, 74);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+  .page-products .products-range-intro .section-title h2 {
+    max-width: none;
+  }
+
+  .page-products .products-range-intro__text {
+    margin-left: 0;
+    font-size: 16px;
+  }
+}
+
+.page-products .home-product-cards {
+  padding-top: 30px;
 }

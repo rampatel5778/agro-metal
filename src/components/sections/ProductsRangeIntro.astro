@@ -1,0 +1,33 @@
+---
+/**
+ * Products Range Intro — Agriva section-title split (title left, copy right)
+ * Matches existing site “Our Product Range” + supporting paragraph.
+ */
+import type { ProductsRangeIntroProps } from '@types/components/content.js';
+
+const {
+  title,
+  description,
+  class: className = '',
+} = Astro.props as ProductsRangeIntroProps;
+---
+
+<section
+  class:list={['section-padding', 'fix', 'products-range-intro', className]}
+  aria-labelledby="products-range-heading"
+>
+  <div class="container">
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+        <div class="section-title mb-0">
+          <h2 id="products-range-heading" class="text-anim">
+            {title}
+          </h2>
+        </div>
+      </div>
+      <div class="col-lg-7 wow fadeInRight" data-wow-delay=".3s">
+        <p class="products-range-intro__text">{description}</p>
+      </div>
+    </div>
+  </div>
+</section>

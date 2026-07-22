@@ -1,6 +1,7 @@
 ---
 /**
  * Home Product Cards — Agriva service-section-2 / service-card-items-2 (3 categories)
+ * Full card is clickable (same component on Home + Products hub).
  * @see docs/sections.md — Home section 4
  * @see docs/component-mapping.md — `.service-card-items-2`
  */
@@ -22,7 +23,11 @@ const { items } = Astro.props as HomeProductCardsProps;
             data-delay={item.delay ?? (0.3 + index * 0.2).toFixed(1)}
             data-fade-from="left"
           >
-            <div class="service-card-items-2 h-100">
+            <a
+              href={item.href}
+              class="service-card-items-2 h-100 home-product-cards__link"
+              aria-label={item.title}
+            >
               <div class="top-content">
                 <div class="tag-list">
                   {item.tags.map((tag) => (
@@ -34,17 +39,15 @@ const { items } = Astro.props as HomeProductCardsProps;
               <div class="service-image">
                 <img
                   src={item.imageSrc}
-                  alt={item.imageAlt}
+                  alt=""
                   width={856}
                   height={1000}
                   loading="lazy"
                   decoding="async"
                 />
               </div>
-              <h3>
-                <a href={item.href}>{item.title}</a>
-              </h3>
-            </div>
+              <h3>{item.title}</h3>
+            </a>
           </div>
         ))
       }

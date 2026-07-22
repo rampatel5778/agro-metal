@@ -4,16 +4,20 @@
  * 1. Agriva breadcrumb hero
  * 2. Business Model (index-4 why-choose-us-section-4)
  * 3. Competitive Advantages (service-2 service-box-items-3)
+ * 4. Supply Chain Excellence — ensuring + what sets us apart (why-choose-us-section-2)
  */
 import BaseLayout from '@components/layout/BaseLayout.astro';
 import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
 import TradingBusinessModel from '@components/sections/TradingBusinessModel.astro';
 import TradingAdvantages from '@components/sections/TradingAdvantages.astro';
+import TradingSupplyChainSplit from '@components/sections/TradingSupplyChainSplit.astro';
 import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
 import {
   tradingLogisticsHero,
   tradingBusinessModel,
   tradingAdvantages,
+  tradingSupplyChainEnsuring,
+  tradingSupplyChainApart,
 } from '@data/pages/trading-logistics-warehousing.js';
 
 const layout = getSiteLayout(Astro.url.pathname);
@@ -23,6 +27,8 @@ const layout = getSiteLayout(Astro.url.pathname);
   <AgrivaBreadcrumbHero {...tradingLogisticsHero} />
   <TradingBusinessModel {...tradingBusinessModel} />
   <TradingAdvantages {...tradingAdvantages} />
+  <TradingSupplyChainSplit {...tradingSupplyChainEnsuring} />
+  <TradingSupplyChainSplit {...tradingSupplyChainApart} />
 </BaseLayout>
 
 <script is:inline src="/assets/js/wow.min.js"></script>

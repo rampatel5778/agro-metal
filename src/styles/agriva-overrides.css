@@ -1627,3 +1627,113 @@ body.page-home {
   font-size: 15px;
   line-height: 1.7;
 }
+
+/* Trading Supply Chain ? Agriva why-choose-us-section-2 + why-choose-us-box */
+.page-trading-logistics .trading-supply-chain {
+  font-family: "DM Sans", sans-serif;
+  background:
+    radial-gradient(ellipse 65% 50% at 12% 30%, rgba(17, 162, 27, 0.07), transparent 58%),
+    radial-gradient(ellipse 50% 40% at 88% 70%, rgba(17, 162, 27, 0.04), transparent 55%),
+    #f7f8f5;
+}
+
+.page-trading-logistics .trading-supply-chain--alt {
+  background: var(--white);
+}
+
+.page-trading-logistics .trading-supply-chain__image {
+  max-width: none;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.page-trading-logistics .trading-supply-chain__image img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  filter: none;
+  display: block;
+}
+
+.page-trading-logistics .trading-supply-chain__content .section-title {
+  margin-bottom: 0;
+}
+
+.page-trading-logistics .trading-supply-chain__content .section-title h2 {
+  text-transform: capitalize;
+  max-width: 18ch;
+}
+
+/* Extra top room so translateY(-10px) hover does not overlap the heading */
+.page-trading-logistics .trading-supply-chain__grid {
+  margin-top: 36px;
+  padding-top: 14px;
+}
+
+.page-trading-logistics .trading-supply-chain__card {
+  height: 100%;
+  background: var(--white);
+  border-color: rgba(47, 47, 47, 0.12);
+  box-shadow: 0 8px 24px rgba(17, 40, 20, 0.04);
+  padding: 20px 18px;
+}
+
+.page-trading-logistics .trading-supply-chain--alt .trading-supply-chain__card {
+  background: #f7f8f5;
+}
+
+.page-trading-logistics .trading-supply-chain__card .top-content {
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.page-trading-logistics .trading-supply-chain__card .top-content .icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(17, 162, 27, 0.08);
+  transition: background 0.4s ease;
+}
+
+.page-trading-logistics .trading-supply-chain__card .top-content .icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  /* Force dark icons ? some Agriva SVGs use white strokes */
+  filter: brightness(0);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.page-trading-logistics .trading-supply-chain__card .top-content h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.page-trading-logistics .trading-supply-chain__card > p {
+  margin: 0;
+  color: rgb(80, 98, 74);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.page-trading-logistics .trading-supply-chain__card:hover .top-content .icon {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 991px) {
+  .page-trading-logistics .trading-supply-chain__content .section-title h2 {
+    max-width: none;
+  }
+
+  .page-trading-logistics .trading-supply-chain__image img {
+    min-height: 280px;
+  }
+}

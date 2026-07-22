@@ -353,6 +353,24 @@ export interface TradingAdvantagesProps {
   class?: string;
 }
 
+/** Trading page — Agriva index why-choose-us-section-2 (flip image via imagePosition) */
+export interface TradingSupplyChainItem {
+  title: string;
+  description: string;
+  iconSrc: string;
+}
+
+export interface TradingSupplyChainSplitProps {
+  id: string;
+  eyebrow?: string;
+  title: string;
+  imageSrc: string;
+  imageAlt: string;
+  items: TradingSupplyChainItem[];
+  imagePosition?: 'left' | 'right';
+  class?: string;
+}
+
 export interface HomeTextMarqueeProps {
   text: string;
   repetitions?: number;

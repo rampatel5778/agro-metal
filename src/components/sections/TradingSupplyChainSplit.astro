@@ -1,0 +1,100 @@
+---
+/**
+ * Trading Supply Chain — Agriva index.html why-choose-us-section-2
+ * Image|content split with why-choose-us-box feature rows; flip via imagePosition.
+ */
+import type { TradingSupplyChainSplitProps } from '@types/components/content.js';
+
+const {
+  id,
+  eyebrow,
+  title,
+  imageSrc,
+  imageAlt,
+  items,
+  imagePosition = 'left',
+  class: className = '',
+} = Astro.props as TradingSupplyChainSplitProps;
+
+const headingId = `${id}-heading`;
+const imageOnRight = imagePosition === 'right';
+---
+
+<section
+  id={id}
+  class:list={[
+    'why-choose-us-section-2',
+    'section-padding',
+    'fix',
+    'trading-supply-chain',
+    imageOnRight && 'trading-supply-chain--image-right',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div class="why-choose-us-wrapper-2">
+      <div class="row g-4 align-items-center">
+        <div class:list={['col-lg-6', imageOnRight && 'order-lg-2']}>
+          <div
+            class:list={[
+              'why-choose-us-image',
+              'trading-supply-chain__image',
+              'wow',
+              imageOnRight ? 'fadeInRight' : 'fadeInLeft',
+            ]}
+            data-wow-delay=".2s"
+          >
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="900"
+            />
+          </div>
+        </div>
+
+        <div class:list={['col-lg-6', imageOnRight && 'order-lg-1']}>
+          <div class="why-choose-us-content trading-supply-chain__content">
+            <div class="section-title mb-0">
+              {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+              <h2 id={headingId} class="text-anim">
+                {title}
+              </h2>
+            </div>
+
+            <div class="why-choose-us-wrapper-4 trading-supply-chain__grid">
+              <div class="row g-3">
+                {
+                  items.map((item, index) => (
+                    <div
+                      class="col-sm-6 wow fadeInUp"
+                      data-wow-delay={`${(0.25 + (index % 3) * 0.1).toFixed(2)}s`}
+                    >
+                      <div class="why-choose-us-box trading-supply-chain__card">
+                        <div class="top-content">
+                          <div class="icon">
+                            <img
+                              src={item.iconSrc}
+                              alt=""
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                          <h3>{item.title}</h3>
+                        </div>
+                        <p>{item.description}</p>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

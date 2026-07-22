@@ -1,10 +1,40 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('logistics');
+/**
+ * Logistics — /services/logistics/
+ * Same template stack as Commodity / Currency Hedging:
+ * 1. Agriva breadcrumb hero
+ * 2. Intro + Benefits — about-section-4
+ * 3. Why Choose Agro Metal? — 2×2 + image
+ * 4. Closing video CTA — drone-video-section
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import ServiceDetailIntro from '@components/sections/ServiceDetailIntro.astro';
+import ServiceWhyChoose from '@components/sections/ServiceWhyChoose.astro';
+import ProductClosingCta from '@components/sections/ProductClosingCta.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  logisticsHero,
+  logisticsIntro,
+  logisticsWhyChoose,
+  logisticsClosingCta,
+} from '@data/pages/logistics.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-services page-service-detail page-logistics">
+  <AgrivaBreadcrumbHero {...logisticsHero} />
+  <ServiceDetailIntro {...logisticsIntro} />
+  <ServiceWhyChoose {...logisticsWhyChoose} />
+  <ProductClosingCta {...logisticsClosingCta} />
+</BaseLayout>
+
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>

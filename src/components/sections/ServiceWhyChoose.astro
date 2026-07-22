@@ -1,0 +1,92 @@
+---
+/**
+ * Service Why Choose — title + 2×2 Agriva why-choose-us-box | image
+ * Reusable for Commodity Hedging, Currency Hedging, Logistics.
+ */
+import type { ServiceWhyChooseProps } from '@types/components/content.js';
+
+const {
+  id = 'service-why-choose',
+  title,
+  items,
+  imageSrc,
+  imageAlt,
+  class: className = '',
+} = Astro.props as ServiceWhyChooseProps;
+
+const headingId = `${id}-heading`;
+---
+
+<section
+  id={id}
+  class:list={[
+    'why-choose-us-section-4',
+    'section-padding',
+    'fix',
+    'service-why-choose',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div class="why-choose-us-wrapper-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="why-choose-us-content service-why-choose__content">
+            <div class="section-title mb-0">
+              <h2 id={headingId} class="text-anim">{title}</h2>
+            </div>
+
+            <div class="row g-4 service-why-choose__grid">
+              {
+                items.map((item, index) => (
+                  <div
+                    class="col-sm-6 wow fadeInUp"
+                    data-wow-delay={`${(0.25 + (index % 2) * 0.1).toFixed(2)}s`}
+                  >
+                    <div
+                      class:list={[
+                        'why-choose-us-box',
+                        'service-why-choose__card',
+                        !item.title && 'service-why-choose__card--text-only',
+                      ]}
+                    >
+                      <div class="top-content">
+                        <div class="icon">
+                          <img
+                            src={item.iconSrc}
+                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                            width="64"
+                            height="64"
+                          />
+                        </div>
+                        {item.title && <h3>{item.title}</h3>}
+                      </div>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="service-why-choose__image wow fadeInRight" data-wow-delay=".3s">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              class="img-custom-anim-right"
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="800"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

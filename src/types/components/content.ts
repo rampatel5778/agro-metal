@@ -492,3 +492,32 @@ export interface ProductClosingCtaProps {
   cta: import('@types/cta.js').CTA;
   class?: string;
 }
+
+/** Service detail intro — Agriva about-section-4 + list-item checklist (image left) */
+export interface ServiceDetailIntroProps {
+  id?: string;
+  title: string;
+  description: string;
+  benefitsTitle?: string;
+  benefits: string[];
+  imageSrc: string;
+  imageAlt: string;
+  cta?: import('@types/cta.js').CTA;
+  class?: string;
+}
+
+/** Service Why Choose — title + 2×2 why-choose-us-box left, image right */
+export interface ServiceWhyChooseItem {
+  title?: string;
+  description: string;
+  iconSrc: string;
+}
+
+export interface ServiceWhyChooseProps {
+  id?: string;
+  title: string;
+  items: ServiceWhyChooseItem[];
+  imageSrc: string;
+  imageAlt: string;
+  class?: string;
+}

@@ -1,0 +1,94 @@
+---
+/**
+ * Service detail intro — Agriva about-section-4
+ * Image left | title + description + Benefits checklist + CTA
+ * Reusable for Commodity Hedging, Currency Hedging, Logistics.
+ */
+import type { ServiceDetailIntroProps } from '@types/components/content.js';
+
+const {
+  id = 'service-detail-intro',
+  title,
+  description,
+  benefitsTitle = 'Benefits',
+  benefits = [],
+  imageSrc,
+  imageAlt,
+  cta,
+  class: className = '',
+} = Astro.props as ServiceDetailIntroProps;
+
+const headingId = `${id}-heading`;
+---
+
+<section
+  id={id}
+  class:list={['about-section-4', 'section-padding', 'fix', 'service-detail-intro', className]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div class="about-wrapper-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="about-image service-detail-intro__image wow fadeInLeft" data-wow-delay=".3s">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              class="img-custom-anim-left"
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="800"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="about-content service-detail-intro__content">
+            <div class="section-title mb-0">
+              <h2 id={headingId} class="text-anim">{title}</h2>
+            </div>
+
+            <p class="text service-detail-intro__text wow fadeInUp" data-wow-delay=".25s">
+              {description}
+            </p>
+
+            {
+              benefits.length > 0 && (
+                <>
+                  <h3 class="service-detail-intro__benefits-title wow fadeInUp" data-wow-delay=".3s">
+                    {benefitsTitle}
+                  </h3>
+                  <div class="list-item service-detail-intro__list wow fadeInUp" data-wow-delay=".35s">
+                    <ul class="list">
+                      {
+                        benefits.map((item) => (
+                          <li>
+                            <i class="fa-solid fa-circle-check" aria-hidden="true" />
+                            {item}
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                </>
+              )
+            }
+
+            {
+              cta && (
+                <a
+                  href={cta.href}
+                  class="theme-btn theme-btn-3 service-detail-intro__cta wow fadeInUp"
+                  data-wow-delay=".45s"
+                >
+                  {cta.label}
+                </a>
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

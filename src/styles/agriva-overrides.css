@@ -1,5 +1,5 @@
 /**
- * Agriva Home 01 overrides — hero video background, logo sizing, global resets
+ * Agriva Home 01 overrides ? hero video background, logo sizing, global resets
  */
 
 /* Prevent project global.css from overriding Agriva chrome typography */
@@ -38,24 +38,114 @@
   font-family: "Inter", sans-serif;
 }
 
-/* About page — Agriva breadcrumb-wrapper (about-2.html); header unchanged */
+/* About / History breadcrumb ? keep new photo, restore Agriva mint title shape */
+.page-about .breadcrumb-wrapper {
+  position: relative;
+  background-color: #e8f3e6;
+  background-image: none !important;
+}
+
+.page-about .breadcrumb-wrapper .breadcrumb-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--breadcrumb-photo);
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: var(--breadcrumb-shape-mask);
+  mask-image: var(--breadcrumb-shape-mask);
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* Soft top scrim so white menu stays readable over the photo */
+.page-about .breadcrumb-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 140px;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.22) 55%,
+    transparent 100%
+  );
+}
+
+.page-about .breadcrumb-wrapper .container {
+  position: relative;
+  z-index: 3;
+}
+
 .page-about .breadcrumb-wrapper .page-heading h1 {
   text-transform: capitalize;
 }
 
-.page-about .breadcrumb-wrapper .breadcrumb-items li:last-child {
-  color: var(--theme3);
-}
-
+/* Desktop: dark title on mint shape (Agriva) */
 @media (min-width: 1400px) {
   .page-about .breadcrumb-wrapper .page-heading h1 {
     color: var(--header) !important;
+    text-shadow: none;
+  }
+
+  .page-about .breadcrumb-wrapper .breadcrumb-items {
+    border-color: rgba(47, 47, 47, 0.2);
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .page-about .breadcrumb-wrapper .breadcrumb-items li {
+    color: var(--theme3) !important;
+  }
+
+  .page-about .breadcrumb-wrapper .breadcrumb-items li a {
+    color: var(--header) !important;
+  }
+
+  .page-about .breadcrumb-wrapper .breadcrumb-items li a i {
+    color: var(--theme3) !important;
+  }
+
+  .page-about .breadcrumb-wrapper .breadcrumb-items li a:hover {
+    color: var(--theme3) !important;
   }
 }
 
+/* Tablet / mobile: full-bleed photo, white title (Agriva) */
 @media (max-width: 1399px) {
+  .page-about .breadcrumb-wrapper .breadcrumb-photo {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .page-about .breadcrumb-wrapper .page-heading h1 {
     color: var(--white) !important;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .page-about .breadcrumb-wrapper .breadcrumb-items {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(4px);
+  }
+
+  .page-about .breadcrumb-wrapper .breadcrumb-items li,
+  .page-about .breadcrumb-wrapper .breadcrumb-items li a,
+  .page-about .breadcrumb-wrapper .breadcrumb-items li a i {
+    color: var(--white) !important;
+  }
+
+  .page-about .breadcrumb-wrapper .breadcrumb-items li:last-child,
+  .page-about .breadcrumb-wrapper .breadcrumb-items li a:hover {
+    color: var(--theme3) !important;
   }
 }
 
@@ -189,7 +279,7 @@
   text-transform: capitalize;
 }
 
-/* Feature commodity grid — 8 cards using Agriva feature-box-item-2 */
+/* Feature commodity grid ? 8 cards using Agriva feature-box-item-2 */
 .home-feature-grid {
   background-color: var(--bg3);
 }
@@ -269,7 +359,7 @@
   color: var(--header);
 }
 
-/* Home about stats — Agriva about-section-2 (heading only + video in paddy area) */
+/* Home about stats ? Agriva about-section-2 (heading only + video in paddy area) */
 .home-about-stats {
   position: relative;
 }
@@ -368,7 +458,7 @@
   pointer-events: auto;
 }
 
-/* Home about stats — click-to-play video modal */
+/* Home about stats ? click-to-play video modal */
 .home-video-modal {
   position: fixed;
   inset: 0;
@@ -429,7 +519,7 @@ body.home-video-modal-open {
   border: 0;
 }
 
-/* Home product cards — Agriva service-card-items-2 (3-up grid) */
+/* Home product cards ? Agriva service-card-items-2 (3-up grid) */
 .service-section-2--product-cards {
   padding-top: 0;
 }
@@ -470,7 +560,7 @@ body.home-video-modal-open {
   text-transform: capitalize;
 }
 
-/* Home stats counter — Agriva count-item-2 (Home 01 yellow stroke style) */
+/* Home stats counter ? Agriva count-item-2 (Home 01 yellow stroke style) */
 .home-stats-section .count-item-2 h2 {
   font-weight: 600;
   font-size: 200px;
@@ -523,7 +613,7 @@ body.home-video-modal-open {
   }
 }
 
-/* About page — our-statistics-section (about-2.html), image removed → 3×2 card grid */
+/* About page ? our-statistics-section (about-2.html), image removed ? 3?2 card grid */
 .page-about .about-statistics-section .our-statistics-content .section-title {
   max-width: 900px;
   margin-bottom: 10px;
@@ -580,7 +670,7 @@ body.home-video-modal-open {
   }
 }
 
-/* About certifications — Agriva our-imapact-section with logo badges */
+/* About certifications ? Agriva our-imapact-section with logo badges */
 .page-about .about-certifications .our-impact-wrapper h2 {
   text-transform: capitalize;
 }
@@ -598,7 +688,7 @@ body.home-video-modal-open {
   object-fit: contain;
 }
 
-/* About differentiators — Agriva work-process-section, 5 process-cards */
+/* About differentiators ? Agriva work-process-section, 5 process-cards */
 .page-about .about-differentiators .section-title h2 {
   text-transform: capitalize;
 }
@@ -655,7 +745,7 @@ body.home-video-modal-open {
   }
 }
 
-/* About Mission & Vision — match Agriva card layout (no year column) */
+/* About Mission & Vision ? match Agriva card layout (no year column) */
 .page-about .about-mission-vision.our-history-section-3 {
   background-color: var(--white);
 }
@@ -724,7 +814,7 @@ body.home-video-modal-open {
   }
 }
 
-/* About Our Values — Agriva why-choose-us-box, 3×2 grid */
+/* About Our Values ? Agriva why-choose-us-box, 3?2 grid */
 .page-about .about-values__header {
   max-width: 820px;
   margin-left: auto;
@@ -826,7 +916,7 @@ body.home-video-modal-open {
   color: var(--white);
 }
 
-/* About Growth Strategy — custom Strategy Rail (Agriva tokens) */
+/* About Growth Strategy ? custom Strategy Rail (Agriva tokens) */
 .page-about .about-growth-strategy {
   background-color: rgb(245, 246, 244);
 }
@@ -1013,7 +1103,7 @@ body.home-video-modal-open {
   }
 }
 
-/* Home vertical timeline — alternating cards + center line */
+/* Home vertical timeline ? alternating cards + center line */
 .home-timeline-section {
   --timeline-gap: clamp(24px, 4vw, 48px);
   background: rgb(247 248 245);
@@ -1315,7 +1405,7 @@ body.page-home {
   background-color: #fff;
 }
 
-/* Home split CTAs — Agriva about-section (Home 03) after timeline */
+/* Home split CTAs ? Agriva about-section (Home 03) after timeline */
 .home-split-cta {
   position: relative;
   background-color: var(--bg3, #f5f6f4);
@@ -1394,4 +1484,146 @@ body.page-home {
   .home-split-cta .section-title h2 {
     max-width: none;
   }
+}
+
+/* Trading Business Model ? Agriva index-4 why-choose-us-section-4 */
+.page-trading-logistics .trading-business-model {
+  font-family: "DM Sans", sans-serif;
+  background:
+    radial-gradient(ellipse 70% 55% at 8% 20%, rgba(17, 162, 27, 0.07), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 92% 75%, rgba(17, 162, 27, 0.05), transparent 55%),
+    #f7f8f5;
+}
+
+.page-trading-logistics .trading-business-model__content .section-title h2 {
+  text-transform: capitalize;
+  max-width: 16ch;
+}
+
+.page-trading-logistics .trading-business-model__intro {
+  margin: 22px 0 0;
+  max-width: 34rem;
+  color: rgb(80, 98, 74);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.page-trading-logistics .trading-business-model .theme-btn-3 {
+  min-width: 170px;
+  justify-content: center;
+}
+
+.page-trading-logistics .trading-business-model__card {
+  height: 100%;
+  background: var(--white);
+  border-color: rgba(47, 47, 47, 0.12);
+  box-shadow: 0 10px 30px rgba(17, 40, 20, 0.04);
+  padding: 28px 24px;
+}
+
+.page-trading-logistics .trading-business-model__card .top-content {
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.page-trading-logistics .trading-business-model__card .top-content .icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(17, 162, 27, 0.08);
+  transition: background 0.4s ease;
+}
+
+.page-trading-logistics .trading-business-model__card .top-content .icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.page-trading-logistics .trading-business-model__card .top-content h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.page-trading-logistics .trading-business-model__card > p {
+  margin: 0;
+  color: rgb(80, 98, 74);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.page-trading-logistics .trading-business-model__card:hover .top-content .icon {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 991px) {
+  .page-trading-logistics .trading-business-model__content .section-title h2 {
+    max-width: none;
+  }
+}
+
+/* Trading Competitive Advantages ? Agriva service-box-items-3 */
+.page-trading-logistics .trading-advantages {
+  font-family: "DM Sans", sans-serif;
+  background: var(--white);
+}
+
+.page-trading-logistics .trading-advantages__header {
+  max-width: 760px;
+  margin: 0 auto 50px;
+}
+
+.page-trading-logistics .trading-advantages__header h2 {
+  text-transform: capitalize;
+}
+
+.page-trading-logistics .trading-advantages__intro {
+  margin: 18px auto 0;
+  color: rgb(80, 98, 74);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.page-trading-logistics .trading-advantages__card {
+  height: 100%;
+  background: var(--white);
+}
+
+.page-trading-logistics .trading-advantages__card h2 {
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.page-trading-logistics .trading-advantages__card .icon {
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+
+.page-trading-logistics .trading-advantages__card .icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.page-trading-logistics .trading-advantages__card h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.35;
+  text-transform: capitalize;
+}
+
+.page-trading-logistics .trading-advantages__card > p {
+  max-width: none;
+  margin: 12px 0 0;
+  color: rgb(80, 98, 74);
+  font-size: 15px;
+  line-height: 1.7;
 }

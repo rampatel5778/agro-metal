@@ -1,0 +1,58 @@
+---
+/**
+ * Competitive Advantages — Agriva service-2.html service-box-items-3
+ * 4 cards: number + icon circle + title + text (no Read More links)
+ */
+import type { TradingAdvantagesProps } from '@types/components/content.js';
+
+const {
+  eyebrow = 'Our Edge',
+  title,
+  description,
+  items,
+  class: className = '',
+} = Astro.props as TradingAdvantagesProps;
+---
+
+<section
+  class:list={['service-section-4', 'section-padding', 'fix', 'trading-advantages', className]}
+  aria-labelledby="trading-advantages-heading"
+>
+  <div class="container">
+    <div class="section-title text-center trading-advantages__header">
+      {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+      <h2 id="trading-advantages-heading" class="text-anim">{title}</h2>
+      {
+        description && (
+          <p class="trading-advantages__intro wow fadeInUp" data-wow-delay=".25s">
+            {description}
+          </p>
+        )
+      }
+    </div>
+
+    <div class="row g-4">
+      {
+        items.map((item, index) => {
+          const step = String(index + 1).padStart(2, '0');
+          const delays = ['.2s', '.4s', '.6s', '.8s'];
+          return (
+            <div
+              class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay={delays[index] ?? '.2s'}
+            >
+              <div class="service-box-items-3 trading-advantages__card">
+                <h2 aria-hidden="true">{step}</h2>
+                <div class="icon">
+                  <img src={item.iconSrc} alt="" loading="lazy" decoding="async" />
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

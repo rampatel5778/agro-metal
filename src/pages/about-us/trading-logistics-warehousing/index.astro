@@ -1,10 +1,35 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('trading-logistics-warehousing');
+/**
+ * Trading, Logistics & Warehousing — /about-us/trading-logistics-warehousing/
+ * 1. Agriva breadcrumb hero
+ * 2. Business Model (index-4 why-choose-us-section-4)
+ * 3. Competitive Advantages (service-2 service-box-items-3)
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import TradingBusinessModel from '@components/sections/TradingBusinessModel.astro';
+import TradingAdvantages from '@components/sections/TradingAdvantages.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  tradingLogisticsHero,
+  tradingBusinessModel,
+  tradingAdvantages,
+} from '@data/pages/trading-logistics-warehousing.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-about page-trading-logistics">
+  <AgrivaBreadcrumbHero {...tradingLogisticsHero} />
+  <TradingBusinessModel {...tradingBusinessModel} />
+  <TradingAdvantages {...tradingAdvantages} />
+</BaseLayout>
+
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>

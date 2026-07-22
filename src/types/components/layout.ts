@@ -91,10 +91,12 @@ export interface BreadcrumbHeroProps {
 export interface AgrivaBreadcrumbHeroProps {
   title: string;
   breadcrumbs?: BreadcrumbItem[];
-  /** Agriva curved desktop background — default breadcrumb.png */
+  /** Full-bleed photo — default home-3/about-1.jpg */
   backgroundImageSrc?: string;
-  /** Mobile / tablet full-bleed photo — default breadcrumb-2.jpg */
+  /** Mobile / tablet full-bleed photo — default home-3/about-1.jpg */
   topImageSrc?: string;
+  /** Desktop shape mask (Agriva breadcrumb.png cutout) */
+  shapeMaskSrc?: string;
   class?: string;
 }
 

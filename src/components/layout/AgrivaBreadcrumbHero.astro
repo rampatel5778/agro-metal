@@ -1,24 +1,26 @@
 ---
 /**
  * Agriva inner-page breadcrumb hero — breadcrumb-wrapper from about-2.html
- * Desktop: breadcrumb.png curved layout + dark title + pill breadcrumbs
- * Mobile: breadcrumb-2.jpg full-bleed photo + white title
+ * Desktop: photo masked with breadcrumb.png cutout (mint title shape)
+ * Mobile: full-bleed top-image photo + white title
  */
 import type { AgrivaBreadcrumbHeroProps } from '@types/components/layout.js';
 
 const {
   title,
   breadcrumbs = [],
-  backgroundImageSrc = '/assets/img/breadcrumb.png',
-  topImageSrc = '/assets/img/breadcrumb-2.jpg',
+  backgroundImageSrc = '/assets/img/home-3/about-1.jpg',
+  topImageSrc = '/assets/img/home-3/about-1.jpg',
+  shapeMaskSrc = '/assets/img/breadcrumb.png',
   class: className = '',
 } = Astro.props as AgrivaBreadcrumbHeroProps;
 ---
 
 <div
   class:list={['breadcrumb-wrapper', 'bg-cover', className]}
-  style={`background-image: url('${backgroundImageSrc}');`}
+  style={`--breadcrumb-photo: url('${backgroundImageSrc}'); --breadcrumb-shape-mask: url('${shapeMaskSrc}');`}
 >
+  <div class="breadcrumb-photo" aria-hidden="true" />
   <div class="top-image">
     <img src={topImageSrc} alt="" loading="eager" decoding="async" />
   </div>

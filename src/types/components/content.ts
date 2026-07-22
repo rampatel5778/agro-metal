@@ -322,6 +322,37 @@ export interface AboutGrowthStrategyProps {
   class?: string;
 }
 
+/** Trading page — Agriva index-4 why-choose-us-section-4 */
+export interface TradingBusinessModelItem {
+  title: string;
+  description: string;
+  iconSrc: string;
+}
+
+export interface TradingBusinessModelProps {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  cta?: import('@types/cta.js').CTA;
+  items: TradingBusinessModelItem[];
+  class?: string;
+}
+
+/** Trading page — Agriva service-2 service-box-items-3 */
+export interface TradingAdvantageItem {
+  title: string;
+  description: string;
+  iconSrc: string;
+}
+
+export interface TradingAdvantagesProps {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  items: TradingAdvantageItem[];
+  class?: string;
+}
+
 export interface HomeTextMarqueeProps {
   text: string;
   repetitions?: number;

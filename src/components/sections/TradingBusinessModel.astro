@@ -1,0 +1,84 @@
+---
+/**
+ * Trading Business Model — Agriva index-4.html why-choose-us-section-4
+ * Left: eyebrow + title + intro + CTA | Right: 2×2 why-choose-us-box
+ */
+import type { TradingBusinessModelProps } from '@types/components/content.js';
+
+const {
+  eyebrow = 'Value Proposition',
+  title,
+  description,
+  cta,
+  items,
+  class: className = '',
+} = Astro.props as TradingBusinessModelProps;
+---
+
+<section
+  class:list={[
+    'why-choose-us-section-4',
+    'section-padding',
+    'fix',
+    'trading-business-model',
+    className,
+  ]}
+  aria-labelledby="trading-business-model-heading"
+>
+  <div class="container">
+    <div class="why-choose-us-wrapper-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-xl-6 col-lg-5">
+          <div class="why-choose-us-content trading-business-model__content wow fadeInLeft" data-wow-delay=".2s">
+            <div class="section-title mb-0">
+              {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+              <h2 id="trading-business-model-heading" class="text-anim">
+                {title}
+              </h2>
+            </div>
+            {
+              description && (
+                <p class="trading-business-model__intro">{description}</p>
+              )
+            }
+            {
+              cta && (
+                <a href={cta.href} class="theme-btn theme-btn-3 mt-4">
+                  {cta.label}
+                </a>
+              )
+            }
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-7">
+          <div class="row g-4">
+            {
+              items.map((item, index) => (
+                <div
+                  class="col-lg-6 col-md-6 wow fadeInUp"
+                  data-wow-delay={`${(0.25 + (index % 2) * 0.15).toFixed(2)}s`}
+                >
+                  <div class="why-choose-us-box trading-business-model__card">
+                    <div class="top-content">
+                      <div class="icon">
+                        <img
+                          src={item.iconSrc}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <h3>{item.title}</h3>
+                    </div>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

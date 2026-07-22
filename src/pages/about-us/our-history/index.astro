@@ -1,10 +1,35 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('our-history');
+/**
+ * Our History — /about-us/our-history/
+ * Reuses the Home vertical timeline section as-is
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import HomeTimeline from '@components/sections/HomeTimeline.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  ourHistoryHero,
+  ourHistoryTimeline,
+} from '@data/pages/our-history.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-about page-our-history">
+  <AgrivaBreadcrumbHero {...ourHistoryHero} />
+  <HomeTimeline {...ourHistoryTimeline} />
+</BaseLayout>
+
+<script is:inline src="/assets/js/gsap.min.js"></script>
+<script is:inline src="/assets/js/ScrollTrigger.min.js"></script>
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script>
+  import '@scripts/home-timeline.ts';
+</script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>

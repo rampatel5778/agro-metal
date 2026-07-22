@@ -1,0 +1,163 @@
+{
+  "id": "logistics",
+  "slug": "logistics",
+  "path": "/services/logistics/",
+  "sourceFile": "logistics.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "Logistics – Agrometal",
+    "description": "Global logistics services from Agrometal — shipping, warehousing, and supply chain management.",
+    "canonical": "/services/logistics/"
+  },
+  "hero": {
+    "title": "Logistics",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-1-1.webp",
+      "src": "/images/agrometal/2026/03/Top-banner-1-1.webp",
+      "alt": "Top banner",
+      "filename": "Top-banner-1-1.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Logistics",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Logistics Logistics Efficient logistics are critical to ensuring timely delivery, cost control, and supply chain reliability. Agro Metal provides end-to-end logistics services, from warehousing and transportation to customs clearance and freight management. Our integrated solutions guarantee smooth and sustainable operations across global markets.",
+        "Efficient logistics are critical to ensuring timely delivery, cost control, and supply chain reliability. Agro Metal provides end-to-end logistics services, from warehousing and transportation to customs clearance and freight management. Our integrated solutions guarantee smooth and sustainable operations across global markets.",
+        "Optimized supply chain management Timely and reliable deliveries Scalable and flexible logistics solutions Enquire Now Why Choose Agro Metal? Global reach with expertise across 14+ countries",
+        "Integrated solutions connecting trading, risk management, and logistics",
+        "Commitment to sustainability, transparency, and responsible operations"
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-1-1.webp",
+        "src": "/images/agrometal/2026/03/Top-banner-1-1.webp",
+        "alt": "Top banner",
+        "filename": "Top-banner-1-1.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Logistics",
+      "body": [
+        "Optimized supply chain management Timely and reliable deliveries Scalable and flexible logistics solutions Enquire Now Why Choose Agro Metal? Global reach with expertise across 14+ countries",
+        "Integrated solutions connecting trading, risk management, and logistics",
+        "Commitment to sustainability, transparency, and responsible operations"
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Benefits",
+      "body": [
+        "Commitment to sustainability, transparency, and responsible operations",
+        "Dedicated support and market insights to maximize your competitive advantage",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:"
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Why Choose Agro Metal?",
+      "body": [
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities",
+      "body": []
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Join Our Newsletter",
+      "body": []
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "About Agro Metal",
+      "body": []
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Get in touch",
+      "body": []
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-1-1.webp",
+            "src": "/images/agrometal/2026/03/Top-banner-1-1.webp",
+            "alt": "Top banner",
+            "filename": "Top-banner-1-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/2nd-image-.webp",
+            "src": "/images/agrometal/2026/03/2nd-image-.webp",
+            "alt": "2nd image",
+            "filename": "2nd-image-.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon6.png",
+            "src": "/images/agrometal/2026/03/icon6.png",
+            "alt": "icon6",
+            "filename": "icon6.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon8.png",
+            "src": "/images/agrometal/2026/03/icon8.png",
+            "alt": "icon8",
+            "filename": "icon8.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon7.png",
+            "src": "/images/agrometal/2026/03/icon7.png",
+            "alt": "icon7",
+            "filename": "icon7.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon5.png",
+            "src": "/images/agrometal/2026/03/icon5.png",
+            "alt": "icon5",
+            "filename": "icon5.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Why-Choose-Agro-Metal-1.webp",
+            "src": "/images/agrometal/2026/03/Why-Choose-Agro-Metal-1.webp",
+            "alt": "Why Choose Agro Metal",
+            "filename": "Why-Choose-Agro-Metal-1.webp"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:41.377Z",
+    "remoteImageCount": 9,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 9",
+      "Paragraphs found: 8"
+    ]
+  }
+}

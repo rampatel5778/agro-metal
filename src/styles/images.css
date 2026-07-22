@@ -1,0 +1,88 @@
+/**
+ * Image utilities — docs/assets.md
+ */
+@layer components {
+  .ds-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ds-img--cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ds-img--contain {
+    object-fit: contain;
+  }
+
+  .ds-img--rounded {
+    border-radius: var(--radius-lg);
+  }
+
+  .ds-img--rounded-full {
+    border-radius: var(--radius-full);
+  }
+
+  .ds-aspect-video {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .ds-aspect-square {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  .ds-aspect-portrait {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+  }
+
+  .ds-aspect-landscape {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+
+  .ds-img-wrap {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-surface-muted);
+  }
+
+  .ds-img-wrap--zoom:hover .ds-img--cover {
+    transform: scale(1.05);
+  }
+
+  .ds-img-wrap .ds-img--cover {
+    transition: transform var(--duration-slow) var(--ease-default);
+  }
+
+  .ds-img-wrap--overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-card);
+    pointer-events: none;
+  }
+
+  .ds-img-pos-top {
+    object-position: top;
+  }
+
+  .ds-img-pos-center {
+    object-position: center;
+  }
+
+  .ds-img-pos-bottom {
+    object-position: bottom;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ds-img-wrap--zoom:hover .ds-img--cover {
+      transform: none;
+    }
+  }
+}

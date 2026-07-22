@@ -1,0 +1,22 @@
+---
+/**
+ * SectionTitle — consistent heading + subtitle pattern
+ * @example
+ * <SectionTitle title="Our Products" subtitle="Global commodity trading" align="center" />
+ */
+import type { SectionTitleProps } from '@types/components/layout.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  title,
+  subtitle,
+  align = 'left',
+  as: Tag = 'h2',
+  class: className = '',
+} = Astro.props as SectionTitleProps;
+---
+
+<header class={cn('ds-stack ds-stack--sm', align === 'center' && 'text-center', className)}>
+  <Tag class="ds-h2">{title}</Tag>
+  {subtitle && <p class="ds-body ds-body--muted">{subtitle}</p>}
+</header>

@@ -1,0 +1,25 @@
+---
+/**
+ * AnchorNav — in-page jump links
+ * @example
+ * <AnchorNav items={[{ label: 'Products', href: '#products' }]} />
+ */
+import type { AnchorNavProps } from '@types/components/business.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  items,
+  ariaLabel = 'Page sections',
+  class: className = '',
+} = Astro.props as AnchorNavProps;
+---
+
+<nav class={cn('ds-anchor-nav', className)} aria-label={ariaLabel}>
+  {
+    items.map((item) => (
+      <a href={item.href} class="ds-anchor-nav__link">
+        {item.label}
+      </a>
+    ))
+  }
+</nav>

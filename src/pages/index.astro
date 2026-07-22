@@ -1,0 +1,45 @@
+---
+/**
+ * Home Page — Phase 5
+ * @route /
+ * @see docs/sections.md
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import HeroVideo from '@components/sections/HeroVideo.astro';
+import HomeIntro from '@components/sections/HomeIntro.astro';
+import HomeCommodityIcons from '@components/sections/HomeCommodityIcons.astro';
+import HomeProductCards from '@components/sections/HomeProductCards.astro';
+import HomeAboutStats from '@components/sections/HomeAboutStats.astro';
+import HomeTimeline from '@components/sections/HomeTimeline.astro';
+import HomeSplitCta from '@components/sections/HomeSplitCta.astro';
+import HomePageScripts from '@components/layout/HomePageScripts.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  homeHero,
+  homeIntro,
+  homeCommodityIcons,
+  homeProductCards,
+  homeAboutStats,
+  homeTimeline,
+  homeMetalsSplit,
+  homeAgriSplit,
+} from '@data/pages/home.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
+---
+
+<BaseLayout {...layout} bodyClass="page-home">
+  <link slot="head" rel="preconnect" href="https://www.youtube-nocookie.com" />
+  <link slot="head" rel="preconnect" href="https://www.youtube.com" />
+
+  <HeroVideo {...homeHero} />
+
+  <HomeIntro {...homeIntro} />
+  <HomeCommodityIcons {...homeCommodityIcons} />
+  <HomeProductCards {...homeProductCards} />
+  <HomeAboutStats {...homeAboutStats} />
+  <HomeTimeline {...homeTimeline} />
+  <HomeSplitCta {...homeMetalsSplit} />
+  <HomeSplitCta {...homeAgriSplit} />
+  <HomePageScripts slot="scripts" />
+</BaseLayout>

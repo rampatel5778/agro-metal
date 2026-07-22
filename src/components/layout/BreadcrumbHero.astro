@@ -1,0 +1,71 @@
+---
+/**
+ * BreadcrumbHero — inner page title banner with optional parallax background
+ * @example
+ * <BreadcrumbHero title="About Us" breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+ */
+import type { BreadcrumbHeroProps } from '@types/components/layout.js';
+import { cn } from '@utils/classNames.js';
+import Container from '@components/layout/Container.astro';
+import Image from '@components/ui/Image.astro';
+
+const {
+  title,
+  breadcrumbs = [],
+  backgroundImage,
+  class: className = '',
+} = Astro.props as BreadcrumbHeroProps;
+---
+
+<section
+  class={cn('ds-breadcrumb-hero', backgroundImage && 'ds-overlay-dark', className)}
+  aria-labelledby="breadcrumb-hero-title"
+>
+  {
+    backgroundImage && (
+      <div class="ds-breadcrumb-hero__bg" aria-hidden="true">
+        <Image
+          src={backgroundImage.src}
+          alt=""
+          width={backgroundImage.width}
+          height={backgroundImage.height}
+          lazy={false}
+          priority
+        />
+      </div>
+    )
+  }
+  <Container>
+    <div class="ds-breadcrumb-hero__content">
+      {
+        breadcrumbs.length > 0 && (
+          <nav aria-label="Breadcrumb">
+            <ol class="ds-breadcrumb">
+              {
+                breadcrumbs.map((crumb, i) => (
+                  <li class="ds-breadcrumb__item">
+                    {crumb.href ? (
+                      <a href={crumb.href} class="ds-breadcrumb__link">
+                        {crumb.label}
+                      </a>
+                    ) : (
+                      <span aria-current="page">{crumb.label}</span>
+                    )}
+                    {i < breadcrumbs.length - 1 && (
+                      <span class="ds-breadcrumb__sep" aria-hidden="true">
+                        /
+                      </span>
+                    )}
+                  </li>
+                ))
+              }
+            </ol>
+          </nav>
+        )
+      }
+      <h1 id="breadcrumb-hero-title" class="ds-h1">
+        {title}
+      </h1>
+    </div>
+  </Container>
+</section>

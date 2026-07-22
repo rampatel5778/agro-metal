@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-07-20T13:22:41.650Z",
+  "pages": [
+    {
+      "file": "index.html",
+      "json": "home.json",
+      "images": 31,
+      "sections": 10,
+      "youtube": [
+        "7AGfbbcy8Ro",
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "about-us.html",
+      "json": "about-us.json",
+      "images": 14,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "our-history.html",
+      "json": "our-history.json",
+      "images": 9,
+      "sections": 9,
+      "youtube": []
+    },
+    {
+      "file": "trading-logistics-warehousing.html",
+      "json": "trading-logistics-warehousing.json",
+      "images": 8,
+      "sections": 9,
+      "youtube": []
+    },
+    {
+      "file": "products.html",
+      "json": "products.json",
+      "images": 7,
+      "sections": 9,
+      "youtube": []
+    },
+    {
+      "file": "ferrous-metals.html",
+      "json": "ferrous-metals.json",
+      "images": 22,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "non-ferrous-metals.html",
+      "json": "non-ferrous-metals.json",
+      "images": 26,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "agricultural-commodities.html",
+      "json": "agricultural-commodities.json",
+      "images": 30,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "services.html",
+      "json": "services.json",
+      "images": 9,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "commodity-hedging.html",
+      "json": "commodity-hedging.json",
+      "images": 9,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "currency-hedging.html",
+      "json": "currency-hedging.json",
+      "images": 9,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "logistics.html",
+      "json": "logistics.json",
+      "images": 9,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "sustainability.html",
+      "json": "sustainability.json",
+      "images": 7,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    },
+    {
+      "file": "contact-us.html",
+      "json": "contact-us.json",
+      "images": 3,
+      "sections": 10,
+      "youtube": [
+        "nr3_0zjTlsI"
+      ]
+    }
+  ]
+}

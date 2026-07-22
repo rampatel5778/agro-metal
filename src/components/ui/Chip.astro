@@ -1,0 +1,28 @@
+---
+/**
+ * Chip — pill-shaped filter/action chip
+ * @example
+ * <Chip text="Logistics" href="#logistics" />
+ */
+import type { ChipProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const { text, variant = 'default', href, class: className = '' } = Astro.props as ChipProps;
+
+const variantMap = {
+  default: 'ds-chip',
+  outline: 'ds-chip ds-chip--outline',
+};
+
+const classes = cn(variantMap[variant], className);
+---
+
+{
+  href ? (
+    <a href={href} class={classes}>
+      {text}
+    </a>
+  ) : (
+    <span class={classes}>{text}</span>
+  )
+}

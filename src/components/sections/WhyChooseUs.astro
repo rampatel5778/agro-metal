@@ -1,0 +1,52 @@
+---
+/**
+ * WhyChooseUs — differentiators section with optional image
+ * @example
+ * <WhyChooseUs heading="Why choose us" items={reasons} image={image} />
+ */
+import type { WhyChooseUsProps } from '@types/components/business.js';
+import { cn } from '@utils/classNames.js';
+import BenefitsList from '@components/sections/BenefitsList.astro';
+import Image from '@components/ui/Image.astro';
+import Button from '@components/ui/Button.astro';
+
+const {
+  heading,
+  body,
+  items,
+  image,
+  cta,
+  class: className = '',
+} = Astro.props as WhyChooseUsProps;
+
+const paragraphs = body ? (Array.isArray(body) ? body : [body]) : [];
+---
+
+<div class={cn('ds-split', image && 'ds-split--reverse', className)}>
+  <div class="ds-split__content ds-stack ds-stack--lg">
+    {heading && <h2 class="ds-h2">{heading}</h2>}
+    {paragraphs.map((p) => <p class="ds-body">{p}</p>)}
+    <BenefitsList items={items} />
+    {
+      cta && (
+        <Button variant="primary" href={cta.href} external={cta.external}>
+          {cta.label}
+        </Button>
+      )
+    }
+  </div>
+  {
+    image && (
+      <div class="ds-split__media">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          aspect="landscape"
+          rounded="lg"
+        />
+      </div>
+    )
+  }
+</div>

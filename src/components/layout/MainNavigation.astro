@@ -1,0 +1,54 @@
+---
+/**
+ * MainNavigation — desktop dropdown navigation
+ * @example
+ * <MainNavigation items={navigation.main} currentPath={Astro.url.pathname} />
+ */
+import type { MainNavigationProps } from '@types/components/layout.js';
+import { cn, isActivePath } from '@utils/classNames.js';
+import Icon from '@components/ui/Icon.astro';
+
+const {
+  items,
+  currentPath = '/',
+  class: className = '',
+  ariaLabel = 'Main navigation',
+} = Astro.props as MainNavigationProps;
+---
+
+<nav class={cn('ds-nav', className)} aria-label={ariaLabel}>
+  <ul class="ds-nav__list" role="menubar">
+    {
+      items.map((item) => {
+        const active = isActivePath(item.href, currentPath, item.exact);
+        const hasChildren = item.children && item.children.length > 0;
+        return (
+          <li class="ds-nav__item" role="none">
+            <a
+              href={item.href}
+              class={cn('ds-nav__link', active && 'ds-nav__link--active')}
+              role="menuitem"
+              aria-current={active ? 'page' : undefined}
+              aria-haspopup={hasChildren ? 'true' : undefined}
+              aria-expanded={hasChildren ? 'false' : undefined}
+            >
+              {item.label}
+              {hasChildren && <Icon name="chevron-down" size="xs" decorative />}
+            </a>
+            {hasChildren && (
+              <ul class="ds-nav__submenu" role="menu">
+                {item.children!.map((child) => (
+                  <li role="none">
+                    <a href={child.href} class="ds-nav__submenu-link" role="menuitem">
+                      {child.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

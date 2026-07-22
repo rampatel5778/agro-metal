@@ -1,0 +1,46 @@
+---
+/**
+ * Checkbox — accessible checkbox with ds-checkbox styling
+ * @example
+ * <Checkbox id="terms" name="terms" label="I agree to terms" required />
+ */
+import type { CheckboxProps } from '@types/components/forms.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  id,
+  name,
+  label,
+  required = false,
+  error,
+  hint,
+  checked = false,
+  disabled = false,
+  class: className = '',
+} = Astro.props as CheckboxProps;
+
+const describedBy = [hint && `${id}-hint`, error && `${id}-error`].filter(Boolean).join(' ') || undefined;
+---
+
+<div class={cn('ds-field ds-field--checkbox', error && 'ds-field--error', className)}>
+  <label class="ds-checkbox" for={id}>
+    <input
+      type="checkbox"
+      id={id}
+      name={name}
+      class="ds-checkbox__input"
+      required={required}
+      checked={checked}
+      disabled={disabled}
+      aria-invalid={error ? 'true' : undefined}
+      aria-describedby={describedBy}
+    />
+    <span class="ds-checkbox__label">{label}</span>
+  </label>
+  {hint && <p class="ds-field__hint" id={`${id}-hint`}>{hint}</p>}
+  {error && (
+    <p class="ds-field__error" id={`${id}-error`} role="alert">
+      {error}
+    </p>
+  )}
+</div>

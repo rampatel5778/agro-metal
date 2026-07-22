@@ -1,0 +1,163 @@
+{
+  "id": "commodity-hedging",
+  "slug": "commodity-hedging",
+  "path": "/services/commodity-hedging/",
+  "sourceFile": "commodity-hedging.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "Commodity Hedging – Agrometal",
+    "description": "Manage price risk with Agrometal commodity hedging strategies for metals and agricultural products.",
+    "canonical": "/services/commodity-hedging/"
+  },
+  "hero": {
+    "title": "Commodity Hedging",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/top-banner.webp",
+      "src": "/images/agrometal/2026/03/top-banner.webp",
+      "alt": "top banner",
+      "filename": "top-banner.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Commodity Hedging",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Commodity Hedging Commodity Hedging Protect your business from price volatility in global commodity markets. Agro Metal provides tailored hedging solutions across ferrous metals, non-ferrous metals, and agricultural commodities. Our strategies help you manage risk, stabilize costs, and maintain predictable margins.",
+        "Protect your business from price volatility in global commodity markets. Agro Metal provides tailored hedging solutions across ferrous metals, non-ferrous metals, and agricultural commodities. Our strategies help you manage risk, stabilize costs, and maintain predictable margins.",
+        "Minimize exposure to price fluctuations Secure competitive procurement costs Leverage market expertise for informed decisions Enquire Now Why Choose Agro Metal? Global reach with expertise across 14+ countries",
+        "Integrated solutions connecting trading, risk management, and logistics",
+        "Commitment to sustainability, transparency, and responsible operations"
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/top-banner.webp",
+        "src": "/images/agrometal/2026/03/top-banner.webp",
+        "alt": "top banner",
+        "filename": "top-banner.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Commodity Hedging",
+      "body": [
+        "Minimize exposure to price fluctuations Secure competitive procurement costs Leverage market expertise for informed decisions Enquire Now Why Choose Agro Metal? Global reach with expertise across 14+ countries",
+        "Integrated solutions connecting trading, risk management, and logistics",
+        "Commitment to sustainability, transparency, and responsible operations"
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Benefits",
+      "body": [
+        "Commitment to sustainability, transparency, and responsible operations",
+        "Dedicated support and market insights to maximize your competitive advantage",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:"
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Why Choose Agro Metal?",
+      "body": [
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities",
+      "body": []
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Join Our Newsletter",
+      "body": []
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "About Agro Metal",
+      "body": []
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Get in touch",
+      "body": []
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/top-banner.webp",
+            "src": "/images/agrometal/2026/03/top-banner.webp",
+            "alt": "top banner",
+            "filename": "top-banner.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Benefits-.webp",
+            "src": "/images/agrometal/2026/03/Benefits-.webp",
+            "alt": "Benefits",
+            "filename": "Benefits-.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon6.png",
+            "src": "/images/agrometal/2026/03/icon6.png",
+            "alt": "icon6",
+            "filename": "icon6.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon8.png",
+            "src": "/images/agrometal/2026/03/icon8.png",
+            "alt": "icon8",
+            "filename": "icon8.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon7.png",
+            "src": "/images/agrometal/2026/03/icon7.png",
+            "alt": "icon7",
+            "filename": "icon7.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon5.png",
+            "src": "/images/agrometal/2026/03/icon5.png",
+            "alt": "icon5",
+            "filename": "icon5.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Why-Choose-Agro-Metal.webp",
+            "src": "/images/agrometal/2026/03/Why-Choose-Agro-Metal.webp",
+            "alt": "Why Choose Agro Metal",
+            "filename": "Why-Choose-Agro-Metal.webp"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:41.300Z",
+    "remoteImageCount": 9,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 9",
+      "Paragraphs found: 8"
+    ]
+  }
+}

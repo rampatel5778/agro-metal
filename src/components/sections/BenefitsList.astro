@@ -1,0 +1,35 @@
+---
+/**
+ * BenefitsList — bulleted benefits block
+ * @example
+ * <BenefitsList heading="Benefits" items={[{ title: 'Risk management', body: '...' }]} />
+ */
+import type { BenefitsListProps } from '@types/components/business.js';
+import { cn } from '@utils/classNames.js';
+import Icon from '@components/ui/Icon.astro';
+
+const { heading, items, class: className = '' } = Astro.props as BenefitsListProps;
+---
+
+<div class={cn('ds-benefits', className)}>
+  {heading && <h2 class="ds-h3">{heading}</h2>}
+  <ul class="ds-benefits__list">
+    {
+      items.map((item) => (
+        <li class="ds-benefits__item">
+          {
+            item.icon ? (
+              <Icon name={item.icon} size="sm" decorative />
+            ) : (
+              <Icon name="check" size="sm" decorative />
+            )
+          }
+          <div>
+            <h3 class="ds-benefits__title">{item.title}</h3>
+            {item.body && <p class="ds-benefits__text">{item.body}</p>}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>

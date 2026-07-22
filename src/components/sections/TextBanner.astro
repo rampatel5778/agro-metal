@@ -1,0 +1,28 @@
+---
+/**
+ * TextBanner — large headline strip
+ * @example
+ * <TextBanner text="Trusted global commodity partner" variant="primary" />
+ */
+import type { TextBannerProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+import Container from '@components/layout/Container.astro';
+
+const {
+  text,
+  variant = 'default',
+  class: className = '',
+} = Astro.props as TextBannerProps;
+
+const variantMap = {
+  default: 'ds-text-banner',
+  primary: 'ds-text-banner ds-text-banner--primary',
+  dark: 'ds-text-banner ds-text-banner--dark',
+};
+---
+
+<section class={cn(variantMap[variant], className)} aria-label={text}>
+  <Container>
+    <p class="ds-h3">{text}</p>
+  </Container>
+</section>

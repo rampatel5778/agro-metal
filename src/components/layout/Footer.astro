@@ -1,0 +1,189 @@
+---
+/**
+ * Footer — Agriva Home 01 footer-section-2 markup with Agrometal content
+ */
+import type { FooterProps } from '@types/components/layout.js';
+import { navigation } from '@data/navigation.js';
+import { company } from '@data/company.js';
+
+const { config, socialLinks = [] } = Astro.props as FooterProps;
+const { logo, logoHref, contact, usefulLinks, newsletter } = config;
+
+const servicesLinks =
+  navigation.main.find((item) => item.label === 'Services')?.children ?? [];
+
+const companyLinks = [
+  ...(navigation.main.find((item) => item.label === 'About')?.children ?? []),
+  { label: 'Contact Us', href: '/contact-us/' },
+];
+
+const newsletterBg = '/assets/img/home-2/vutta.jpg';
+const emailField = newsletter.form.fields.find((field) => field.name === 'email');
+---
+
+<footer class="footer-section-2 footer-bg fix pb-0">
+  <div class="left-shape float-bob-x">
+    <img src="/assets/img/home-2/maize-tree-2.png" alt="" aria-hidden="true" />
+  </div>
+  <div class="right-shape float-bob-x">
+    <img src="/assets/img/home-2/maize-tree.png" alt="" aria-hidden="true" />
+  </div>
+  <div class="container">
+    <div class="footer-top-item">
+      <div class="footer-logo wow fadeInUp" data-wow-delay=".2s">
+        <a href={logoHref}>
+          <img src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
+        </a>
+      </div>
+      <div class="footer-right-item">
+        <div class="social-icon wow fadeInUp" data-wow-delay=".4s">
+          {
+            socialLinks.map((link) => (
+              <a
+                href={link.href}
+                aria-label={link.label}
+                {...(link.href !== '#' && link.href.startsWith('http')
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
+              >
+                <i class={`fa-brands fa-${link.icon}`} aria-hidden="true"></i>
+              </a>
+            ))
+          }
+        </div>
+        <div class="icon-item wow fadeInUp" data-wow-delay=".6s">
+          <div class="icon">
+            <img src="/assets/img/home-2/icon/10.svg" alt="" aria-hidden="true" />
+          </div>
+          <div class="cont">
+            <span>call for details</span>
+            <h4>
+              <a href={contact.phoneHref}>{contact.phone}</a>
+            </h4>
+          </div>
+        </div>
+        <div class="icon-item wow fadeInUp" data-wow-delay=".8s">
+          <div class="icon">
+            <img src="/assets/img/home-2/icon/11.svg" alt="" aria-hidden="true" />
+          </div>
+          <div class="cont">
+            <span>call for details</span>
+            <h4>
+              <a href={contact.emailHref}>{contact.email}</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-widget-wrapper footer-widget-wrapper-2">
+      <div class="row">
+        <div class="col-xl-5 col-md-7 col-lg-6 wow fadeInUp" data-wow-delay=".2s">
+          <div class="single-footer-widget">
+            <div
+              class="footer-contact-image bg-cover"
+              style={`background-image: url(${newsletterBg});`}
+            >
+              <div class="footer-contact-content">
+                <h3>{newsletter.heading}</h3>
+                <form
+                  action={newsletter.form.action}
+                  method={newsletter.form.method}
+                  class="wow fadeInUp"
+                  data-wow-delay=".5s"
+                >
+                  <div class="form-clt">
+                    <input
+                      type="email"
+                      name={emailField?.name ?? 'email'}
+                      id="footer-newsletter-email"
+                      placeholder={emailField?.placeholder ?? 'Enter your email'}
+                      required={emailField?.required}
+                      autocomplete={emailField?.autocomplete}
+                    />
+                    <button type="submit" class="theme-btn-2">
+                      {newsletter.form.submitLabel.toLowerCase()}
+                    </button>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  </div>
+                </form>
+                <div class="input-single input-check payment-save">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    name="terms"
+                    id="footerNewsletterTerms"
+                  />
+                  <label for="footerNewsletterTerms">Agree with terms and conditions</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-5 col-lg-4 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+          <div class="single-footer-widget">
+            <div class="widget-head">
+              <h4>our Services</h4>
+            </div>
+            <ul class="list-area">
+              {
+                servicesLinks.map((item) => (
+                  <li>
+                    <a href={item.href}>
+                      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                      {item.label}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay=".6s">
+          <div class="single-footer-widget">
+            <div class="widget-head">
+              <h4>Resources</h4>
+            </div>
+            <ul class="list-area">
+              {
+                usefulLinks.map((item) => (
+                  <li>
+                    <a href={item.href}>
+                      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                      {item.label}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-2 ps-lg-5 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".8s">
+          <div class="single-footer-widget">
+            <div class="widget-head">
+              <h4>our company</h4>
+            </div>
+            <ul class="list-area">
+              {
+                companyLinks.map((item) => (
+                  <li>
+                    <a href={item.href}>
+                      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                      {item.label}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom pb-0">
+      <div class="footer-wrapper justify-content-center">
+        <p>
+          ©{new Date().getFullYear()} <span>{company.name}</span>, All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

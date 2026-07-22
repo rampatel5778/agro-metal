@@ -1,0 +1,278 @@
+/**
+ * Button system — Agriva .theme-btn pattern (docs/colors.md)
+ */
+@layer components {
+  .ds-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    vertical-align: middle;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: var(--radius-btn);
+    transition: color var(--duration-normal) var(--ease-default),
+      background-color var(--duration-normal) var(--ease-default),
+      border-color var(--duration-normal) var(--ease-default),
+      opacity var(--duration-fast) var(--ease-default),
+      transform var(--duration-fast) var(--ease-default);
+  }
+
+  .ds-btn:focus-visible {
+    outline: var(--outline-focus-width) solid var(--color-focus-ring);
+    outline-offset: var(--outline-focus-offset);
+    box-shadow: var(--shadow-focus);
+  }
+
+  .ds-btn:disabled,
+  .ds-btn[aria-disabled='true'] {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* Sizes */
+  .ds-btn--sm {
+    font-size: 0.875rem;
+    padding: 0.625rem 1.25rem;
+    min-height: var(--min-touch-target);
+  }
+
+  .ds-btn--md {
+    font-size: 1rem;
+    padding: 0.9375rem 1.875rem;
+    min-height: var(--min-touch-target);
+  }
+
+  .ds-btn--lg {
+    font-size: 1.0625rem;
+    padding: 1.125rem 2.25rem;
+    min-height: 3rem;
+  }
+
+  /* Primary — template .theme-btn circle reveal */
+  .ds-btn--primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+
+  .ds-btn--primary::before,
+  .ds-btn--primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path var(--duration-btn-hover) var(--ease-bounce);
+  }
+
+  .ds-btn--primary::before {
+    background-color: var(--color-header);
+  }
+
+  .ds-btn--primary::after {
+    background-color: rgb(47 47 47 / 0.3);
+  }
+
+  .ds-btn--primary:hover:not(:disabled)::before,
+  .ds-btn--primary:hover:not(:disabled)::after {
+    clip-path: circle(100% at 50% 50%);
+  }
+
+  .ds-btn--primary:hover:not(:disabled) {
+    color: var(--color-white);
+  }
+
+  /* Secondary — template .theme-btn-2 */
+  .ds-btn--secondary {
+    color: var(--color-header);
+    background-color: var(--color-secondary);
+  }
+
+  .ds-btn--secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--color-header);
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path var(--duration-btn-hover) var(--ease-bounce);
+  }
+
+  .ds-btn--secondary:hover:not(:disabled)::before {
+    clip-path: circle(100% at 50% 50%);
+  }
+
+  .ds-btn--secondary:hover:not(:disabled) {
+    color: var(--color-white);
+  }
+
+  /* Accent / green */
+  .ds-btn--accent {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+  }
+
+  .ds-btn--accent:hover:not(:disabled) {
+    background-color: var(--color-accent-dark);
+  }
+
+  /* Outline */
+  .ds-btn--outline {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+  }
+
+  .ds-btn--outline:hover:not(:disabled) {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+
+  /* Ghost */
+  .ds-btn--ghost {
+    color: var(--color-primary);
+    background-color: transparent;
+  }
+
+  .ds-btn--ghost:hover:not(:disabled) {
+    background-color: rgb(217 86 72 / 0.08);
+  }
+
+  /* Text / link button */
+  .ds-btn--text,
+  .ds-btn--link {
+    color: var(--color-primary);
+    background: transparent;
+    padding-inline: 0.25rem;
+    min-height: auto;
+    font-weight: 600;
+    overflow: visible;
+  }
+
+  .ds-btn--text:hover:not(:disabled),
+  .ds-btn--link:hover:not(:disabled) {
+    color: var(--color-primary-dark);
+  }
+
+  .ds-btn--link .ds-btn__arrow {
+    transition: transform var(--duration-normal) var(--ease-default);
+  }
+
+  .ds-btn--link:hover:not(:disabled) .ds-btn__arrow {
+    transform: translateX(4px);
+  }
+
+  /* Icon button */
+  .ds-btn--icon {
+    padding: 0.75rem;
+    min-width: var(--min-touch-target);
+    min-height: var(--min-touch-target);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    color: var(--color-header);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .ds-btn--icon:hover:not(:disabled) {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  /* CTA — larger primary */
+  .ds-btn--cta {
+    font-size: 1.0625rem;
+    padding: 1.125rem 2.5rem;
+    letter-spacing: 0.01em;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+
+  .ds-btn--cta::before,
+  .ds-btn--cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path var(--duration-btn-hover) var(--ease-bounce);
+  }
+
+  .ds-btn--cta::before {
+    background-color: var(--color-header);
+  }
+
+  .ds-btn--cta::after {
+    background-color: rgb(47 47 47 / 0.3);
+  }
+
+  .ds-btn--cta:hover:not(:disabled)::before,
+  .ds-btn--cta:hover:not(:disabled)::after {
+    clip-path: circle(100% at 50% 50%);
+  }
+
+  /* Loading */
+  .ds-btn--loading {
+    pointer-events: none;
+    color: transparent !important;
+  }
+
+  .ds-btn--loading::after {
+    content: '';
+    position: absolute;
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 2px solid rgb(255 255 255 / 0.35);
+    border-top-color: var(--color-white);
+    border-radius: 50%;
+    animation: ds-spin 0.7s linear infinite;
+  }
+
+  .ds-btn--secondary.ds-btn--loading::after,
+  .ds-btn--outline.ds-btn--loading::after {
+    border-color: rgb(47 47 47 / 0.2);
+    border-top-color: var(--color-header);
+  }
+
+  .ds-btn:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  @keyframes ds-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ds-btn--primary::before,
+    .ds-btn--primary::after,
+    .ds-btn--secondary::before {
+      transition: none;
+      clip-path: circle(100% at 50% 50%);
+      opacity: 0;
+    }
+
+    .ds-btn--primary:hover::before,
+    .ds-btn--secondary:hover::before {
+      opacity: 1;
+    }
+
+    .ds-btn--loading::after {
+      animation: none;
+      border-top-color: transparent;
+    }
+  }
+}

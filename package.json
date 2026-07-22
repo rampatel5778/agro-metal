@@ -1,0 +1,39 @@
+{
+  "name": "agrometal-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "astro check",
+    "docs:phase3": "node scripts/generate-phase3-docx.mjs",
+    "docs:phase4": "node scripts/generate-phase4-docx.mjs",
+    "audit:content": "node scripts/extract-content.mjs",
+    "audit:assets": "node scripts/download-assets.mjs",
+    "phase0": "npm run audit:content && npm run audit:assets"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.1.2",
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "docx": "^9.7.1",
+    "eslint": "^10.7.0",
+    "eslint-plugin-astro": "^1.7.0",
+    "prettier": "^3.9.5",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "typescript-eslint": "^8.64.0"
+  }
+}

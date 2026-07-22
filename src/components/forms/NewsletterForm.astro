@@ -1,0 +1,65 @@
+---
+/**
+ * NewsletterForm — footer email signup UI (no backend)
+ * @example
+ * <NewsletterForm form={newsletterFormDefinition} heading="Newsletter" />
+ */
+import type { NewsletterFormProps } from '@types/components/forms.js';
+import { cn } from '@utils/classNames.js';
+import Input from '@components/forms/Input.astro';
+import Button from '@components/ui/Button.astro';
+
+const {
+  form,
+  class: className = '',
+  heading,
+  description,
+} = Astro.props as NewsletterFormProps;
+
+const emailField = form.fields[0];
+const fieldId = `${form.id}-${emailField?.name ?? 'email'}`;
+---
+
+<div class={cn('ds-newsletter-form', className)}>
+  {heading && <h2 class="ds-footer__heading">{heading}</h2>}
+  {description && <p class="ds-body ds-body--muted">{description}</p>}
+
+  <form
+    class="ds-form ds-flex"
+    id={form.id}
+    name={form.name}
+    method={form.method}
+    action={form.action}
+    novalidate
+    data-form-ui-only
+  >
+    {
+      emailField && (
+        <Input
+          id={fieldId}
+          name={emailField.name}
+          label={emailField.label}
+          type="email"
+          placeholder={emailField.placeholder}
+          required={emailField.required}
+          autocomplete={emailField.autocomplete}
+          class="ds-flex-1"
+        />
+      )
+    }
+    <Button type="submit" variant="primary">
+      {form.submitLabel}
+    </Button>
+    <p class="ds-sr-only" role="status" aria-live="polite" data-form-status />
+  </form>
+</div>
+
+<script define:vars={{ successMessage: form.successMessage }}>
+  document.querySelectorAll('.ds-newsletter-form [data-form-ui-only]').forEach((formEl) => {
+    formEl.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const status = formEl.querySelector('[data-form-status]');
+      if (status) status.textContent = successMessage;
+    });
+  });
+</script>

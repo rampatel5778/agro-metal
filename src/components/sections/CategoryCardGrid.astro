@@ -1,0 +1,60 @@
+---
+/**
+ * CategoryCardGrid — hub page linked image cards
+ * @example
+ * <CategoryCardGrid items={categories} columns={3} />
+ */
+import type { CategoryCardGridProps } from '@types/components/business.js';
+import { cn } from '@utils/classNames.js';
+import Card from '@components/ui/Card.astro';
+import Image from '@components/ui/Image.astro';
+import Overlay from '@components/ui/Overlay.astro';
+
+const {
+  items,
+  columns = 3,
+  class: className = '',
+  ariaLabel = 'Categories',
+} = Astro.props as CategoryCardGridProps;
+
+const colClass = `ds-grid--${columns}` as const;
+---
+
+<ul class={cn('ds-grid', colClass, className)} aria-label={ariaLabel}>
+  {
+    items.map((item) => (
+      <li>
+        <Card variant="default" href={item.href} class="ds-card--image ds-card--lift">
+          {
+            item.image && (
+              <div class="ds-card__media">
+                <Image
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  width={item.image.width}
+                  height={item.image.height}
+                  aspect="landscape"
+                />
+                {
+                  item.overlay && (
+                    <Overlay variant="gradient">
+                      <div class="ds-card__overlay">
+                        <h3 class="ds-card__title">{item.title}</h3>
+                      </div>
+                    </Overlay>
+                  )
+                }
+              </div>
+            )
+          }
+          {!item.overlay && (
+            <div class="ds-card__body">
+              <h3 class="ds-card__title">{item.title}</h3>
+              {item.description && <p class="ds-card__text">{item.description}</p>}
+            </div>
+          )}
+        </Card>
+      </li>
+    ))
+  }
+</ul>

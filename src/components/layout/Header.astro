@@ -1,0 +1,100 @@
+---
+/**
+ * Header — Agriva Home 01 header-1 markup with Agrometal content
+ */
+import type { HeaderProps } from '@types/components/layout.js';
+import type { NavigationItem } from '@types/navigation.js';
+import AgrivaOffcanvas from '@components/layout/AgrivaOffcanvas.astro';
+
+const {
+  logo,
+  navigation,
+  currentPath = '/',
+  phone,
+  phoneHref,
+  contactCta = { label: 'Get In Touch', href: '/contact-us/' },
+} = Astro.props as HeaderProps;
+
+function isActive(item: NavigationItem): boolean {
+  if (item.exact) return item.href === currentPath;
+  if (item.href === '/') return currentPath === '/';
+  return currentPath.startsWith(item.href);
+}
+
+function navItemClass(item: NavigationItem): string {
+  const classes = [item.children?.length ? 'has-dropdown' : '', isActive(item) ? 'active' : '']
+    .filter(Boolean)
+    .join(' ');
+  return classes;
+}
+---
+
+<header id="header-sticky" class="header-1">
+  <div class="container-fluid">
+    <div class="mega-menu-wrapper">
+      <div class="header-main">
+        <div class="header-left">
+          <div class="logo">
+            <a href={logo.href ?? '/'} class="header-logo">
+              <img src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
+            </a>
+            <a href={logo.href ?? '/'} class="header-logo-2">
+              <img src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
+            </a>
+          </div>
+        </div>
+        <div class="mean__menu-wrapper">
+          <div class="main-menu">
+            <nav id="mobile-menu">
+              <ul>
+                {
+                  navigation.map((item) => (
+                    <li class={navItemClass(item)}>
+                      <a href={item.href}>{item.label}</a>
+                      {item.children?.length ? (
+                        <ul class="submenu">
+                          {item.children.map((child) => (
+                            <li>
+                              <a href={child.href}>{child.label}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  ))
+                }
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header-right d-flex justify-content-end align-items-center">
+          <div class="header-btn">
+            <span>
+              <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+              <a href={phoneHref}>{phone}</a>
+            </span>
+            <div class="header-button">
+              <a href={contactCta.href} class="theme-btn-2 style-btns">
+                {contactCta.label}
+              </a>
+            </div>
+            <div class="header__hamburger d-xl-none my-auto">
+              <div class="sidebar__toggle" role="button" tabindex="0" aria-label="Open menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<AgrivaOffcanvas
+  logo={logo}
+  navigation={navigation}
+  currentPath={currentPath}
+  phone={phone}
+  phoneHref={phoneHref}
+/>
+<script src="@scripts/agriva-chrome.ts"></script>

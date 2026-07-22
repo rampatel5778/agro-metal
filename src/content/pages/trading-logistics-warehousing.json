@@ -1,0 +1,155 @@
+{
+  "id": "trading-logistics-warehousing",
+  "slug": "trading-logistics-warehousing",
+  "path": "/about-us/trading-logistics-warehousing/",
+  "sourceFile": "trading-logistics-warehousing.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "Trading, Logistics & warehousing – Agrometal",
+    "description": "Agrometal trading, logistics and warehousing services for agricultural and mining commodities worldwide.",
+    "canonical": "/about-us/trading-logistics-warehousing/"
+  },
+  "hero": {
+    "title": "Trading, Logistics & warehousing",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Trading, Logistics & warehousing",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Trading, Logistics & warehousing Business Model & Value Proposition Agro Metal creates value by seamlessly connecting global supply and demand trading, moving, and managing risk on metals and agri-commodities while leveraging deep partnerships and upstream integration for lasting competitive advantage.",
+        "Agro Metal is a global leader trading steel, metals, grains, oilseeds efficiently.",
+        "Agro Metal combines steel sourcing across Africa, Middle East, Asia ensuring supply.",
+        "Agro Metal oversees sourcing, blending, inventory, risk, shipping, financing with quality controls.",
+        "Agro Metal secures African mining rights, boosting profits while integrated trading logistics remain core."
+      ]
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Business Model & Value Proposition",
+      "body": [
+        "Agro Metal combines steel sourcing across Africa, Middle East, Asia ensuring supply.",
+        "Agro Metal oversees sourcing, blending, inventory, risk, shipping, financing with quality controls.",
+        "Agro Metal secures African mining rights, boosting profits while integrated trading logistics remain core."
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Business Model",
+      "body": [
+        "Agro Metal secures African mining rights, boosting profits while integrated trading logistics remain core.",
+        "Reliable global sourcing, flexible storage and blending, strong international partnerships,",
+        "and decades of experience ensure fast, dependable, and innovative supply solutions."
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Sourcing Edge & Major Gateways",
+      "body": [
+        "and decades of experience ensure fast, dependable, and innovative supply solutions.",
+        "Global Sourcing Strength Cross-continental sourcing ensures supply security.",
+        "Integrated Storage & Blending Control of storage and blending facilities enables agile, tailored fulfillment."
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Integrated Trading & Value Creation",
+      "body": [
+        "Integrated Storage & Blending Control of storage and blending facilities enables agile, tailored fulfillment.",
+        "Strategic Global Partnerships Partnerships with global leaders enhancing market reach.",
+        "Decades of Trading Excellence Decades of trading experience foster a culture of reliability, speed, and innovation."
+      ]
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Mining as a Strategic Value Driver",
+      "body": [
+        "Decades of Trading Excellence Decades of trading experience foster a culture of reliability, speed, and innovation.",
+        "Strategic Global Network Presence in 14 countries ensures timely delivery and optimised logistics.",
+        "Integrated Logistics Solutions End-to-end management from sourcing to transportation and financing."
+      ]
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Competitive Advantages",
+      "body": [
+        "Integrated Logistics Solutions End-to-end management from sourcing to transportation and financing.",
+        "Market Expertise Actionable insights and data-driven analysis to navigate volatility.",
+        "Proactive Risk Mitigation Identifying and preventing potential disruptions across the supply chain."
+      ]
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Global Sourcing Strength",
+      "body": [
+        "Proactive Risk Mitigation Identifying and preventing potential disruptions across the supply chain.",
+        "Strategic Partnerships Strong supplier relationships guarantee transparent, responsible sourcing.",
+        "Commitment to Sustainability Embedding environmental and social responsibility in all operations."
+      ]
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/industrial-port-container-yard-e1773143918781.webp",
+            "src": "/images/agrometal/2026/03/industrial-port-container-yard-e1773143918781.webp",
+            "alt": "industrial-port-container-yard",
+            "filename": "industrial-port-container-yard-e1773143918781.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon4.png",
+            "src": "/images/agrometal/2026/03/icon4.png",
+            "alt": "",
+            "filename": "icon4.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon1.png",
+            "src": "/images/agrometal/2026/03/icon1.png",
+            "alt": "icon1",
+            "filename": "icon1.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon2.png",
+            "src": "/images/agrometal/2026/03/icon2.png",
+            "alt": "icon2",
+            "filename": "icon2.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/icon3.png",
+            "src": "/images/agrometal/2026/03/icon3.png",
+            "alt": "icon3",
+            "filename": "icon3.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/sustainable-development-with-renewable-energy-solutions-ecology-concept-green-business.webp",
+            "src": "/images/agrometal/2026/03/sustainable-development-with-renewable-energy-solutions-ecology-concept-green-business.webp",
+            "alt": "sustainable-development-with-renewable-energy-solutions-ecology-concept-green-business",
+            "filename": "sustainable-development-with-renewable-energy-solutions-ecology-concept-green-business.webp"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:39.367Z",
+    "remoteImageCount": 8,
+    "youtubeIds": [],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 47",
+      "Paragraphs found: 35"
+    ]
+  }
+}

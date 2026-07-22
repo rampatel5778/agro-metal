@@ -1,0 +1,294 @@
+{
+  "id": "home",
+  "slug": "home",
+  "path": "/",
+  "sourceFile": "index.html",
+  "template": "home",
+  "seo": {
+    "title": "Agrometal – Bridging global agriculture and mining commodities with trusted trading and logistics solutions.",
+    "description": "Agrometal bridges global agriculture and mining commodities with trusted trading, hedging, and logistics solutions from Dubai, UAE.",
+    "canonical": "/"
+  },
+  "hero": {
+    "title": "Agro Metal is involved in the supply chain of metals, minerals and energy products.",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "hero-video",
+      "heading": "Agro Metal is involved in the supply chain of metals, minerals and energy products.",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us",
+        "Know More SR7.PMH ??={}; SR7.PMH[\"SR7_1_1\"] = {cn:100,state:false,fn: function() { if (_tpt!==undefined && _tpt.prepareModuleHeight !== undefined) { _tpt.prepareModuleHeight({id:\"SR7_1_1\",el:[1024,1024,767,480,585],type:'standard',shdw:'0',gh:[1024,1024,778,700,585],gw:[1920,1920,1023,778,300],vpt:['-100px','-100px','-100px','-100px','-100px'],size:{fullWidth:false, fullHeight:false},mh:'0',onh:0,onw:0,bg:{color:'{\"orig\":\"transparent\",\"type\":\"solid\",\"string\":\"transparent\"}'}}); SR7.PMH[\"SR7_1_1\"].state=true;} else if(SR7.PMH[\"SR7_1_1\"].cn-->0) setTimeout( SR7.PMH[\"SR7_1_1\"].fn,19);}};SR7.PMH[\"SR7_1_1\" ].fn(); Agro Metal is involved in the supply chain of metals, minerals and energy products. Zinc",
+        "Founded in 2003 and headquartered in Dubai, Agro Metal FZCO is more than a commodity trader – we&#8217;re your strategic partner. We connect vital industries with responsibly sourced raw materials, navigating the complexities of global supply chains with unparalleled expertise. Our client-centric approach leverages over 50 years of experience, a growing presence across 14 countries, cutting-edge market intelligence, and a deep commitment to sustainability to deliver a competitive edge and drive lasting value.",
+        "Over 50 years in the global metals and agriculture trading industry.",
+        "Operating in 14 countries with offices, agents and partner networks."
+      ],
+      "videoId": "7AGfbbcy8Ro"
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Ferrous Metals",
+      "body": [
+        "Founded in 2003 and headquartered in Dubai, Agro Metal FZCO is more than a commodity trader – we&#8217;re your strategic partner. We connect vital industries with responsibly sourced raw materials, navigating the complexities of global supply chains with unparalleled expertise. Our client-centric approach leverages over 50 years of experience, a growing presence across 14 countries, cutting-edge market intelligence, and a deep commitment to sustainability to deliver a competitive edge and drive lasting value.",
+        "Over 50 years in the global metals and agriculture trading industry.",
+        "Operating in 14 countries with offices, agents and partner networks."
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Non-Ferrous Metals",
+      "body": [
+        "Operating in 14 countries with offices, agents and partner networks.",
+        "Delivering Excellence in Metals and Agriculture Delivering Excellence in Metals and Agriculture Delivering Quality Products Across the World 20 years with us. history of metals agriculture growth across regions through years. 2003 2010 Built strong supplier customer networks, expanded metals agriculture, established regional hubs, strengthened finance expertise.",
+        "Entered 14+ countries, formed partnerships, optimised logistics, strengthened supply chains, integrated sustainability and sourcing."
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Agricultural Commodities",
+      "body": [
+        "Entered 14+ countries, formed partnerships, optimised logistics, strengthened supply chains, integrated sustainability and sourcing.",
+        "Invested in copper mining assets, launched ESG framework, adopted tools, expanded reach, diversified portfolio.",
+        "Resilient enterprise connecting industries worldwide with reliable sourced commodities, delivering sustainable value and partnerships."
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Trusted supplier delivering metals and agricultural products efficiently to global markets",
+      "body": [
+        "Resilient enterprise connecting industries worldwide with reliable sourced commodities, delivering sustainable value and partnerships.",
+        "Agriculture is the art and science of cultivating the soil AGRICULTURAL COMMODITIES From farm to world, delivering essential agricultural commodities with reliability and care. Know more April 6, 2022 By agrometal-admin Cultivating Blog 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since t",
+        "October 7, 2025 By agrometal-admin Cultivating Blog 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since t"
+      ]
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Delivering Quality Products Across the World",
+      "body": [
+        "October 7, 2025 By agrometal-admin Cultivating Blog 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since t",
+        "October 7, 2025 By agrometal-admin Cultivating Blog 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since t",
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter"
+      ]
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "20 years with us. history of metals agriculture growth across regions through years.",
+      "body": [
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Powering industries worldwide with premium quality ferrous & non-ferrous metal solutions you trust.",
+      "body": [
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/zinc-new.webp",
+            "src": "/images/agrometal/2025/12/zinc-new.webp",
+            "alt": "zinc new",
+            "filename": "zinc-new.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/zinc.webp",
+            "src": "/images/agrometal/2025/12/zinc.webp",
+            "alt": "zinc",
+            "filename": "zinc.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/li.webp",
+            "src": "/images/agrometal/2025/12/li.webp",
+            "alt": "li",
+            "filename": "li.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/fe-new.webp",
+            "src": "/images/agrometal/2025/12/fe-new.webp",
+            "alt": "fe new",
+            "filename": "fe-new.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/corn.webp",
+            "src": "/images/agrometal/2025/12/corn.webp",
+            "alt": "",
+            "filename": "corn.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/Wheat.webp",
+            "src": "/images/agrometal/2025/12/Wheat.webp",
+            "alt": "Wheat",
+            "filename": "Wheat.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/Barley.webp",
+            "src": "/images/agrometal/2025/12/Barley.webp",
+            "alt": "Barley",
+            "filename": "Barley.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/Oilseeds.webp",
+            "src": "/images/agrometal/2025/12/Oilseeds.webp",
+            "alt": "Oilseeds",
+            "filename": "Oilseeds.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Ferrous-Metals.webp",
+            "src": "/images/agrometal/2026/02/Ferrous-Metals.webp",
+            "alt": "Ferrous Metals",
+            "filename": "Ferrous-Metals.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Non-Ferrous-Metals.webp",
+            "src": "/images/agrometal/2026/02/Non-Ferrous-Metals.webp",
+            "alt": "Non-Ferrous Metals",
+            "filename": "Non-Ferrous-Metals.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Agricultural-Commodities.webp",
+            "src": "/images/agrometal/2026/02/Agricultural-Commodities.webp",
+            "alt": "Agricultural Commodities",
+            "filename": "Agricultural-Commodities.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2023/03/Group-2291-4.png",
+            "src": "/images/agrometal/2023/03/Group-2291-4.png",
+            "alt": "",
+            "filename": "Group-2291-4.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/1.webp",
+            "src": "/images/agrometal/2026/03/1.webp",
+            "alt": "1",
+            "filename": "1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/2.webp",
+            "src": "/images/agrometal/2026/02/2.webp",
+            "alt": "2",
+            "filename": "2.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/3.webp",
+            "src": "/images/agrometal/2026/02/3.webp",
+            "alt": "3",
+            "filename": "3.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/2.webp",
+            "src": "/images/agrometal/2026/03/2.webp",
+            "alt": "2",
+            "filename": "2.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/agriculture-food-production-concept-with-tractor-machine-silos-irrigation-system.webp",
+            "src": "/images/agrometal/2026/03/agriculture-food-production-concept-with-tractor-machine-silos-irrigation-system.webp",
+            "alt": "agriculture-food-production-concept-with-tractor-machine-silos-irrigation-system",
+            "filename": "agriculture-food-production-concept-with-tractor-machine-silos-irrigation-system.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/output-onlinepngtools-8.png",
+            "src": "/images/agrometal/2026/02/output-onlinepngtools-8.png",
+            "alt": "green",
+            "filename": "output-onlinepngtools-8.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/industrial-worker-shaping-metal-rod-factory.webp",
+            "src": "/images/agrometal/2026/03/industrial-worker-shaping-metal-rod-factory.webp",
+            "alt": "",
+            "filename": "industrial-worker-shaping-metal-rod-factory.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2023/03/b-l-2-img-2-7.jpg",
+            "src": "/images/agrometal/2023/03/b-l-2-img-2-7.jpg",
+            "alt": "c",
+            "filename": "b-l-2-img-2-7.jpg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2023/03/b-l-2-img-1-7.jpg",
+            "src": "/images/agrometal/2023/03/b-l-2-img-1-7.jpg",
+            "alt": "c",
+            "filename": "b-l-2-img-1-7.jpg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2023/03/b-l-2-img-8-7.jpg",
+            "src": "/images/agrometal/2023/03/b-l-2-img-8-7.jpg",
+            "alt": "c",
+            "filename": "b-l-2-img-8-7.jpg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/output-onlinepngtools-9.png",
+            "src": "/images/agrometal/2026/02/output-onlinepngtools-9.png",
+            "alt": "faemers",
+            "filename": "output-onlinepngtools-9.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/output-onlinepngtools-10.png",
+            "src": "/images/agrometal/2026/02/output-onlinepngtools-10.png",
+            "alt": "family farm",
+            "filename": "output-onlinepngtools-10.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/output-onlinepngtools-11.png",
+            "src": "/images/agrometal/2026/02/output-onlinepngtools-11.png",
+            "alt": "oraganic",
+            "filename": "output-onlinepngtools-11.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/output-onlinepngtools-12.png",
+            "src": "/images/agrometal/2026/02/output-onlinepngtools-12.png",
+            "alt": "farm barn",
+            "filename": "output-onlinepngtools-12.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/output-onlinepngtools-13.png",
+            "src": "/images/agrometal/2026/02/output-onlinepngtools-13.png",
+            "alt": "organic 2",
+            "filename": "output-onlinepngtools-13.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/output-onlinepngtools-14.png",
+            "src": "/images/agrometal/2026/02/output-onlinepngtools-14.png",
+            "alt": "farm",
+            "filename": "output-onlinepngtools-14.png"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:38.466Z",
+    "remoteImageCount": 31,
+    "youtubeIds": [
+      "7AGfbbcy8Ro",
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 17",
+      "Paragraphs found: 15"
+    ]
+  }
+}

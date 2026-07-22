@@ -1,0 +1,62 @@
+---
+/**
+ * FeatureCards — generic feature/icon cards
+ * @example
+ * <FeatureCards items={features} columns={3} />
+ */
+import type { FeatureCardsProps } from '@types/components/business.js';
+import { cn } from '@utils/classNames.js';
+import Card from '@components/ui/Card.astro';
+import Icon from '@components/ui/Icon.astro';
+import Image from '@components/ui/Image.astro';
+import Button from '@components/ui/Button.astro';
+
+const {
+  items,
+  columns = 3,
+  class: className = '',
+  ariaLabel = 'Features',
+} = Astro.props as FeatureCardsProps;
+
+const colClass = `ds-grid--${columns}` as const;
+---
+
+<ul class={cn('ds-grid', colClass, className)} aria-label={ariaLabel}>
+  {
+    items.map((item) => (
+      <li>
+        <Card variant="feature" href={item.href} class="ds-card--lift h-full">
+          {
+            item.icon && (
+              <div class="ds-card__icon">
+                <Icon name={item.icon} size="lg" decorative />
+              </div>
+            )
+          }
+          {
+            item.iconSrc && (
+              <Image
+                src={item.iconSrc.src}
+                alt={item.iconSrc.alt}
+                width={item.iconSrc.width}
+                height={item.iconSrc.height}
+                fit="contain"
+              />
+            )
+          }
+          <div class="ds-card__body">
+            <h3 class="ds-card__title">{item.title}</h3>
+            {item.description && <p class="ds-card__text">{item.description}</p>}
+            {
+              item.cta && (
+                <Button variant="link" href={item.cta.href} external={item.cta.external}>
+                  {item.cta.label}
+                </Button>
+              )
+            }
+          </div>
+        </Card>
+      </li>
+    ))
+  }
+</ul>

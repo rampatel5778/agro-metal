@@ -1,0 +1,10 @@
+---
+import '@styles/global.css';
+import { getRouteMeta } from '@utils/route';
+const meta = getRouteMeta('ferrous-metals');
+---
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
+  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
+</html>

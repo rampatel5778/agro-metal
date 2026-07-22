@@ -1,0 +1,55 @@
+---
+/**
+ * VideoCTA — full-width CTA with video background
+ * @example
+ * <VideoCTA youtubeId="nr3_0zjTlsI" heading="Watch our story" cta={{ label: 'Contact', href: '/contact-us/' }} />
+ */
+import type { VideoCTAProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+import Container from '@components/layout/Container.astro';
+import Overlay from '@components/ui/Overlay.astro';
+import Button from '@components/ui/Button.astro';
+
+const {
+  youtubeId,
+  videoSrc,
+  heading,
+  body,
+  cta,
+  poster,
+  class: className = '',
+} = Astro.props as VideoCTAProps;
+
+const embedSrc = youtubeId
+  ? `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&playlist=${youtubeId}&controls=0&rel=0`
+  : undefined;
+---
+
+<section class={cn('ds-video-cta ds-overlay-dark', className)} aria-labelledby="video-cta-heading">
+  <div class="ds-video-cta__media" aria-hidden="true">
+    {
+      embedSrc ? (
+        <iframe src={embedSrc} title="" tabindex="-1" loading="lazy" />
+      ) : videoSrc ? (
+        <video src={videoSrc} autoplay muted loop playsinline poster={poster?.src} />
+      ) : poster ? (
+        <img src={poster.src} alt="" />
+      ) : null
+    }
+  </div>
+  <Container>
+    <div class="ds-video-cta__content ds-stack ds-stack--lg">
+      <h2 id="video-cta-heading" class="ds-h2">
+        {heading}
+      </h2>
+      {body && <p class="ds-body">{body}</p>}
+      {
+        cta && (
+          <Button variant="cta" href={cta.href} external={cta.external}>
+            {cta.label}
+          </Button>
+        )
+      }
+    </div>
+  </Container>
+</section>

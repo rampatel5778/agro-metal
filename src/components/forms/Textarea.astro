@@ -1,0 +1,48 @@
+---
+/**
+ * Textarea — multiline input with ds-textarea styling
+ * @example
+ * <Textarea id="message" name="message" label="Message" rows={5} />
+ */
+import type { TextareaProps } from '@types/components/forms.js';
+import FormField from '@components/forms/FormField.astro';
+import { cn } from '@utils/classNames.js';
+
+const {
+  id,
+  name,
+  label,
+  placeholder,
+  required = false,
+  error,
+  hint,
+  value,
+  disabled = false,
+  autocomplete,
+  minLength,
+  maxLength,
+  rows = 4,
+  class: className = '',
+} = Astro.props as TextareaProps;
+
+const describedBy = [hint && `${id}-hint`, error && `${id}-error`].filter(Boolean).join(' ') || undefined;
+---
+
+<FormField id={id} name={name} label={label} required={required} error={error} hint={hint}>
+  <textarea
+    id={id}
+    name={name}
+    class={cn('ds-textarea', className)}
+    placeholder={placeholder}
+    required={required}
+    disabled={disabled}
+    rows={rows}
+    autocomplete={autocomplete}
+    minlength={minLength}
+    maxlength={maxLength}
+    aria-invalid={error ? 'true' : undefined}
+    aria-describedby={describedBy}
+  >
+    {value}
+  </textarea>
+</FormField>

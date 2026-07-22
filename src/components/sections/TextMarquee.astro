@@ -1,0 +1,41 @@
+---
+/**
+ * TextMarquee — scrolling text strip
+ * @example
+ * <TextMarquee items={['Global Trading', 'Logistics', 'Sustainability']} speed="normal" />
+ */
+import type { TextMarqueeProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  items,
+  speed = 'normal',
+  class: className = '',
+  ariaLabel = 'Scrolling highlights',
+} = Astro.props as TextMarqueeProps;
+
+const speedClass = {
+  slow: 'ds-marquee--slow',
+  normal: '',
+  fast: 'ds-marquee--fast',
+};
+
+const doubled = [...items, ...items];
+---
+
+<div
+  class={cn('ds-marquee', speedClass[speed], className)}
+  role="region"
+  aria-label={ariaLabel}
+>
+  <div class="ds-marquee__track" aria-hidden="true">
+    {
+      doubled.map((text, i) => (
+        <span class="ds-h4">{text}</span>
+      ))
+    }
+  </div>
+  <ul class="ds-sr-only">
+    {items.map((text) => <li>{text}</li>)}
+  </ul>
+</div>

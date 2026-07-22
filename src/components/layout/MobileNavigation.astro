@@ -1,0 +1,158 @@
+---
+/**
+ * MobileNavigation — accordion mobile menu (vanilla JS)
+ * @example
+ * <MobileNavigation items={navigation.main} currentPath={Astro.url.pathname} />
+ * @example Panel only (toggle rendered in Header)
+ * <MobileNavigation items={items} panelOnly id="mobile-nav" />
+ */
+import type { MobileNavigationProps } from '@types/components/layout.js';
+import { cn, isActivePath } from '@utils/classNames.js';
+import Container from '@components/layout/Container.astro';
+import Icon from '@components/ui/Icon.astro';
+
+interface Props extends MobileNavigationProps {
+  /** When true, only render the panel (toggle lives in Header) */
+  panelOnly?: boolean;
+}
+
+const {
+  items,
+  currentPath = '/',
+  id = 'mobile-nav',
+  class: className = '',
+  ariaLabel = 'Mobile navigation',
+  panelOnly = false,
+} = Astro.props as Props;
+---
+
+{
+  !panelOnly && (
+    <div class={cn('ds-mobile-nav-root', className)} data-mobile-nav>
+      <button
+        type="button"
+        class="ds-mobile-nav-toggle"
+        aria-controls={id}
+        aria-expanded="false"
+        data-mobile-nav-toggle
+        aria-label="Toggle menu"
+      >
+        <Icon name="bars" decorative />
+      </button>
+
+      <nav
+        id={id}
+        class="ds-mobile-nav"
+        aria-label={ariaLabel}
+        data-mobile-nav-panel
+        hidden
+      >
+        <ul class="ds-mobile-nav__list">
+          {
+            items.map((item) => {
+              const active = isActivePath(item.href, currentPath, item.exact);
+              const hasChildren = item.children && item.children.length > 0;
+              const subId = `${id}-${item.label.replace(/\s+/g, '-').toLowerCase()}`;
+              return (
+                <li>
+                  {hasChildren ? (
+                    <>
+                      <button
+                        type="button"
+                        class={cn('ds-mobile-nav__link', active && 'ds-mobile-nav__link--active')}
+                        aria-expanded="false"
+                        aria-controls={subId}
+                        data-mobile-submenu-toggle
+                      >
+                        {item.label}
+                        <Icon name="chevron-down" size="sm" decorative />
+                      </button>
+                      <ul id={subId} class="ds-mobile-nav__sublist" data-mobile-submenu hidden>
+                        {item.children!.map((child) => (
+                          <li>
+                            <a href={child.href} class="ds-mobile-nav__sub-link">
+                              {child.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <a
+                      href={item.href}
+                      class={cn('ds-mobile-nav__link', active && 'ds-mobile-nav__link--active')}
+                      aria-current={active ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </a>
+                  )}
+                </li>
+              );
+            })
+          }
+        </ul>
+      </nav>
+    </div>
+  )
+}
+
+{
+  panelOnly && (
+    <nav
+      id={id}
+      class={cn('ds-mobile-nav', className)}
+      aria-label={ariaLabel}
+      data-mobile-nav-panel
+      hidden
+    >
+      <Container width="fluid">
+        <ul class="ds-mobile-nav__list">
+          {
+            items.map((item) => {
+              const active = isActivePath(item.href, currentPath, item.exact);
+              const hasChildren = item.children && item.children.length > 0;
+              const subId = `${id}-${item.label.replace(/\s+/g, '-').toLowerCase()}`;
+              return (
+                <li>
+                  {hasChildren ? (
+                    <>
+                      <button
+                        type="button"
+                        class={cn('ds-mobile-nav__link', active && 'ds-mobile-nav__link--active')}
+                        aria-expanded="false"
+                        aria-controls={subId}
+                        data-mobile-submenu-toggle
+                      >
+                        {item.label}
+                        <Icon name="chevron-down" size="sm" decorative />
+                      </button>
+                      <ul id={subId} class="ds-mobile-nav__sublist" data-mobile-submenu hidden>
+                        {item.children!.map((child) => (
+                          <li>
+                            <a href={child.href} class="ds-mobile-nav__sub-link">
+                              {child.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <a
+                      href={item.href}
+                      class={cn('ds-mobile-nav__link', active && 'ds-mobile-nav__link--active')}
+                      aria-current={active ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </a>
+                  )}
+                </li>
+              );
+            })
+          }
+        </ul>
+      </Container>
+    </nav>
+  )
+}
+
+<script src="@scripts/mobile-nav.ts"></script>

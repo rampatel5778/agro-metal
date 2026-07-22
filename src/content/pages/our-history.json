@@ -1,0 +1,148 @@
+{
+  "id": "our-history",
+  "slug": "our-history",
+  "path": "/about-us/our-history/",
+  "sourceFile": "our-history.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "Our History – Agrometal",
+    "description": "Discover the history and milestones of Agrometal in global commodity trading and logistics.",
+    "canonical": "/about-us/our-history/"
+  },
+  "hero": {
+    "title": "Our History",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Our History",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Our History 2003-2010 Building the Foundation 2003–2010 Built strong supplier customer networks, expanded metals agriculture, established regional hubs, strengthened finance expertise.",
+        "2011–2020 Global Expansion 2011–2020 Entered 14+ countries, formed partnerships, optimised logistics, strengthened supply chains, integrated sustainability and sourcing.",
+        "2021–Present Diversification & Innovation 2021–Present Invested in copper mining assets, launched ESG framework, adopted tools, expanded reach, diversified portfolio.",
+        "Today Today — A Trusted Global Leader Resilient enterprise connecting industries worldwide with reliable sourced commodities, delivering sustainable value and partnerships.",
+        "Built strong supplier customer networks, expanded metals agriculture, established regional hubs, strengthened finance expertise."
+      ]
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Building the Foundation 2003–2010",
+      "body": [
+        "2021–Present Diversification & Innovation 2021–Present Invested in copper mining assets, launched ESG framework, adopted tools, expanded reach, diversified portfolio.",
+        "Today Today — A Trusted Global Leader Resilient enterprise connecting industries worldwide with reliable sourced commodities, delivering sustainable value and partnerships.",
+        "Built strong supplier customer networks, expanded metals agriculture, established regional hubs, strengthened finance expertise."
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Global Expansion 2011–2020",
+      "body": [
+        "Built strong supplier customer networks, expanded metals agriculture, established regional hubs, strengthened finance expertise.",
+        "Entered 14+ countries, formed partnerships, optimised logistics, strengthened supply chains, integrated sustainability and sourcing.",
+        "Invested in copper mining assets, launched ESG framework, adopted tools, expanded reach, diversified portfolio."
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Diversification & Innovation 2021–Present",
+      "body": [
+        "Invested in copper mining assets, launched ESG framework, adopted tools, expanded reach, diversified portfolio.",
+        "Resilient enterprise connecting industries worldwide with reliable sourced commodities, delivering sustainable value and partnerships.",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:"
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Today — A Trusted Global Leader",
+      "body": [
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Building the Foundation 2003–2010",
+      "body": []
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Global Expansion 2011–2020",
+      "body": []
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Diversification & Innovation 2021–Present",
+      "body": []
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/10/sunny-meadow-1.webp",
+            "src": "/images/agrometal/2025/10/sunny-meadow-1.webp",
+            "alt": "sunny-meadow",
+            "filename": "sunny-meadow-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/1.webp",
+            "src": "/images/agrometal/2026/03/1.webp",
+            "alt": "1",
+            "filename": "1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/2.webp",
+            "src": "/images/agrometal/2026/02/2.webp",
+            "alt": "2",
+            "filename": "2.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/3.webp",
+            "src": "/images/agrometal/2026/02/3.webp",
+            "alt": "3",
+            "filename": "3.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/2.webp",
+            "src": "/images/agrometal/2026/03/2.webp",
+            "alt": "2",
+            "filename": "2.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/1.webp",
+            "src": "/images/agrometal/2026/02/1.webp",
+            "alt": "1",
+            "filename": "1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/4.webp",
+            "src": "/images/agrometal/2026/02/4.webp",
+            "alt": "4",
+            "filename": "4.webp"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:39.244Z",
+    "remoteImageCount": 9,
+    "youtubeIds": [],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 13",
+      "Paragraphs found: 10"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+---
+/**
+ * SectionWrapper — padded section with background variants
+ * @example
+ * <SectionWrapper variant="muted" id="about"><slot /></SectionWrapper>
+ */
+import type { SectionWrapperProps } from '@types/components/layout.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  variant = 'default',
+  class: className = '',
+  id,
+  ariaLabel,
+} = Astro.props as SectionWrapperProps;
+
+const variantMap = {
+  default: 'ds-section',
+  sm: 'ds-section ds-section--sm',
+  muted: 'ds-section ds-section--muted',
+  dark: 'ds-section ds-section--dark',
+};
+---
+
+<section
+  class={cn(variantMap[variant], className)}
+  id={id}
+  aria-label={ariaLabel}
+>
+  <slot />
+</section>

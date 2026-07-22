@@ -1,0 +1,40 @@
+---
+/**
+ * VideoBlock — YouTube or native video embed
+ * @example
+ * <VideoBlock youtubeId="abc123" title="Company overview" />
+ */
+import type { VideoBlockProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  youtubeId,
+  videoSrc,
+  title,
+  poster,
+  class: className = '',
+} = Astro.props as VideoBlockProps;
+
+const embedSrc = youtubeId
+  ? `https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0`
+  : undefined;
+---
+
+<figure class={cn('ds-video-block', className)}>
+  <div class="ds-video-embed">
+    {
+      embedSrc ? (
+        <iframe
+          src={embedSrc}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        />
+      ) : videoSrc ? (
+        <video src={videoSrc} controls poster={poster?.src} aria-label={title} />
+      ) : null
+    }
+  </div>
+  <figcaption class="ds-sr-only">{title}</figcaption>
+</figure>

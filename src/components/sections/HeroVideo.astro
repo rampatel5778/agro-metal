@@ -1,0 +1,113 @@
+---
+/**
+ * Hero — Agriva Home 01 hero-2 layout with Agrometal video background
+ */
+import type { HeroVideoProps } from '@types/components/content.js';
+
+const {
+  youtubeId,
+  eyebrow,
+  title,
+  description,
+  primaryCta,
+  secondaryCta,
+  bottomBar,
+  videoTitle = 'Background video',
+  iconSrc = '/assets/img/home-2/icon/03.svg',
+  arrowLeftSrc = '/assets/img/home-2/icon/01.svg',
+  arrowRightSrc = '/assets/img/home-2/icon/12.svg',
+} = Astro.props as HeroVideoProps;
+---
+
+<section class="hero-section hero-2 fix" data-hero-video aria-labelledby="hero-heading">
+  <div class="hero-portfolio-revealing-slider">
+    <div class="hero-portfolio-revealing-slider-slides">
+      <div class="hero-portfolio-revealing-slide s-active">
+        <div
+          class="hero-portfolio-revealing-slide-inner hero-portfolio-revealing-slide-inner--video bg-cover"
+        >
+          <div class="hero-video-bg" data-hero-video-bg aria-hidden="true">
+            <iframe
+              data-hero-iframe
+              data-youtube-id={youtubeId}
+              title={videoTitle}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              loading="eager"
+              tabindex="-1"
+            ></iframe>
+          </div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-9">
+                <div class="hero-portfolio-revealing-slide-content">
+                  <div class="icon">
+                    <img src={iconSrc} alt="" />
+                  </div>
+                  {eyebrow && <span>{eyebrow}</span>}
+                  <h1 id="hero-heading" class="hero-portfolio-revealing-slide-heading" set:html={title} />
+                  {description && <p>{description}</p>}
+                  <div class="hero-button" data-animation="fadeInUp" data-delay="1.5s">
+                    <a href={primaryCta.href} class="theme-btn-2">{primaryCta.label}</a>
+                    {
+                      secondaryCta && (
+                        <a href={secondaryCta.href} class="theme-btn-2 border-btn">
+                          {secondaryCta.label}
+                        </a>
+                      )
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-portfolio-revealing-slider-control">
+      <img
+        src={arrowLeftSrc}
+        alt=""
+        class="hero-portfolio-revealing-slider-control-line"
+        aria-hidden="true"
+      />
+    </div>
+    <div
+      class="hero-portfolio-revealing-slider-control hero-portfolio-revealing-slider-control-right m-right"
+    >
+      <img
+        src={arrowRightSrc}
+        alt=""
+        class="hero-portfolio-revealing-slider-control-line"
+        aria-hidden="true"
+      />
+    </div>
+  </div>
+  {
+    bottomBar && (
+      <div class="hero-border-item">
+        <div class="hero-bottom-item">
+          <h2>{bottomBar.heading}</h2>
+          <div class="hero-list">
+            {
+              bottomBar.items.map((item) => (
+                <span>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i> {item}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+        <div class="pagi-item">
+          <div class="dot-number">
+            <span class="dot-num">
+              <span>01</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    )
+  }
+</section>
+
+<script src="@scripts/hero-video.ts"></script>

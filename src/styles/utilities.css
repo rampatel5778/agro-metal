@@ -1,0 +1,198 @@
+/**
+ * Utility classes — overlays, badges, dividers (docs/components.md)
+ */
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .ds-glass {
+    background: rgb(255 255 255 / 0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(255 255 255 / 0.2);
+  }
+
+  .ds-overlay-dark {
+    position: relative;
+  }
+
+  .ds-overlay-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--overlay-dark);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .ds-overlay-dark-strong::before {
+    background: var(--overlay-dark-strong);
+  }
+
+  .ds-gradient-overlay {
+    position: relative;
+  }
+
+  .ds-gradient-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-card);
+    pointer-events: none;
+  }
+
+  .ds-text-gradient {
+    background: var(--gradient-theme);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .ds-divider {
+    border: 0;
+    border-top: 1px solid var(--color-border-muted);
+    margin-block: 2rem;
+  }
+
+  .ds-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    font-family: var(--font-heading);
+    font-size: var(--text-caption);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    border-radius: var(--radius-full);
+    background: rgb(217 86 72 / 0.1);
+    color: var(--color-primary);
+  }
+
+  .ds-badge--secondary {
+    background: rgb(245 216 62 / 0.25);
+    color: var(--color-header);
+  }
+
+  .ds-badge--success {
+    background: var(--color-success-bg);
+    color: var(--color-success);
+  }
+
+  .ds-badge--warning {
+    background: var(--color-warning-bg);
+    color: var(--color-warning);
+  }
+
+  .ds-badge--error {
+    background: var(--color-error-bg);
+    color: var(--color-error);
+  }
+
+  .ds-tag {
+    display: inline-block;
+    padding: 0.35rem 0.875rem;
+    font-size: var(--text-body-sm);
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-muted);
+    color: var(--color-text);
+  }
+
+  .ds-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.875rem;
+    font-size: var(--text-body-sm);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border-muted);
+    background: var(--color-surface);
+  }
+
+  .ds-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--text-body-sm);
+    font-weight: 600;
+  }
+
+  .ds-status::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: var(--radius-full);
+    background: currentColor;
+  }
+
+  .ds-status--success {
+    color: var(--color-success);
+  }
+
+  .ds-status--warning {
+    color: var(--color-warning);
+  }
+
+  .ds-status--error {
+    color: var(--color-error);
+  }
+
+  .ds-highlight {
+    background: linear-gradient(transparent 60%, rgb(245 216 62 / 0.45) 60%);
+    padding-inline: 0.15em;
+  }
+
+  .ds-swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    gap: 1rem;
+  }
+
+  .ds-swatch {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .ds-swatch__color {
+    height: 4rem;
+  }
+
+  .ds-swatch__label {
+    padding: 0.5rem 0.75rem;
+    font-size: var(--text-caption);
+    background: var(--color-surface);
+    color: var(--color-header);
+    font-family: monospace;
+  }
+
+  .ds-spacing-demo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ds-spacing-demo__block {
+    background: var(--color-primary);
+    opacity: 0.85;
+    height: 1.5rem;
+    border-radius: var(--radius-xs);
+  }
+
+  .ds-showcase-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .ds-showcase-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+}

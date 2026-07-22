@@ -1,0 +1,189 @@
+/**
+ * Card design tokens — template card patterns (docs/components.md)
+ */
+@layer components {
+  .ds-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: transform var(--duration-normal) var(--ease-default),
+      box-shadow var(--duration-normal) var(--ease-default);
+  }
+
+  .ds-card__body {
+    padding: 1.5rem;
+  }
+
+  .ds-card__media {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ds-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-default);
+  }
+
+  .ds-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-h4);
+    font-weight: 700;
+    color: var(--color-header);
+    margin-bottom: 0.5rem;
+  }
+
+  .ds-card__text {
+    font-size: var(--text-body-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-body);
+  }
+
+  /* Hover lift — template card behavior */
+  .ds-card--lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+  }
+
+  .ds-card--lift:hover .ds-card__media img {
+    transform: scale(1.05);
+  }
+
+  /* Feature card */
+  .ds-card--feature {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .ds-card--feature .ds-card__icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(217 86 72 / 0.08);
+    border-radius: var(--radius-full);
+    color: var(--color-primary);
+    font-size: 1.5rem;
+  }
+
+  /* Product / service card */
+  .ds-card--product .ds-card__media,
+  .ds-card--service .ds-card__media {
+    aspect-ratio: 4 / 5;
+  }
+
+  .ds-card--product .ds-card__tag,
+  .ds-card--service .ds-card__tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  /* Blog / trends card */
+  .ds-card--blog .ds-card__media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .ds-card--blog .ds-card__meta {
+    font-size: var(--text-caption);
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Value card */
+  .ds-card--value {
+    border-left: 4px solid var(--color-primary);
+    padding: 1.5rem;
+  }
+
+  /* Statistic card */
+  .ds-card--stat {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: var(--color-surface-muted);
+    box-shadow: none;
+  }
+
+  .ds-card--stat .ds-card__value {
+    font-family: var(--font-heading);
+    font-size: var(--text-h2);
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+  }
+
+  .ds-card--stat .ds-card__label {
+    margin-top: 0.5rem;
+    font-size: var(--text-body-sm);
+    color: var(--color-text);
+  }
+
+  /* Timeline card */
+  .ds-card--timeline {
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    padding: 1.5rem;
+  }
+
+  .ds-card--timeline .ds-card__period {
+    font-size: var(--text-caption);
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Image card */
+  .ds-card--image {
+    padding: 0;
+  }
+
+  .ds-card--image .ds-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-card);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+  }
+
+  .ds-card--image .ds-card__title {
+    color: var(--color-white);
+    margin: 0;
+  }
+
+  /* Icon card */
+  .ds-card--icon {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .ds-card--icon .ds-card__icon {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface-muted);
+    border-radius: var(--radius-md);
+    color: var(--color-primary);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ds-card--lift:hover {
+      transform: none;
+    }
+
+    .ds-card--lift:hover .ds-card__media img {
+      transform: none;
+    }
+  }
+}

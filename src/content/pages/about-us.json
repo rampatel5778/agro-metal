@@ -1,0 +1,198 @@
+{
+  "id": "about-us",
+  "slug": "about-us",
+  "path": "/about-us/",
+  "sourceFile": "about-us.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "About Agrometal – Agrometal",
+    "description": "Learn about Agrometal — a Dubai-based commodity trading company connecting global agriculture and mining markets.",
+    "canonical": "/about-us/"
+  },
+  "hero": {
+    "title": "About Agrometal",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "About Agrometal",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us About Agrometal Agro Metal delivers high-volume global trade across metals and agriculture, ensuring reliability, quality, partnerships, and growth. Metric Tons key commodities",
+        "Agro Metal brings together international expertise, strong momentum, and strategic partnerships to lead the next wave of opportunity across the rapidly evolving agricultural commodities, metals, and mining sectors.",
+        "Headquartered in Dubai, connecting suppliers and clients worldwide.",
+        "Certified, experienced, trusted by leading global market participants.",
+        "Leading agriculture, metals, mining with sustainable global operations."
+      ]
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Agro Metal delivers high-volume global trade across metals and agriculture, ensuring reliability, quality, partnerships, and growth.",
+      "body": [
+        "Headquartered in Dubai, connecting suppliers and clients worldwide.",
+        "Certified, experienced, trusted by leading global market participants.",
+        "Leading agriculture, metals, mining with sustainable global operations."
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Metric Tons",
+      "body": [
+        "Leading agriculture, metals, mining with sustainable global operations.",
+        "Strong sourcing networks across key global agricultural regions",
+        "Financially strong, expanding across Asia and MENA markets"
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Metric Tons",
+      "body": [
+        "Financially strong, expanding across Asia and MENA markets",
+        "Deliver metals and agriculture globally with transparency, efficiency, sustainability, and lasting partner value.",
+        "Connecting industries worldwide with essential resources through seamless, responsible, and innovative trade solutions."
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Metric Tons",
+      "body": [
+        "Connecting industries worldwide with essential resources through seamless, responsible, and innovative trade solutions.",
+        "These values define who we are at Agro Metal FZCO and are the cornerstone of our sustainable growth for our clients, partners, communities, and people.",
+        "Conducting business with honesty, transparency, and fairness. Upholding commitments and ethical sourcing. Reliability – Dependable & Consistent Ensuring secure supply chains and consistent service. Proactively managing risks and mitigating disruptions. Customer Focus – Your Success First Tailoring solutions to meet client needs. Building long-term partnerships based on trust and communication. Excellence – Constantly Improving Driving innovation and continuous improvement. Investing in people and celebrating achievement. Sustainability – People, Planet, Prosperity Minimizing environmental impact and ethical sourcing. Supporting communities and responsible resource management. Collaboration – One Team, Global Impact Fostering teamwork, diversity, and inclusion. Working closely with partners, suppliers, and clients to achieve shared goals. These values define who we are at Agro Metal FZCO and are the cornerstone of our sustainable growth – for our clients, partners, communities, and people."
+      ]
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Metric Tons",
+      "body": [
+        "Conducting business with honesty, transparency, and fairness. Upholding commitments and ethical sourcing. Reliability – Dependable & Consistent Ensuring secure supply chains and consistent service. Proactively managing risks and mitigating disruptions. Customer Focus – Your Success First Tailoring solutions to meet client needs. Building long-term partnerships based on trust and communication. Excellence – Constantly Improving Driving innovation and continuous improvement. Investing in people and celebrating achievement. Sustainability – People, Planet, Prosperity Minimizing environmental impact and ethical sourcing. Supporting communities and responsible resource management. Collaboration – One Team, Global Impact Fostering teamwork, diversity, and inclusion. Working closely with partners, suppliers, and clients to achieve shared goals. These values define who we are at Agro Metal FZCO and are the cornerstone of our sustainable growth – for our clients, partners, communities, and people.",
+        "Agro Metal’s growth framework centers on vertical integration, regional expansion, product diversification, and digital modernization—each aligned to global supply and demand shifts in agricultural commodities, metals, and mining.",
+        "Strengthening operational control across sourcing, logistics, processing, and mining to improve efficiency and supply security."
+      ]
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Metric Tons",
+      "body": [
+        "Strengthening operational control across sourcing, logistics, processing, and mining to improve efficiency and supply security.",
+        "These values define who we are at Agro Metal FZCO and are the cornerstone of our sustainable growth – for our clients, partners, communities, and people.",
+        "Extending our market reach across Africa, Asia, MENA, and Europe through strategic alliances and local market development. Deploying analytics, digital platforms, and risk management systems to enhance margins, optimize decisions, and support customized client solutions."
+      ]
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Metric Tons",
+      "body": [
+        "Extending our market reach across Africa, Asia, MENA, and Europe through strategic alliances and local market development. Deploying analytics, digital platforms, and risk management systems to enhance margins, optimize decisions, and support customized client solutions.",
+        "Investing in sustainable mining, community initiatives, and environmental stewardship to support long-term enterprise value Vertical Integration",
+        "Scaling volumes and expanding into a broader commodity mix including grains, oilseeds, edible oils, copper, zinc, and industrial metals to serve global food and industrial demand"
+      ]
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/01/about-us-page-2.webp",
+            "src": "/images/agrometal/2026/01/about-us-page-2.webp",
+            "alt": "about us page 2",
+            "filename": "about-us-page-2.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/output-onlinepngtools-8.png",
+            "src": "/images/agrometal/2026/02/output-onlinepngtools-8.png",
+            "alt": "green",
+            "filename": "output-onlinepngtools-8.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/iso-icon-1-1.webp",
+            "src": "/images/agrometal/2026/02/iso-icon-1-1.webp",
+            "alt": "iso-icon-1",
+            "filename": "iso-icon-1-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Gata-icon-1-1.webp",
+            "src": "/images/agrometal/2026/02/Gata-icon-1-1.webp",
+            "alt": "Gata-icon-1",
+            "filename": "Gata-icon-1-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/SGS-icon-1-1-e1772100029904.webp",
+            "src": "/images/agrometal/2026/02/SGS-icon-1-1-e1772100029904.webp",
+            "alt": "SGS-icon-1",
+            "filename": "SGS-icon-1-1-e1772100029904.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Global-1.png",
+            "src": "/images/agrometal/2026/03/Global-1.png",
+            "alt": "Global (1)",
+            "filename": "Global-1.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Reliability.png",
+            "src": "/images/agrometal/2026/03/Reliability.png",
+            "alt": "Reliability",
+            "filename": "Reliability.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Diversified.png",
+            "src": "/images/agrometal/2026/03/Diversified.png",
+            "alt": "Diversified",
+            "filename": "Diversified.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Powerhouse.png",
+            "src": "/images/agrometal/2026/03/Powerhouse.png",
+            "alt": "Powerhouse",
+            "filename": "Powerhouse.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Expansion.png",
+            "src": "/images/agrometal/2026/03/Expansion.png",
+            "alt": "Expansion",
+            "filename": "Expansion.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/mission-1-1.webp",
+            "src": "/images/agrometal/2026/02/mission-1-1.webp",
+            "alt": "mission",
+            "filename": "mission-1-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Vision-3-1.webp",
+            "src": "/images/agrometal/2026/02/Vision-3-1.webp",
+            "alt": "Vision-3 (1)",
+            "filename": "Vision-3-1.webp"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:39.217Z",
+    "remoteImageCount": 14,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 31",
+      "Paragraphs found: 20"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+---
+/** Agriva Home 01 search popup shell (UI only) */
+import { company } from '@data/company.js';
+---
+
+<div class="search_popup">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="search_wrapper">
+          <div class="search_top d-flex align-items-center">
+            <div class="search_logo">
+              <a href="/">
+                <img src={company.logos.header} alt={`${company.name} logo`} />
+              </a>
+            </div>
+            <div class="search_close">
+              <button type="button" class="search_close_btn" aria-label="Close search">
+                <i class="fa-thin fa-times" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="search_form">
+            <form action="/contact-us/" method="get" role="search">
+              <label for="agriva-search" class="visually-hidden">Search</label>
+              <input id="agriva-search" type="search" name="q" placeholder="Search here..." />
+              <button type="submit" aria-label="Submit search">
+                <i class="fal fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="search-popup-overlay"></div>

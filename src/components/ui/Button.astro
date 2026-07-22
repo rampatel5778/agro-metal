@@ -1,0 +1,69 @@
+---
+/**
+ * Button — ds-btn variants (primary, secondary, outline, ghost, link, icon, cta)
+ * @example
+ * <Button variant="primary" href="/contact-us/">Contact Us</Button>
+ */
+import type { ButtonProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  variant = 'primary',
+  size = 'md',
+  href,
+  type = 'button',
+  disabled = false,
+  external = false,
+  class: className = '',
+  ariaLabel,
+  id,
+  name,
+  value,
+} = Astro.props as ButtonProps;
+
+const variantMap = {
+  primary: 'ds-btn ds-btn--primary',
+  secondary: 'ds-btn ds-btn--secondary',
+  outline: 'ds-btn ds-btn--outline',
+  ghost: 'ds-btn ds-btn--ghost',
+  link: 'ds-btn ds-btn--link',
+  icon: 'ds-btn ds-btn--icon',
+  cta: 'ds-btn ds-btn--cta',
+};
+
+const sizeMap = {
+  sm: 'ds-btn--sm',
+  md: 'ds-btn--md',
+  lg: 'ds-btn--lg',
+};
+
+const classes = cn(variantMap[variant], sizeMap[size], className);
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      class={classes}
+      aria-label={ariaLabel}
+      aria-disabled={disabled ? 'true' : undefined}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+      id={id}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      type={type}
+      class={classes}
+      disabled={disabled}
+      aria-label={ariaLabel}
+      id={id}
+      name={name}
+      value={value}
+    >
+      <slot />
+    </button>
+  )
+}

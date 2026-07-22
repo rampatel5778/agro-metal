@@ -1,0 +1,52 @@
+---
+/**
+ * BaseLayout — HTML shell with Agriva Home 01 chrome + SEO
+ */
+import type { BaseLayoutProps } from '@types/components/layout.js';
+import '@styles/global.css';
+import '@styles/agriva-overrides.css';
+import SEO from '@components/layout/SEO.astro';
+import StructuredData from '@components/layout/StructuredData.astro';
+import Header from '@components/layout/Header.astro';
+import Footer from '@components/layout/Footer.astro';
+import BackToTop from '@components/layout/BackToTop.astro';
+import { site } from '@data/site.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  seo,
+  structuredData,
+  header,
+  footer,
+  socialLinks = [],
+  showSkipLink = true,
+  bodyClass = '',
+} = Astro.props as BaseLayoutProps;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO {...seo} />
+    {structuredData && <StructuredData data={structuredData} />}
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.css" />
+    <link rel="stylesheet" href="/assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href={site.fonts.googleFontsUrl} />
+    <slot name="head" />
+  </head>
+  <body class={cn('bg-white', bodyClass)}>
+    {showSkipLink && <a href="#main-content" class="ds-skip-link">Skip to main content</a>}
+    <BackToTop />
+    <Header {...header} />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer config={footer.config} socialLinks={socialLinks} />
+    <slot name="scripts" />
+  </body>
+</html>

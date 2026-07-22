@@ -1,0 +1,40 @@
+---
+/**
+ * Card — base card wrapper with ds-card variants
+ * @example
+ * <Card variant="feature" hover><slot /></Card>
+ */
+import type { CardProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  variant = 'default',
+  href,
+  class: className = '',
+  hover = true,
+} = Astro.props as CardProps;
+
+const variantMap = {
+  default: 'ds-card',
+  feature: 'ds-card ds-card--feature',
+  product: 'ds-card ds-card--product',
+  stat: 'ds-card ds-card--stat',
+  timeline: 'ds-card ds-card--timeline',
+  service: 'ds-card ds-card--service',
+  blog: 'ds-card ds-card--blog',
+};
+
+const classes = cn(variantMap[variant], hover && 'ds-hover-lift', className);
+---
+
+{
+  href ? (
+    <a href={href} class={classes}>
+      <slot />
+    </a>
+  ) : (
+    <article class={classes}>
+      <slot />
+    </article>
+  )
+}

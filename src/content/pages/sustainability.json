@@ -1,0 +1,166 @@
+{
+  "id": "sustainability",
+  "slug": "sustainability",
+  "path": "/sustainability/",
+  "sourceFile": "sustainability.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "Sustainability – Agrometal",
+    "description": "Agrometal commitment to environmental stewardship, social responsibility, and ethical governance.",
+    "canonical": "/sustainability/"
+  },
+  "hero": {
+    "title": "Sustainability",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-1-2.webp",
+      "src": "/images/agrometal/2026/03/Top-banner-1-2.webp",
+      "alt": "Top banner",
+      "filename": "Top-banner-1-2.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Sustainability",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Sustainability Sustainability & ESG Commitment Committed to Sustainable Value At Agro Metal, we believe responsible business is better business. Our operations impact the environment, society, and the global economy, and we strive to drive positive change through Environmental, Social, and Governance (ESG) principles . We don’t just trade commodities we invest in a sustainable future.",
+        "We minimise our environmental footprint by prioritising",
+        "Environmental Stewardship We minimise our environmental footprint by prioritising",
+        "Sustainable Sourcing : Partnering with suppliers who share our commitment to ethical and responsible practices. Reduced Carbon Footprint : Optimising logistics and exploring technologies to cut greenhouse gas emissions. Waste Management : Promoting recycling and reducing waste across our operations. Environmental Compliance : Meeting and exceeding environmental regulations. Social Responsibility We foster positive change in communities and uphold ethical labour practices",
+        "Social Responsibility We foster positive change in communities and uphold ethical labour practices"
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-1-2.webp",
+        "src": "/images/agrometal/2026/03/Top-banner-1-2.webp",
+        "alt": "Top banner",
+        "filename": "Top-banner-1-2.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Sustainability & ESG Commitment",
+      "body": [
+        "Environmental Stewardship We minimise our environmental footprint by prioritising",
+        "Sustainable Sourcing : Partnering with suppliers who share our commitment to ethical and responsible practices. Reduced Carbon Footprint : Optimising logistics and exploring technologies to cut greenhouse gas emissions. Waste Management : Promoting recycling and reducing waste across our operations. Environmental Compliance : Meeting and exceeding environmental regulations. Social Responsibility We foster positive change in communities and uphold ethical labour practices",
+        "Social Responsibility We foster positive change in communities and uphold ethical labour practices"
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Environmental Stewardship",
+      "body": [
+        "Social Responsibility We foster positive change in communities and uphold ethical labour practices",
+        "Human Rights : Prohibiting forced labour, child labour, and discrimination. Community Engagement : Investing in education, economic empowerment, and conservation initiatives. Health & Safety : Prioritising the well-being of employees, partners, and communities. Diversity & Inclusion : Cultivating a workplace where everyone is valued. Environmental Stewardship We operate with integrity and transparency",
+        "Governance & Ethics We operate with integrity and transparency"
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Environmental Stewardship",
+      "body": [
+        "Governance & Ethics We operate with integrity and transparency",
+        "Transparency & Accountability : Open reporting on ESG performance. Ethical Business Practices : Zero tolerance for bribery, corruption, or unethical behaviour. Risk Management : Proactively mitigating ESG-related risks. Stakeholder Engagement : Collaborating with customers, suppliers, employees, and communities to improve performance. Environmental Stewardship We minimise our environmental footprint by prioritising:",
+        "Social Responsibility We foster positive change in communities and uphold ethical labour practices:"
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Social Responsibility",
+      "body": [
+        "Social Responsibility We foster positive change in communities and uphold ethical labour practices:",
+        "Governance & Ethics We operate with integrity and transparency:",
+        "Expanding community initiatives in key regions. Reducing carbon emissions year on year. Integrating ESG principles is central to how we create long-term value and contribute to a sustainable, equitable future one commodity at a time."
+      ]
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Social Responsibility",
+      "body": [
+        "Expanding community initiatives in key regions. Reducing carbon emissions year on year. Integrating ESG principles is central to how we create long-term value and contribute to a sustainable, equitable future one commodity at a time.",
+        "Expanding community initiatives in key regions. Reducing carbon emissions year on year. Integrating ESG principles is central to how we create long-term value and contribute to a sustainable, equitable future—one commodity at a time.",
+        "Expanding community initiatives in key regions. Reducing carbon emissions year on year. Integrating ESG principles is central to how we create long-term value and contribute to a sustainable, equitable future one commodity at a time, ensuring responsible practices, transparency, environmental care, social responsibility, and strong governance across our operations while supporting sustainable growth and long-term positive impact."
+      ]
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Environmental Stewardship",
+      "body": [
+        "Expanding community initiatives in key regions. Reducing carbon emissions year on year. Integrating ESG principles is central to how we create long-term value and contribute to a sustainable, equitable future one commodity at a time, ensuring responsible practices, transparency, environmental care, social responsibility, and strong governance across our operations while supporting sustainable growth and long-term positive impact.",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Governance & Ethics",
+      "body": [
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-1-2.webp",
+            "src": "/images/agrometal/2026/03/Top-banner-1-2.webp",
+            "alt": "Top banner",
+            "filename": "Top-banner-1-2.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/Environmental-Stewardship-1.webp",
+            "src": "/images/agrometal/2025/12/Environmental-Stewardship-1.webp",
+            "alt": "Environmental Stewardship 1",
+            "filename": "Environmental-Stewardship-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/Social-Responsibility-2.webp",
+            "src": "/images/agrometal/2025/12/Social-Responsibility-2.webp",
+            "alt": "Social Responsibility 2",
+            "filename": "Social-Responsibility-2.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2025/12/Governance-Ethics-3.webp",
+            "src": "/images/agrometal/2025/12/Governance-Ethics-3.webp",
+            "alt": "Governance & Ethics 3",
+            "filename": "Governance-Ethics-3.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Looking-ahead--1024x683.webp",
+            "src": "/images/agrometal/2026/03/Looking-ahead--1024x683.webp",
+            "alt": "Looking ahead",
+            "filename": "Looking-ahead--1024x683.webp"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:41.569Z",
+    "remoteImageCount": 7,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 19",
+      "Paragraphs found: 15"
+    ]
+  }
+}

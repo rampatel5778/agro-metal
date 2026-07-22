@@ -1,0 +1,277 @@
+{
+  "id": "non-ferrous-metals",
+  "slug": "non-ferrous-metals",
+  "path": "/products/non-ferrous-metals/",
+  "sourceFile": "non-ferrous-metals.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "Non-Ferrous Metals – Agrometal",
+    "description": "Non-ferrous metals trading — copper, aluminium, zinc and more through Agrometal global network.",
+    "canonical": "/products/non-ferrous-metals/"
+  },
+  "hero": {
+    "title": "Non-Ferrous Metals",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Non-ferous-metal-top-Banner-.webp",
+      "src": "/images/agrometal/2026/03/Non-ferous-metal-top-Banner-.webp",
+      "alt": "Non ferous metal top Banner",
+      "filename": "Non-ferous-metal-top-Banner-.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Non-Ferrous Metals",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Non-Ferrous Metals Non-Ferrous Metals Non-ferrous metals are essential for modern manufacturing, renewable energy, and electrification, supporting advanced technologies through lightweight properties, corrosion resistance, and superior conductivity worldwide industries.",
+        "These metals enable innovation across industries by delivering efficiency, durability, and performance, making them indispensable materials for electrical systems, sustainable infrastructure, and future-focused industrial applications.",
+        "Copper Copper includes cathodes, rods, wires, and pipes, widely used in electrical systems, power applications, and electric vehicle infrastructure due to conductivity, reliability, and versatility.",
+        "Zinc is supplied as ingots, alloys, and sheets, primarily used for corrosion protection and galvanizing, enhancing durability and extending the lifespan of steel and metal products.",
+        "Lithium is available as carbonate, hydroxide, and spodumene, essential for lithium-ion batteries and energy storage systems supporting electric mobility and modern energy applications."
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Non-ferous-metal-top-Banner-.webp",
+        "src": "/images/agrometal/2026/03/Non-ferous-metal-top-Banner-.webp",
+        "alt": "Non ferous metal top Banner",
+        "filename": "Non-ferous-metal-top-Banner-.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Non-Ferrous Metals",
+      "body": [
+        "Copper Copper includes cathodes, rods, wires, and pipes, widely used in electrical systems, power applications, and electric vehicle infrastructure due to conductivity, reliability, and versatility.",
+        "Zinc is supplied as ingots, alloys, and sheets, primarily used for corrosion protection and galvanizing, enhancing durability and extending the lifespan of steel and metal products.",
+        "Lithium is available as carbonate, hydroxide, and spodumene, essential for lithium-ion batteries and energy storage systems supporting electric mobility and modern energy applications."
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Copper",
+      "body": [
+        "Lithium is available as carbonate, hydroxide, and spodumene, essential for lithium-ion batteries and energy storage systems supporting electric mobility and modern energy applications.",
+        "Aluminium is supplied as ingots, sheets, billets, and extrusions, valued for lightweight strength, recyclability, and suitability for electric vehicles, aerospace applications, and construction projects.",
+        "End-use industries include automotive and EVs, renewable energy, construction, aerospace, consumer goods, and electronics across diverse industrial sectors worldwide."
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Cathodes",
+      "body": [
+        "End-use industries include automotive and EVs, renewable energy, construction, aerospace, consumer goods, and electronics across diverse industrial sectors worldwide.",
+        "Electrification and battery demand drive growth, while circular economy recycling initiatives and digitalization of metals trading platforms reshape markets globally.",
+        "Electrification and battery demand"
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "rods",
+      "body": [
+        "Electrification and battery demand",
+        "Circular economy & recycling initiatives",
+        "Digitalization of metals trading platforms"
+      ]
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "wires",
+      "body": [
+        "Digitalization of metals trading platforms",
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:"
+      ]
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "pipes",
+      "body": [
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Zinc",
+      "body": []
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Non-ferous-metal-top-Banner-.webp",
+            "src": "/images/agrometal/2026/03/Non-ferous-metal-top-Banner-.webp",
+            "alt": "Non ferous metal top Banner",
+            "filename": "Non-ferous-metal-top-Banner-.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/2nd-image-1.webp",
+            "src": "/images/agrometal/2026/03/2nd-image-1.webp",
+            "alt": "2nd image",
+            "filename": "2nd-image-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/01/Non-Ferrous-Product-Range.webp",
+            "src": "/images/agrometal/2026/01/Non-Ferrous-Product-Range.webp",
+            "alt": "Non-Ferrous Product Range",
+            "filename": "Non-Ferrous-Product-Range.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/large-steel-factory-warehouse_1127-3282.jpeg",
+            "src": "/images/agrometal/2026/02/large-steel-factory-warehouse_1127-3282.jpeg",
+            "alt": "",
+            "filename": "large-steel-factory-warehouse_1127-3282.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/wire-1024x682.jpeg",
+            "src": "/images/agrometal/2026/02/wire-1024x682.jpeg",
+            "alt": "",
+            "filename": "wire-1024x682.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/pipe.jpeg",
+            "src": "/images/agrometal/2026/02/pipe.jpeg",
+            "alt": "pipe",
+            "filename": "pipe.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/cathods-1024x731.jpeg",
+            "src": "/images/agrometal/2026/02/cathods-1024x731.jpeg",
+            "alt": "ingots",
+            "filename": "cathods-1024x731.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/alloy.jpeg",
+            "src": "/images/agrometal/2026/02/alloy.jpeg",
+            "alt": "",
+            "filename": "alloy.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/sheet.jpeg",
+            "src": "/images/agrometal/2026/02/sheet.jpeg",
+            "alt": "sheet",
+            "filename": "sheet.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/carbonet.jpeg",
+            "src": "/images/agrometal/2026/02/carbonet.jpeg",
+            "alt": "Carbonate",
+            "filename": "carbonet.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/hydroxide.jpeg",
+            "src": "/images/agrometal/2026/02/hydroxide.jpeg",
+            "alt": "",
+            "filename": "hydroxide.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/spodumene.jpeg",
+            "src": "/images/agrometal/2026/02/spodumene.jpeg",
+            "alt": "",
+            "filename": "spodumene.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/al-ingot.jpeg",
+            "src": "/images/agrometal/2026/02/al-ingot.jpeg",
+            "alt": "al ingot",
+            "filename": "al-ingot.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/al-sheet.jpeg",
+            "src": "/images/agrometal/2026/02/al-sheet.jpeg",
+            "alt": "",
+            "filename": "al-sheet.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/billets-1024x1024.jpeg",
+            "src": "/images/agrometal/2026/02/billets-1024x1024.jpeg",
+            "alt": "billets",
+            "filename": "billets-1024x1024.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/extrusions.jpeg",
+            "src": "/images/agrometal/2026/02/extrusions.jpeg",
+            "alt": "extrusions",
+            "filename": "extrusions.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Automotive-and-EV-.webp",
+            "src": "/images/agrometal/2026/03/Automotive-and-EV-.webp",
+            "alt": "Automotive and EV",
+            "filename": "Automotive-and-EV-.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Renewable-Energy-and-utility.webp",
+            "src": "/images/agrometal/2026/03/Renewable-Energy-and-utility.webp",
+            "alt": "",
+            "filename": "Renewable-Energy-and-utility.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Construction-.webp",
+            "src": "/images/agrometal/2026/03/Construction-.webp",
+            "alt": "Construction",
+            "filename": "Construction-.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/aircraft-engine-maintenance-by-technician-hangar-with-dramatic-lighting-1.webp",
+            "src": "/images/agrometal/2026/03/aircraft-engine-maintenance-by-technician-hangar-with-dramatic-lighting-1.webp",
+            "alt": "aircraft-engine-maintenance-by-technician-hangar-with-dramatic-lighting (1)",
+            "filename": "aircraft-engine-maintenance-by-technician-hangar-with-dramatic-lighting-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Consumer-Goods-1-1.webp",
+            "src": "/images/agrometal/2026/03/Consumer-Goods-1-1.webp",
+            "alt": "Consumer Goods",
+            "filename": "Consumer-Goods-1-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Electronics.webp",
+            "src": "/images/agrometal/2026/03/Electronics.webp",
+            "alt": "Electronics",
+            "filename": "Electronics.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/CIRCUL_1.webp",
+            "src": "/images/agrometal/2026/03/CIRCUL_1.webp",
+            "alt": "",
+            "filename": "CIRCUL_1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2023/03/icon-list-6.png",
+            "src": "/images/agrometal/2023/03/icon-list-6.png",
+            "alt": "d",
+            "filename": "icon-list-6.png"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:41.015Z",
+    "remoteImageCount": 26,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 34",
+      "Paragraphs found: 14"
+    ]
+  }
+}

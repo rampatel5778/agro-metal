@@ -1,0 +1,305 @@
+{
+  "id": "agricultural-commodities",
+  "slug": "agricultural-commodities",
+  "path": "/products/agricultural-commodities/",
+  "sourceFile": "agricultural-commodities.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "Agricultural Commodities – Agrometal",
+    "description": "Agricultural commodities trading — grains, pulses, and food crops sourced and delivered globally.",
+    "canonical": "/products/agricultural-commodities/"
+  },
+  "hero": {
+    "title": "Agricultural Commodities",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-image.webp",
+      "src": "/images/agrometal/2026/03/Top-banner-image.webp",
+      "alt": "Top banner image",
+      "filename": "Top-banner-image.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Agricultural Commodities",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Agricultural Commodities Agricultural Commodities Agro Metal supports global food security and economic stability through resilient, climate-smart supply chains, ensuring reliable sourcing, efficient distribution, and consistent quality across agricultural commodities worldwide for global markets demand.",
+        "We deliver high-quality grains, oilseeds, oils, flour, and pulses to meet evolving needs of global markets, supporting dependable supply, consistent standards, and market responsiveness worldwide across diverse agricultural value chains.",
+        "Grains Grains such as corn, wheat, and barley are used for animal feed, human consumption, ethanol production, and various industrial applications across agricultural and processing sectors.",
+        "Oilseeds include soybeans, sunflower seeds, rapeseed or canola, and cottonseed, serving as important agricultural commodities for food, oil extraction, and related industrial applications.",
+        "Oils and related products include edible and refined oils used in food preparation, industrial processes, and biofuel applications."
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-image.webp",
+        "src": "/images/agrometal/2026/03/Top-banner-image.webp",
+        "alt": "Top banner image",
+        "filename": "Top-banner-image.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Agricultural Commodities",
+      "body": [
+        "Grains Grains such as corn, wheat, and barley are used for animal feed, human consumption, ethanol production, and various industrial applications across agricultural and processing sectors.",
+        "Oilseeds include soybeans, sunflower seeds, rapeseed or canola, and cottonseed, serving as important agricultural commodities for food, oil extraction, and related industrial applications.",
+        "Oils and related products include edible and refined oils used in food preparation, industrial processes, and biofuel applications."
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Grains",
+      "body": [
+        "Oils and related products include edible and refined oils used in food preparation, industrial processes, and biofuel applications.",
+        "Flour and by-products include wheat flour, cornmeal, barley flour, and bran supporting food processing, baking, and nutritional applications across agricultural markets.",
+        "Pulses include lentils, chickpeas, beans, and peas, serving as important agricultural products widely used for food consumption, nutrition, and dietary needs across households and food processing industries."
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Corn",
+      "body": [
+        "Pulses include lentils, chickpeas, beans, and peas, serving as important agricultural products widely used for food consumption, nutrition, and dietary needs across households and food processing industries.",
+        "End-use industries include food and beverage, animal feed, biofuels, industrial applications, textiles, pharmaceuticals, and nutraceuticals across sectors.",
+        "Climate-smart traceable sourcing, rising food and feed demand, digital efficiency platforms, and growing biofuels and renewable demand drive global trends."
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Wheat",
+      "body": [
+        "Climate-smart traceable sourcing, rising food and feed demand, digital efficiency platforms, and growing biofuels and renewable demand drive global trends.",
+        "Climate-smart and traceable sourcing",
+        "Rising global demand for food and feed"
+      ]
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Barley",
+      "body": [
+        "Rising global demand for food and feed",
+        "Digital platforms improving efficiency",
+        "Growth in biofuels and renewable demand"
+      ]
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Oilseeds",
+      "body": [
+        "Growth in biofuels and renewable demand",
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:"
+      ]
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Soybeans",
+      "body": [
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-banner-image.webp",
+            "src": "/images/agrometal/2026/03/Top-banner-image.webp",
+            "alt": "Top banner image",
+            "filename": "Top-banner-image.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/2nd-image-1-1.webp",
+            "src": "/images/agrometal/2026/03/2nd-image-1-1.webp",
+            "alt": "2nd image (1)",
+            "filename": "2nd-image-1-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Corn.jpg",
+            "src": "/images/agrometal/2026/02/Corn.jpg",
+            "alt": "Corn",
+            "filename": "Corn.jpg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Wheat.jpg",
+            "src": "/images/agrometal/2026/02/Wheat.jpg",
+            "alt": "Wheat",
+            "filename": "Wheat.jpg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Barley.jpeg",
+            "src": "/images/agrometal/2026/02/Barley.jpeg",
+            "alt": "Barley",
+            "filename": "Barley.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Soybeans.jpeg",
+            "src": "/images/agrometal/2026/02/Soybeans.jpeg",
+            "alt": "Soybeans",
+            "filename": "Soybeans.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/sunflower-oil.jpeg",
+            "src": "/images/agrometal/2026/02/sunflower-oil.jpeg",
+            "alt": "sunflower-oil",
+            "filename": "sunflower-oil.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Rapeseed-1024x684.jpeg",
+            "src": "/images/agrometal/2026/02/Rapeseed-1024x684.jpeg",
+            "alt": "Rapeseed",
+            "filename": "Rapeseed-1024x684.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Cottonseed.jpeg",
+            "src": "/images/agrometal/2026/02/Cottonseed.jpeg",
+            "alt": "Cottonseed",
+            "filename": "Cottonseed.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/sunflower-oil-2.jpeg",
+            "src": "/images/agrometal/2026/02/sunflower-oil-2.jpeg",
+            "alt": "sunflower-oil (2)",
+            "filename": "sunflower-oil-2.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/refined-oilsâ€“-food-2.jpeg",
+            "src": "/images/agrometal/2026/02/refined-oilsâ€“-food-2.jpeg",
+            "alt": "refined oilsâ€“ food (2)",
+            "filename": "refined-oilsâ€“-food-2.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/biofuel.jpeg",
+            "src": "/images/agrometal/2026/02/biofuel.jpeg",
+            "alt": "biofuel",
+            "filename": "biofuel.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Wheat-flour.jpeg",
+            "src": "/images/agrometal/2026/02/Wheat-flour.jpeg",
+            "alt": "Wheat flour",
+            "filename": "Wheat-flour.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/cornmeal.jpeg",
+            "src": "/images/agrometal/2026/02/cornmeal.jpeg",
+            "alt": "cornmeal",
+            "filename": "cornmeal.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/barley-flour.jpeg",
+            "src": "/images/agrometal/2026/02/barley-flour.jpeg",
+            "alt": "barley flour",
+            "filename": "barley-flour.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/bran.jpeg",
+            "src": "/images/agrometal/2026/02/bran.jpeg",
+            "alt": "bran",
+            "filename": "bran.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Lentils.jpeg",
+            "src": "/images/agrometal/2026/02/Lentils.jpeg",
+            "alt": "Lentils",
+            "filename": "Lentils.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Chickpeas.jpeg",
+            "src": "/images/agrometal/2026/02/Chickpeas.jpeg",
+            "alt": "Chickpeas",
+            "filename": "Chickpeas.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Beans.jpeg",
+            "src": "/images/agrometal/2026/02/Beans.jpeg",
+            "alt": "",
+            "filename": "Beans.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Peas.jpeg",
+            "src": "/images/agrometal/2026/02/Peas.jpeg",
+            "alt": "Peas",
+            "filename": "Peas.jpeg"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/food-and-Beverage.webp",
+            "src": "/images/agrometal/2026/03/food-and-Beverage.webp",
+            "alt": "food and Beverage",
+            "filename": "food-and-Beverage.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Animal-Feed.webp",
+            "src": "/images/agrometal/2026/03/Animal-Feed.webp",
+            "alt": "Animal Feed",
+            "filename": "Animal-Feed.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Bio-Fuel.webp",
+            "src": "/images/agrometal/2026/03/Bio-Fuel.webp",
+            "alt": "Bio Fuel",
+            "filename": "Bio-Fuel.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Industry-and-textile.webp",
+            "src": "/images/agrometal/2026/03/Industry-and-textile.webp",
+            "alt": "Industry and textile",
+            "filename": "Industry-and-textile.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Pharma.webp",
+            "src": "/images/agrometal/2026/03/Pharma.webp",
+            "alt": "Pharma",
+            "filename": "Pharma.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Natureuticles.webp",
+            "src": "/images/agrometal/2026/03/Natureuticles.webp",
+            "alt": "Natureuticles",
+            "filename": "Natureuticles.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/01/Agricultural-Commodities-Trends-Insights.webp",
+            "src": "/images/agrometal/2026/01/Agricultural-Commodities-Trends-Insights.webp",
+            "alt": "Agricultural Commodities Trends & Insights",
+            "filename": "Agricultural-Commodities-Trends-Insights.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2023/03/icon-list-6.png",
+            "src": "/images/agrometal/2023/03/icon-list-6.png",
+            "alt": "d",
+            "filename": "icon-list-6.png"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:41.061Z",
+    "remoteImageCount": 30,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 39",
+      "Paragraphs found: 16"
+    ]
+  }
+}

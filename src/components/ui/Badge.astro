@@ -1,0 +1,20 @@
+---
+/**
+ * Badge — label badge with ds-badge variants
+ * @example
+ * <Badge text="New" variant="secondary" />
+ */
+import type { BadgeProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const { text, variant = 'default', class: className = '' } = Astro.props as BadgeProps;
+
+const variantMap = {
+  default: 'ds-badge',
+  secondary: 'ds-badge ds-badge--secondary',
+  success: 'ds-badge ds-badge--success',
+  outline: 'ds-badge ds-badge--outline',
+};
+---
+
+<span class={cn(variantMap[variant], className)}>{text}</span>

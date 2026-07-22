@@ -1,0 +1,17 @@
+---
+/**
+ * RichText — render HTML content from props
+ * @example
+ * <RichText html="<p>Paragraph content</p>" />
+ */
+import type { RichTextProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+
+const { html = '', class: className = '' } = Astro.props as RichTextProps;
+---
+
+{
+  html && (
+    <div class={cn('ds-rich-text ds-prose', className)} set:html={html} />
+  )
+}

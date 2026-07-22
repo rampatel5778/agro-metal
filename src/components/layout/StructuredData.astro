@@ -1,0 +1,15 @@
+---
+/**
+ * StructuredData — JSON-LD schema injection
+ * @example
+ * <StructuredData data={[{ '@type': 'Organization', name: 'Agrometal' }]} />
+ */
+import type { StructuredDataProps } from '@types/components/layout.js';
+
+const { data } = Astro.props as StructuredDataProps;
+
+const schemas = Array.isArray(data) ? data : [data];
+const json = JSON.stringify(schemas.length === 1 ? schemas[0] : schemas);
+---
+
+<script type="application/ld+json" set:html={json} />

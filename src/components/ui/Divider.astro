@@ -1,0 +1,13 @@
+---
+/**
+ * Divider — horizontal rule separator
+ * @example
+ * <Divider decorative />
+ */
+import type { DividerProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const { class: className = '', decorative = true } = Astro.props as DividerProps;
+---
+
+<hr class={cn('ds-divider', className)} role={decorative ? 'presentation' : undefined} />

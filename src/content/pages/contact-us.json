@@ -1,0 +1,122 @@
+{
+  "id": "contact-us",
+  "slug": "contact-us",
+  "path": "/contact-us/",
+  "sourceFile": "contact-us.html",
+  "template": "contact",
+  "seo": {
+    "title": "Contact Us – Agrometal",
+    "description": "Contact Agrometal in Jebel Ali, Dubai. Phone, email, and enquiry form for commodity trading inquiries.",
+    "canonical": "/contact-us/"
+  },
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/top-banner-1-3.webp",
+      "src": "/images/agrometal/2026/03/top-banner-1-3.webp",
+      "alt": "top banner",
+      "filename": "top-banner-1-3.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Contact Us",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Contact Us Get in Touch Get in touch with Agro Metal for inquiries, partnerships, or support. Our team is committed to providing reliable service and timely responses.",
+        "Office No:LB04124, P.O.Box 262679,Jebel Ali, Dubai, United Arab Emirates",
+        "organic Poultry, Free-spirited chicken Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Join Our Newsletter",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/top-banner-1-3.webp",
+        "src": "/images/agrometal/2026/03/top-banner-1-3.webp",
+        "alt": "top banner",
+        "filename": "top-banner-1-3.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Get in Touch",
+      "body": [
+        "organic Poultry, Free-spirited chicken Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Join Our Newsletter",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Contact",
+      "body": [
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Contact us",
+      "body": []
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "organic Poultry, Free-spirited chicken",
+      "body": []
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities",
+      "body": []
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Join Our Newsletter",
+      "body": []
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "About Agro Metal",
+      "body": []
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/top-banner-1-3.webp",
+            "src": "/images/agrometal/2026/03/top-banner-1-3.webp",
+            "alt": "top banner",
+            "filename": "top-banner-1-3.webp"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:41.613Z",
+    "remoteImageCount": 3,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 10",
+      "Paragraphs found: 5"
+    ]
+  }
+}

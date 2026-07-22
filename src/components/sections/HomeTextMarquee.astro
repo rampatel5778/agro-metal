@@ -1,0 +1,37 @@
+---
+/**
+ * Home Text Marquee — Agriva marquee / marquee-group CSS scroll
+ * @see docs/sections.md — Home section 6
+ */
+import type { HomeTextMarqueeProps } from '@types/components/content.js';
+
+const { text, repetitions = 5 } = Astro.props as HomeTextMarqueeProps;
+
+const marqueeItems = Array.from({ length: repetitions }, () => text);
+---
+
+<section class="home-text-marquee-section" aria-label="Brand message">
+  <div class="marquee mb-0 style-2 home-text-marquee wow fadeInUp" data-wow-delay=".2s">
+    <div class="marquee-group">
+      {
+        marqueeItems.map((item) => (
+          <div class="text">{item}</div>
+        ))
+      }
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      {
+        marqueeItems.map((item) => (
+          <div class="text">{item}</div>
+        ))
+      }
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      {
+        marqueeItems.map((item) => (
+          <div class="text">{item}</div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,127 @@
+{
+  "id": "products",
+  "slug": "products",
+  "path": "/products/",
+  "sourceFile": "products.html",
+  "template": "hub",
+  "seo": {
+    "title": "Products – Agrometal",
+    "description": "Explore Agrometal product categories: ferrous metals, non-ferrous metals, and agricultural commodities.",
+    "canonical": "/products/"
+  },
+  "hero": {
+    "title": "Products",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/below-banner-1.webp",
+      "src": "/images/agrometal/2026/03/below-banner-1.webp",
+      "alt": "below banner (1)",
+      "filename": "below-banner-1.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Products",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Our Product Range Metals, minerals, agricultural commodities, and energy products sourced globally with reliable supply and quality.",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/below-banner-1.webp",
+        "src": "/images/agrometal/2026/03/below-banner-1.webp",
+        "alt": "below banner (1)",
+        "filename": "below-banner-1.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Ferrous Metals",
+      "body": [
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Non-Ferrous Metals",
+      "body": []
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Agricultural Commodities",
+      "body": []
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Our Product Range",
+      "body": []
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Ferrous Metals",
+      "body": []
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Non-Ferrous Metals",
+      "body": []
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Agricultural Commodities",
+      "body": []
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/below-banner-1.webp",
+            "src": "/images/agrometal/2026/03/below-banner-1.webp",
+            "alt": "below banner (1)",
+            "filename": "below-banner-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Ferrous-Metals.webp",
+            "src": "/images/agrometal/2026/02/Ferrous-Metals.webp",
+            "alt": "Ferrous Metals",
+            "filename": "Ferrous-Metals.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Non-Ferrous-Metals.webp",
+            "src": "/images/agrometal/2026/02/Non-Ferrous-Metals.webp",
+            "alt": "Non-Ferrous Metals",
+            "filename": "Non-Ferrous-Metals.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Agricultural-Commodities.webp",
+            "src": "/images/agrometal/2026/02/Agricultural-Commodities.webp",
+            "alt": "Agricultural Commodities",
+            "filename": "Agricultural-Commodities.webp"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:40.886Z",
+    "remoteImageCount": 7,
+    "youtubeIds": [],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 12",
+      "Paragraphs found: 3"
+    ]
+  }
+}

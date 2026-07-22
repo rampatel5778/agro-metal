@@ -1,0 +1,28 @@
+---
+/**
+ * Tag — inline tag label
+ * @example
+ * <Tag text="Metals" variant="muted" />
+ */
+import type { TagProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const { text, variant = 'default', href, class: className = '' } = Astro.props as TagProps;
+
+const variantMap = {
+  default: 'ds-tag',
+  muted: 'ds-tag ds-tag--muted',
+};
+
+const classes = cn(variantMap[variant], className);
+---
+
+{
+  href ? (
+    <a href={href} class={classes}>
+      {text}
+    </a>
+  ) : (
+    <span class={classes}>{text}</span>
+  )
+}

@@ -1,0 +1,175 @@
+/**
+ * Animation system — docs/animations.md (reusable layer only)
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .ds-animate-fade-in {
+    animation: ds-fade-in var(--duration-slow) var(--ease-default) both;
+  }
+
+  .ds-animate-fade-in-up {
+    animation: ds-fade-in-up var(--duration-slow) var(--ease-default) both;
+  }
+
+  .ds-animate-slide-in-left {
+    animation: ds-slide-in-left var(--duration-slow) var(--ease-default) both;
+  }
+
+  .ds-animate-slide-in-right {
+    animation: ds-slide-in-right var(--duration-slow) var(--ease-default) both;
+  }
+
+  .ds-animate-scale-in {
+    animation: ds-scale-in var(--duration-normal) var(--ease-default) both;
+  }
+
+  .ds-animate-reveal {
+    animation: ds-reveal var(--duration-slower) var(--ease-default) both;
+  }
+
+  .ds-animate-marquee {
+    animation: ds-marquee 30s linear infinite;
+  }
+
+  .ds-hover-lift {
+    transition: transform var(--duration-normal) var(--ease-default),
+      box-shadow var(--duration-normal) var(--ease-default);
+  }
+
+  .ds-hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+  }
+
+  .ds-hover-scale {
+    transition: transform var(--duration-normal) var(--ease-default);
+  }
+
+  .ds-hover-scale:hover {
+    transform: scale(1.03);
+  }
+
+  .ds-delay-1 {
+    animation-delay: 100ms;
+  }
+
+  .ds-delay-2 {
+    animation-delay: 200ms;
+  }
+
+  .ds-delay-3 {
+    animation-delay: 300ms;
+  }
+
+  @keyframes ds-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes ds-fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes ds-slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes ds-slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes ds-scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes ds-reveal {
+    from {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes ds-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ds-animate-fade-in,
+    .ds-animate-fade-in-up,
+    .ds-animate-slide-in-left,
+    .ds-animate-slide-in-right,
+    .ds-animate-scale-in,
+    .ds-animate-reveal,
+    .ds-animate-marquee {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      clip-path: none;
+    }
+
+    .ds-hover-lift:hover,
+    .ds-hover-scale:hover {
+      transform: none;
+    }
+  }
+}
+
+@layer base {
+  a,
+  button {
+    transition-property: color, background-color, border-color, opacity, transform;
+    transition-duration: var(--duration-normal);
+    transition-timing-function: var(--ease-default);
+  }
+}

@@ -1,0 +1,53 @@
+---
+/**
+ * Home Product Cards — Agriva service-section-2 / service-card-items-2 (3 categories)
+ * @see docs/sections.md — Home section 4
+ * @see docs/component-mapping.md — `.service-card-items-2`
+ */
+import type { HomeProductCardsProps } from '@types/components/content.js';
+
+const { items } = Astro.props as HomeProductCardsProps;
+---
+
+<section
+  class="service-section-2 service-section-2--product-cards section-padding fix home-product-cards"
+  aria-label="Product categories"
+>
+  <div class="container">
+    <div class="row g-4 home-product-cards__row">
+      {
+        items.map((item, index) => (
+          <div
+            class="col-xl-4 col-lg-4 col-md-6 tp_fade_anim home-product-cards__col"
+            data-delay={item.delay ?? (0.3 + index * 0.2).toFixed(1)}
+            data-fade-from="left"
+          >
+            <div class="service-card-items-2 h-100">
+              <div class="top-content">
+                <div class="tag-list">
+                  {item.tags.map((tag) => (
+                    <span>{tag}</span>
+                  ))}
+                </div>
+                <p>{item.description}</p>
+              </div>
+              <div class="service-image">
+                <img
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  width={856}
+                  height={1000}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>
+                <a href={item.href}>{item.title}</a>
+              </h3>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

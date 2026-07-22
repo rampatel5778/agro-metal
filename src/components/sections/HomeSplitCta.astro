@@ -1,0 +1,69 @@
+---
+/**
+ * Home Split CTA — Agriva Home 03 about-section (image + sub-title + headline + theme-btn)
+ * Alternating image left/right for metals & agricultural commodity blocks.
+ */
+import type { HomeSplitCtaProps } from '@types/components/content.js';
+
+const {
+  id,
+  eyebrow,
+  title,
+  imageSrc,
+  imageAlt,
+  cta,
+  imagePosition = 'left',
+  class: className = '',
+} = Astro.props as HomeSplitCtaProps;
+
+const headingId = `${id}-heading`;
+const imageOnRight = imagePosition === 'right';
+const imageAnim = imageOnRight ? 'img-custom-anim-right' : 'img-custom-anim-left';
+---
+
+<section
+  id={id}
+  class:list={[
+    'about-section',
+    'section-padding',
+    'fix',
+    'home-split-cta',
+    imageOnRight && 'home-split-cta--image-right',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div class="about-wrapper">
+      <div class="row g-4 align-items-center">
+        <div class:list={['col-lg-6', imageOnRight && 'order-lg-2']}>
+          <div class="about-image home-split-cta__image wow">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              class={imageAnim}
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="675"
+            />
+          </div>
+        </div>
+
+        <div class:list={['col-lg-6', imageOnRight && 'order-lg-1']}>
+          <div class="about-content home-split-cta__content">
+            <div class="section-title mb-0">
+              <span class="sub-title-3">{eyebrow}</span>
+              <h2 id={headingId} class="text-anim">{title}</h2>
+            </div>
+            <div class="about-button wow fadeInUp" data-wow-delay=".3s">
+              <a href={cta.href} class="theme-btn-2">
+                {cta.label}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

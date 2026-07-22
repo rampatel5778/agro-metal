@@ -1,0 +1,27 @@
+---
+/**
+ * Link — accessible anchor with ds-link styling
+ * @example
+ * <Link href="/products/" underline>View products</Link>
+ */
+import type { LinkProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  href,
+  external = false,
+  class: className = '',
+  ariaLabel,
+  underline = false,
+} = Astro.props as LinkProps;
+---
+
+<a
+  href={href}
+  class={cn('ds-link', underline && 'ds-link--underline', className)}
+  aria-label={ariaLabel}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+>
+  <slot />
+</a>

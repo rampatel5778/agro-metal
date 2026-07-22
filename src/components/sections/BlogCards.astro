@@ -1,0 +1,58 @@
+---
+/**
+ * BlogCards — trends/insights card row
+ * @example
+ * <BlogCards items={posts} columns={3} />
+ */
+import type { BlogCardsProps } from '@types/components/business.js';
+import { cn } from '@utils/classNames.js';
+import Card from '@components/ui/Card.astro';
+import Image from '@components/ui/Image.astro';
+import Button from '@components/ui/Button.astro';
+
+const {
+  items,
+  columns = 3,
+  class: className = '',
+  ariaLabel = 'Articles',
+} = Astro.props as BlogCardsProps;
+
+const colClass = `ds-grid--${columns}` as const;
+const readMoreDefault = 'Read More';
+---
+
+<ul class={cn('ds-grid', colClass, className)} aria-label={ariaLabel}>
+  {
+    items.map((item) => (
+      <li>
+        <Card variant="blog" href={item.href} class="ds-card--lift h-full">
+          {
+            item.image && (
+              <div class="ds-card__media">
+                <Image
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  width={item.image.width}
+                  height={item.image.height}
+                  aspect="video"
+                />
+              </div>
+            )
+          }
+          <div class="ds-card__body">
+            {item.date && <p class="ds-card__meta">{item.date}</p>}
+            <h3 class="ds-card__title">{item.title}</h3>
+            {item.description && <p class="ds-card__text">{item.description}</p>}
+            {
+              item.href && (
+                <Button variant="link" href={item.href}>
+                  {item.readMoreLabel ?? readMoreDefault}
+                </Button>
+              )
+            }
+          </div>
+        </Card>
+      </li>
+    ))
+  }
+</ul>

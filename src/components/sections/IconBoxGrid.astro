@@ -1,0 +1,57 @@
+---
+/**
+ * IconBoxGrid — icon box with title + description
+ * @example
+ * <IconBoxGrid items={[{ icon: 'truck', title: 'Logistics', body: '...' }]} />
+ */
+import type { IconBoxGridProps } from '@types/components/business.js';
+import { cn } from '@utils/classNames.js';
+import Icon from '@components/ui/Icon.astro';
+import Image from '@components/ui/Image.astro';
+import Link from '@components/ui/Link.astro';
+
+const {
+  items,
+  columns = 3,
+  class: className = '',
+  ariaLabel = 'Features',
+} = Astro.props as IconBoxGridProps;
+
+const colClass = `ds-grid--${columns}` as const;
+---
+
+<ul class={cn('ds-grid', colClass, className)} aria-label={ariaLabel}>
+  {
+    items.map((item) => (
+      <li class="ds-card ds-card--icon">
+        <div class="ds-card__icon">
+          {
+            item.iconSrc ? (
+              <Image
+                src={item.iconSrc.src}
+                alt={item.iconSrc.alt}
+                width={item.iconSrc.width}
+                height={item.iconSrc.height}
+                fit="contain"
+              />
+            ) : item.icon ? (
+              <Icon name={item.icon} size="lg" decorative />
+            ) : null
+          }
+        </div>
+        <div class="ds-card__body">
+          {
+            item.href ? (
+              <Link href={item.href}>
+                <h3 class="ds-card__title">{item.title}</h3>
+              </Link>
+            ) : (
+              <h3 class="ds-card__title">{item.title}</h3>
+            )
+          }
+          {item.body && <p class="ds-card__text">{item.body}</p>}
+        </div>
+      </li>
+    ))
+  }
+</ul>

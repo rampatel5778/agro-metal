@@ -1,0 +1,70 @@
+---
+/**
+ * Home Intro — Agriva about-2.html about-us-two-section (image mosaic + title/body)
+ */
+import type { HomeIntroProps } from '@types/components/content.js';
+
+const {
+  eyebrow,
+  title,
+  body,
+  cta,
+  images = {
+    top: { src: '/assets/img/inner-page/about/01.jpg', animation: 'img-custom-anim-top' },
+    left: { src: '/assets/img/inner-page/about/02.jpg', animation: 'img-custom-anim-left' },
+    right: { src: '/assets/img/inner-page/about/03.jpg', animation: 'img-custom-anim-right' },
+  },
+} = Astro.props as HomeIntroProps;
+
+const paragraphs = Array.isArray(body) ? body : [body];
+---
+
+<section class="about-us-two-section section-padding fix" aria-labelledby="home-intro-heading">
+  <div class="container">
+    <div class="about-us-two-wrapper">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6 col-md-6">
+              <div class:list={['about-us-image wow', images.top.animation]}>
+                <img src={images.top.src} alt="" decoding="async" />
+              </div>
+              <div class:list={['about-us-image mt-4 wow', images.left.animation]}>
+                <img src={images.left.src} alt="" decoding="async" />
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class:list={['about-us-image wow', images.right.animation]}>
+                <img src={images.right.src} alt="" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-us-content">
+            <div class="section-title mb-0">
+              {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+              <h2 id="home-intro-heading" class="text-anim">{title}</h2>
+            </div>
+            {
+              paragraphs.map((paragraph) => (
+                <p class="text wow fadeInUp wow-fade" data-wow-delay=".3s">
+                  {paragraph}
+                </p>
+              ))
+            }
+            {
+              cta && (
+                <div class="about-us-btn-item">
+                  <a href={cta.href} class="theme-btn">
+                    {cta.label}
+                  </a>
+                </div>
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

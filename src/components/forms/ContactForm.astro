@@ -1,0 +1,97 @@
+---
+/**
+ * ContactForm — inquiry form UI (no backend)
+ * @example
+ * <ContactForm form={contactFormDefinition} heading="Get in touch" />
+ */
+import type { ContactFormProps } from '@types/components/forms.js';
+import { cn } from '@utils/classNames.js';
+import Input from '@components/forms/Input.astro';
+import Textarea from '@components/forms/Textarea.astro';
+import Button from '@components/ui/Button.astro';
+
+const {
+  form,
+  class: className = '',
+  heading,
+  description,
+} = Astro.props as ContactFormProps;
+---
+
+<form
+  class={cn('ds-form ds-stack', className)}
+  id={form.id}
+  name={form.name}
+  method={form.method}
+  action={form.action}
+  novalidate
+  data-form-ui-only
+>
+  {heading && <h2 class="ds-h3">{heading}</h2>}
+  {description && <p class="ds-body ds-body--muted">{description}</p>}
+
+  {
+    form.honeypotField && (
+      <div class="ds-sr-only" aria-hidden="true">
+        <label for={`${form.id}-${form.honeypotField}`}>Leave blank</label>
+        <input
+          type="text"
+          id={`${form.id}-${form.honeypotField}`}
+          name={form.honeypotField}
+          tabindex="-1"
+          autocomplete="off"
+        />
+      </div>
+    )
+  }
+
+  {
+    form.fields.map((field) => {
+      const fieldId = `${form.id}-${field.name}`;
+      if (field.type === 'textarea') {
+        return (
+          <Textarea
+            id={fieldId}
+            name={field.name}
+            label={field.label}
+            placeholder={field.placeholder}
+            required={field.required}
+            maxLength={field.maxLength}
+            autocomplete={field.autocomplete}
+          />
+        );
+      }
+      return (
+        <Input
+          id={fieldId}
+          name={field.name}
+          label={field.label}
+          type={field.type}
+          placeholder={field.placeholder}
+          required={field.required}
+          minLength={field.minLength}
+          maxLength={field.maxLength}
+          autocomplete={field.autocomplete}
+        />
+      );
+    })
+  }
+
+  <Button type="submit" variant="primary">
+    {form.submitLabel}
+  </Button>
+
+  <p class="ds-sr-only" role="status" aria-live="polite" data-form-status />
+</form>
+
+<script define:vars={{ successMessage: form.successMessage, errorMessage: form.errorMessage }}>
+  document.querySelectorAll('[data-form-ui-only]').forEach((formEl) => {
+    formEl.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const status = formEl.querySelector('[data-form-status]');
+      if (status) {
+        status.textContent = successMessage;
+      }
+    });
+  });
+</script>

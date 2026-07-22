@@ -1,0 +1,870 @@
+/**
+ * Agriva Home 01 overrides — hero video background, logo sizing, global resets
+ */
+
+/* Prevent project global.css from overriding Agriva chrome typography */
+.header-1,
+.hero-section.hero-2,
+.footer-section-2,
+.about-section-2,
+.about-us-two-section,
+.feature-section-2,
+.home-feature-grid,
+.service-section-2,
+.home-stats-section,
+.home-about-stats {
+  font-family: "DM Sans", sans-serif;
+}
+.home-timeline-section {
+  font-family: "DM Sans", sans-serif;
+}
+.home-split-cta {
+  font-family: "Inter", sans-serif;
+}
+
+.header-1 .header-left {
+  flex-shrink: 0;
+}
+
+/* Home 01: transparent header over hero; white bar only when sticky */
+.header-1:not(.sticky) {
+  background-color: transparent;
+}
+
+.header-1 .header-logo img,
+.header-1 .header-logo-2 img {
+  height: 56px;
+  width: auto;
+  max-width: none;
+}
+
+.header-1 h1,
+.header-1 h2,
+.header-1 h3,
+.header-1 h4,
+.footer-section-2 h1,
+.footer-section-2 h2,
+.footer-section-2 h3,
+.footer-section-2 h4 {
+  text-transform: none;
+}
+
+.hero-section.hero-2 .hero-portfolio-revealing-slide-heading,
+.hero-section.hero-2 .hero-portfolio-revealing-slide-content span,
+.hero-section.hero-2 .hero-portfolio-revealing-slide p {
+  color: var(--white);
+}
+
+.hero-portfolio-revealing-slide-inner--video {
+  position: relative;
+}
+
+.hero-portfolio-revealing-slide-inner--video::before {
+  z-index: 1;
+}
+
+.hero-portfolio-revealing-slide-inner--video .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, 177.78vh);
+  height: max(100%, 56.25vw);
+  transform: translate(-50%, -50%);
+  border: 0;
+}
+
+.hero-video-bg--static {
+  background: #162609 center / cover no-repeat;
+}
+
+.footer-section-2 {
+  position: relative;
+}
+
+.footer-section-2 > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-section-2 .left-shape,
+.footer-section-2 .right-shape {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer-section-2 .left-shape img,
+.footer-section-2 .right-shape img {
+  display: block;
+  max-width: none;
+  width: auto;
+  height: auto;
+}
+
+.footer-section-2 .footer-top-item .footer-logo {
+  flex-shrink: 0;
+}
+
+.footer-section-2 .footer-logo img {
+  display: block;
+  height: 115px;
+  width: auto;
+  max-width: none;
+}
+
+.about-us-two-section h1,
+.about-us-two-section h3,
+.about-us-two-section h4,
+.about-us-two-section p {
+  text-transform: none;
+}
+
+.about-us-two-section .section-title h2 {
+  text-transform: capitalize;
+}
+
+.about-us-two-wrapper .about-us-image {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.about-us-two-wrapper .about-us-content .text {
+  max-width: none;
+}
+
+.about-us-two-wrapper .about-us-content .about-us-btn-item {
+  margin-top: 40px;
+}
+
+.about-us-two-wrapper .about-us-content .about-us-btn-item .theme-btn {
+  text-transform: capitalize;
+}
+
+/* Feature commodity grid — 8 cards using Agriva feature-box-item-2 */
+.home-feature-grid {
+  background-color: var(--bg3);
+}
+
+.home-feature-grid__row {
+  align-items: stretch;
+}
+
+.home-feature-grid__col {
+  display: flex;
+}
+
+.home-feature-grid .feature-box-item-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+.home-feature-grid .feature-box-item-2 .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-feature-grid .feature-box-item-2 .content p {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.home-feature-grid .feature-box-item-2 .maize-shape {
+  display: none;
+}
+
+.home-feature-grid .feature-box-item-2 .masking-shape {
+  width: 126px;
+  height: 130px;
+}
+
+.home-feature-grid .feature-box-item-2 .masking-shape > img,
+.home-feature-grid .feature-box-item-2 .masking-shape .masking-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home-feature-grid .feature-box-item-2 .masking-shape .icon {
+  inset: 0;
+  top: 0;
+  left: 0;
+  transform: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-section-2 .feature-box-item-2 .masking-shape .icon img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  max-width: 44px;
+  object-fit: contain;
+}
+
+.feature-section-2 .feature-box-item-2 .masking-shape > img,
+.feature-section-2 .feature-box-item-2 .masking-shape .masking-2 img {
+  max-width: none;
+}
+
+.feature-box-item-2 .content h3,
+.feature-box-item-2 .content p {
+  text-transform: none;
+}
+
+.feature-box-item-2.active .content h3,
+.feature-box-item-2.active .content p {
+  color: var(--header);
+}
+
+/* Home about stats — Agriva about-section-2 (heading only + video in paddy area) */
+.home-about-stats {
+  position: relative;
+}
+
+.home-about-stats__title-area {
+  display: block;
+}
+
+.home-about-stats__title-area .section-title {
+  max-width: none;
+}
+
+.home-about-stats h2#home-about-stats-heading {
+  text-transform: capitalize;
+}
+
+.home-about-stats .count-item-2 p {
+  text-transform: none;
+}
+
+.home-about-stats .count-item-2 p strong {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.home-about-stats {
+  overflow: visible;
+}
+
+.home-about-stats .about-wrapper-2 {
+  overflow: visible;
+}
+
+.home-about-stats .about-wrapper-2 .count-wrap {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .home-about-stats .about-wrapper-2 .count-wrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .home-about-stats .about-wrapper-2 .count-item-2.style-top {
+    margin-top: 0;
+  }
+}
+
+.home-about-stats .about-wrapper-2 .count-item-2 {
+  text-align: center;
+}
+
+.home-about-stats .about-wrapper-2 .count-item-2 p {
+  margin-inline: auto;
+}
+
+.home-about-stats .about-wrapper-2 .trac-wrap {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  width: 100%;
+}
+
+.home-about-stats .about-wrapper-2 .count-item-2.style-top {
+  position: relative;
+  z-index: 5;
+}
+
+.home-about-stats .count-item-2 h2 .count-suffix,
+.home-about-stats .count-item-2 h2 .count-prefix {
+  -webkit-text-stroke: inherit;
+}
+
+.home-about-stats .count-item-2.active h2 .count-suffix,
+.home-about-stats .count-item-2.active h2 .count-prefix {
+  color: inherit;
+}
+
+.home-about-stats .paddy-image {
+  position: relative;
+  z-index: 1;
+}
+
+.home-about-stats .paddy-image .video-btn {
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Home about stats — click-to-play video modal */
+.home-video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.home-video-modal[hidden] {
+  display: none;
+}
+
+body.home-video-modal-open {
+  overflow: hidden;
+}
+
+.home-video-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: rgb(0 0 0 / 0.82);
+  cursor: pointer;
+}
+
+.home-video-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(960px, 100%);
+}
+
+.home-video-modal__close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--header);
+  cursor: pointer;
+}
+
+.home-video-modal__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.home-video-modal__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Home product cards — Agriva service-card-items-2 (3-up grid) */
+.service-section-2--product-cards {
+  padding-top: 0;
+}
+
+.home-product-cards__row {
+  align-items: stretch;
+}
+
+.home-product-cards__col {
+  display: flex;
+}
+
+.home-product-cards .service-card-items-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home-product-cards .service-card-items-2 .service-image {
+  position: relative;
+  flex: 1;
+}
+
+.home-product-cards .service-card-items-2 .service-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.home-product-cards .service-card-items-2 h3,
+.home-product-cards .service-card-items-2 .top-content p {
+  text-transform: none;
+}
+
+.home-product-cards .service-card-items-2 h3 {
+  text-transform: capitalize;
+}
+
+/* Home stats counter — Agriva count-item-2 (Home 01 yellow stroke style) */
+.home-stats-section .count-item-2 h2 {
+  font-weight: 600;
+  font-size: 200px;
+  color: transparent;
+  line-height: 94%;
+  -webkit-text-stroke: 1px rgb(245, 216, 62);
+}
+
+.home-stats-section .count-item-2.active h2 {
+  color: var(--theme2);
+  -webkit-text-stroke: 0;
+}
+
+.home-stats-section .count-item-2 p {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(47, 47, 47);
+  max-width: 318px;
+  text-transform: none;
+}
+
+.home-stats-section .count-item-2 p strong {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.home-stats-section .count-item-2.style-top {
+  margin-top: -100px;
+}
+
+.home-stats-section h2#home-stats-heading {
+  text-transform: capitalize;
+}
+
+@media (max-width: 1399px) {
+  .home-stats-section .count-item-2 h2 {
+    font-size: 90px;
+  }
+
+  .home-stats-section .count-item-2 p {
+    font-size: 18px;
+  }
+
+  .home-stats-section .count-item-2.style-top {
+    margin-top: 0;
+  }
+}
+
+/* Home vertical timeline — alternating cards + center line */
+.home-timeline-section {
+  --timeline-gap: clamp(24px, 4vw, 48px);
+  background: rgb(247 248 245);
+}
+
+.home-timeline-heading {
+  max-width: 700px;
+  margin: 0 auto 56px;
+  text-align: center;
+  font-size: clamp(26px, 3.2vw, 42px);
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--header);
+  text-transform: capitalize;
+}
+
+.home-timeline-heading br {
+  display: block;
+  content: '';
+}
+
+.home-timeline-vertical {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 12px 0 24px;
+}
+
+.home-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-timeline-line__track,
+.home-timeline-line__progress {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+}
+
+.home-timeline-line__track {
+  background: #d5d5d5;
+}
+
+.home-timeline-line__progress {
+  background: var(--theme3);
+  transform: scaleY(0);
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.home-timeline-step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+  gap: var(--timeline-gap);
+  padding: 32px 0;
+  align-items: stretch;
+}
+
+.home-timeline-step__side {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.home-timeline-step__side--empty {
+  pointer-events: none;
+}
+
+.home-timeline-step__axis {
+  grid-column: 2;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  min-height: 100%;
+}
+
+.home-timeline-step__dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--theme3);
+  box-shadow: 0 0 0 4px rgb(123 153 110 / 0.12);
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.5s ease,
+    background-color 0.5s ease,
+    box-shadow 0.5s ease;
+  z-index: 2;
+}
+
+.home-timeline-step__connector {
+  position: absolute;
+  top: 50%;
+  width: var(--timeline-gap);
+  height: 2px;
+  transform: translateY(-50%);
+  background: rgb(123 153 110 / 0.35);
+  transition: background-color 0.45s ease;
+  z-index: 1;
+}
+
+.home-timeline-step--left .home-timeline-step__connector {
+  right: calc(50% + 8px);
+}
+
+.home-timeline-step--right .home-timeline-step__connector {
+  left: calc(50% + 8px);
+}
+
+.home-timeline-step.is-past .home-timeline-step__dot {
+  border-color: var(--theme3);
+  background: var(--theme3);
+}
+
+.home-timeline-step.is-past .home-timeline-step__connector {
+  background: var(--theme3);
+}
+
+.home-timeline-step.is-active .home-timeline-step__dot {
+  transform: translate(-50%, -50%) scale(1.35);
+  border-color: var(--theme2);
+  background: var(--theme2);
+  box-shadow: 0 0 0 4px rgb(245 216 62 / 0.3), 0 0 0 14px rgb(245 216 62 / 0.12);
+}
+
+.home-timeline-step.is-active .home-timeline-step__connector {
+  background: var(--theme2);
+}
+
+.home-timeline-card {
+  width: 100%;
+  background: var(--white);
+  border-radius: 18px;
+  padding: 24px 26px 22px;
+  border: 2px solid transparent;
+  box-shadow: 0 12px 36px rgb(47 47 47 / 0.07);
+  transition:
+    border-color 0.5s ease,
+    box-shadow 0.5s ease,
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.home-timeline-step.is-past .home-timeline-card {
+  opacity: 0.82;
+}
+
+.home-timeline-step.is-active .home-timeline-card {
+  opacity: 1;
+  border-color: rgb(245 216 62 / 0.45);
+  box-shadow: 0 20px 54px rgb(123 153 110 / 0.18);
+  transform: translateY(-2px);
+}
+
+.home-timeline-card__header {
+  margin-bottom: 14px;
+}
+
+.home-timeline-step--left .home-timeline-card__header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home-timeline-step--right .home-timeline-card__header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.home-timeline-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--theme3);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.home-timeline-step.is-active .home-timeline-card__badge {
+  background: var(--theme2);
+  color: var(--header);
+}
+
+.home-timeline-card__title {
+  margin: 0 0 10px;
+  font-size: clamp(21px, 2.1vw, 27px);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--header);
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.home-timeline-card__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgb(65 65 65);
+}
+
+@media (max-width: 767px) {
+  .home-timeline-heading {
+    max-width: none;
+    margin-bottom: 36px;
+    text-align: left;
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  .home-timeline-line {
+    left: 19px;
+    transform: none;
+  }
+
+  .home-timeline-step,
+  .home-timeline-step--left,
+  .home-timeline-step--right {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 16px;
+    padding: 22px 0;
+  }
+
+  .home-timeline-step__axis {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: auto;
+  }
+
+  .home-timeline-step__dot {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .home-timeline-step.is-active .home-timeline-step__dot {
+    transform: translate(-50%, -50%) scale(1.35);
+  }
+
+  .home-timeline-step__side--start,
+  .home-timeline-step__side--end {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .home-timeline-step__side--empty {
+    display: none;
+  }
+
+  .home-timeline-step__connector {
+    display: none;
+  }
+
+  .home-timeline-step--left .home-timeline-card__header,
+  .home-timeline-step--right .home-timeline-card__header {
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-timeline-step__dot,
+  .home-timeline-step__connector,
+  .home-timeline-card {
+    transition: none;
+  }
+}
+
+/* Single-slide hero: hide pagination dots */
+.hero-section.hero-2 .pagi-item {
+  visibility: hidden;
+}
+
+.page-home .ds-skip-link {
+  z-index: 99999;
+}
+
+.page-home body,
+body.page-home {
+  background-color: #fff;
+}
+
+/* Home split CTAs — Agriva about-section (Home 03) after timeline */
+.home-split-cta {
+  position: relative;
+  background-color: var(--bg3, #f5f6f4);
+  overflow: hidden;
+}
+
+.home-split-cta + .home-split-cta {
+  background-color: #fff;
+}
+
+.home-split-cta .about-wrapper .about-image {
+  max-width: none;
+  width: 100%;
+}
+
+.home-split-cta .about-wrapper .about-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.home-split-cta .about-wrapper .about-content {
+  margin-left: 48px;
+}
+
+.home-split-cta--image-right .about-wrapper .about-content {
+  margin-left: 0;
+  margin-right: 48px;
+}
+
+.home-split-cta .section-title {
+  margin-bottom: 0;
+}
+
+.home-split-cta .section-title .sub-title-3 {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--theme3);
+  border-color: rgb(17 162 27 / 0.2);
+  font-family: "Inter", sans-serif;
+}
+
+.home-split-cta .section-title h2 {
+  font-family: "Instrument Sans", sans-serif;
+  color: var(--header);
+  font-weight: 700;
+  max-width: 18ch;
+}
+
+.home-split-cta .about-button {
+  margin-top: 36px;
+}
+
+.home-split-cta .about-button .theme-btn-2 {
+  font-family: "Instrument Sans", sans-serif;
+  background-color: var(--theme2);
+  color: var(--header);
+  text-transform: capitalize;
+}
+
+.home-split-cta .container,
+.home-split-cta .about-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .home-split-cta .about-wrapper .about-content,
+  .home-split-cta--image-right .about-wrapper .about-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home-split-cta .section-title h2 {
+    max-width: none;
+  }
+}

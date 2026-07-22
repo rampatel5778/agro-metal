@@ -1,0 +1,62 @@
+---
+/**
+ * Home vertical timeline — alternating cards with center line
+ * @see docs/sections.md — Home sections 8–9
+ */
+import type { HomeTimelineProps } from '@types/components/content.js';
+
+const { title, items } = Astro.props as HomeTimelineProps;
+---
+
+<section class="home-timeline-section section-padding fix" aria-labelledby="home-timeline-heading">
+  <div class="container">
+    <h2 id="home-timeline-heading" class="home-timeline-heading wow fadeInUp" data-wow-delay="0.1s" set:html={title} />
+
+    <div class="home-timeline-vertical" data-timeline-vertical>
+      <div class="home-timeline-line" aria-hidden="true">
+        <span class="home-timeline-line__track"></span>
+        <span class="home-timeline-line__progress" data-timeline-line-progress></span>
+      </div>
+
+      {
+        items.map((item, index) => {
+          const isLeft = index % 2 === 0;
+
+          const card = (
+            <div class="home-timeline-card">
+              <div class="home-timeline-card__header">
+                <span class="home-timeline-card__badge">{item.period}</span>
+              </div>
+              <h3 class="home-timeline-card__title">{item.title}</h3>
+              <p class="home-timeline-card__text">{item.body}</p>
+            </div>
+          );
+
+          return (
+            <article
+              class:list={[
+                'home-timeline-step',
+                isLeft ? 'home-timeline-step--left' : 'home-timeline-step--right',
+              ]}
+              data-timeline-step
+              data-step-index={index}
+            >
+              <div class:list={['home-timeline-step__side', 'home-timeline-step__side--start', { 'home-timeline-step__side--empty': !isLeft }]}>
+                {isLeft ? card : null}
+              </div>
+
+              <div class="home-timeline-step__axis" aria-hidden="true">
+                <span class="home-timeline-step__connector"></span>
+                <span class="home-timeline-step__dot"></span>
+              </div>
+
+              <div class:list={['home-timeline-step__side', 'home-timeline-step__side--end', { 'home-timeline-step__side--empty': isLeft }]}>
+                {!isLeft ? card : null}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

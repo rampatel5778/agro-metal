@@ -1,0 +1,256 @@
+{
+  "id": "ferrous-metals",
+  "slug": "ferrous-metals",
+  "path": "/products/ferrous-metals/",
+  "sourceFile": "ferrous-metals.html",
+  "template": "inner-default",
+  "seo": {
+    "title": "Ferrous Metals – Agrometal",
+    "description": "Ferrous metals trading by Agrometal — reliable supply of iron, steel, and related commodities.",
+    "canonical": "/products/ferrous-metals/"
+  },
+  "hero": {
+    "title": "Ferrous Metals",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-Banner-.webp",
+      "src": "/images/agrometal/2026/03/Top-Banner-.webp",
+      "alt": "Top Banner",
+      "filename": "Top-Banner-.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Ferrous Metals",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Ferrous Metals Ferrous Metals Ferrous metals underpin construction, automotive, machinery, and infrastructure, offering strength, durability, and versatility for structures, vehicles, equipment, ensuring consistent performance, reliability, and long-term industrial dependability.",
+        "Sustainable steel solutions deliver reliability, performance, and quality through responsible sourcing and efficient processes, supporting industries with durable materials while reducing environmental impact globally responsibly.",
+        "Iron Ore Iron ore, available as lumps, fines, and pellets, serves as the primary raw material in steel production, supporting manufacturing processes that create essential steel products for various industrial applications.",
+        "Steel products include long products like rebar, wire rod, structural steel; flat products such as hot-rolled coils, cold-rolled coils, plates; tubular pipes and tubes, and alloy steel grades.",
+        "Rebar, wire rod, structural steel"
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-Banner-.webp",
+        "src": "/images/agrometal/2026/03/Top-Banner-.webp",
+        "alt": "Top Banner",
+        "filename": "Top-Banner-.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Ferrous Metals",
+      "body": [
+        "Iron Ore Iron ore, available as lumps, fines, and pellets, serves as the primary raw material in steel production, supporting manufacturing processes that create essential steel products for various industrial applications.",
+        "Steel products include long products like rebar, wire rod, structural steel; flat products such as hot-rolled coils, cold-rolled coils, plates; tubular pipes and tubes, and alloy steel grades.",
+        "Rebar, wire rod, structural steel"
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Iron Ore",
+      "body": [
+        "Rebar, wire rod, structural steel",
+        "Hot-rolled coils, cold-rolled coils, plates",
+        "High-strength, corrosion-resistant grades"
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Lumps",
+      "body": [
+        "High-strength, corrosion-resistant grades",
+        "End-use industries include construction, automotive, machinery, energy, and consumer goods, relying on materials for manufacturing and development.",
+        "Key trends shaping ferrous metals focus on sustainability, recycling, lightweight applications, and advanced technologies improving efficiency, performance, and responsible steel production."
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "fines",
+      "body": [
+        "Key trends shaping ferrous metals focus on sustainability, recycling, lightweight applications, and advanced technologies improving efficiency, performance, and responsible steel production.",
+        "Low-carbon and electric arc furnace steel adoption",
+        "Lightweight automotive steel growth"
+      ]
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "pellets",
+      "body": [
+        "Lightweight automotive steel growth",
+        "Rising demand for recycled ferrous metals",
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter"
+      ]
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Lumps",
+      "body": [
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "fines",
+      "body": [
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Top-Banner-.webp",
+            "src": "/images/agrometal/2026/03/Top-Banner-.webp",
+            "alt": "Top Banner",
+            "filename": "Top-Banner-.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/2nd-Image.webp",
+            "src": "/images/agrometal/2026/03/2nd-Image.webp",
+            "alt": "2nd Image",
+            "filename": "2nd-Image.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Lumps.webp",
+            "src": "/images/agrometal/2026/03/Lumps.webp",
+            "alt": "Lumps",
+            "filename": "Lumps.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Fines-1.webp",
+            "src": "/images/agrometal/2026/03/Fines-1.webp",
+            "alt": "Fines",
+            "filename": "Fines-1.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Pillets-1024x683.webp",
+            "src": "/images/agrometal/2026/03/Pillets-1024x683.webp",
+            "alt": "Pillets",
+            "filename": "Pillets-1024x683.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/Lumps.webp",
+            "src": "/images/agrometal/2026/02/Lumps.webp",
+            "alt": "",
+            "filename": "Lumps.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/fines.webp",
+            "src": "/images/agrometal/2026/02/fines.webp",
+            "alt": "",
+            "filename": "fines.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/pellets.webp",
+            "src": "/images/agrometal/2026/02/pellets.webp",
+            "alt": "pellets",
+            "filename": "pellets.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Long-Products.webp",
+            "src": "/images/agrometal/2026/03/Long-Products.webp",
+            "alt": "Long Products",
+            "filename": "Long-Products.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Flat-Products.webp",
+            "src": "/images/agrometal/2026/03/Flat-Products.webp",
+            "alt": "Flat Products",
+            "filename": "Flat-Products.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Tubular.webp",
+            "src": "/images/agrometal/2026/03/Tubular.webp",
+            "alt": "Tubular",
+            "filename": "Tubular.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Carbon-and-Alloy.webp",
+            "src": "/images/agrometal/2026/03/Carbon-and-Alloy.webp",
+            "alt": "",
+            "filename": "Carbon-and-Alloy.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Construction-and-Infra.webp",
+            "src": "/images/agrometal/2026/03/Construction-and-Infra.webp",
+            "alt": "Construction and Infra",
+            "filename": "Construction-and-Infra.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Automotive.webp",
+            "src": "/images/agrometal/2026/03/Automotive.webp",
+            "alt": "Automotive",
+            "filename": "Automotive.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Machinery-and-industrial.webp",
+            "src": "/images/agrometal/2026/03/Machinery-and-industrial.webp",
+            "alt": "Machinery and industrial",
+            "filename": "Machinery-and-industrial.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Energy-and-utility.webp",
+            "src": "/images/agrometal/2026/03/Energy-and-utility.webp",
+            "alt": "Energy and utility",
+            "filename": "Energy-and-utility.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Consumer-Goods-.webp",
+            "src": "/images/agrometal/2026/03/Consumer-Goods-.webp",
+            "alt": "Consumer Goods",
+            "filename": "Consumer-Goods-.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Packaging.webp",
+            "src": "/images/agrometal/2026/03/Packaging.webp",
+            "alt": "",
+            "filename": "Packaging.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Trend-and-Insight.webp",
+            "src": "/images/agrometal/2026/03/Trend-and-Insight.webp",
+            "alt": "Trend and Insight",
+            "filename": "Trend-and-Insight.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2023/03/icon-list-6.png",
+            "src": "/images/agrometal/2023/03/icon-list-6.png",
+            "alt": "d",
+            "filename": "icon-list-6.png"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:40.934Z",
+    "remoteImageCount": 22,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 28",
+      "Paragraphs found: 15"
+    ]
+  }
+}

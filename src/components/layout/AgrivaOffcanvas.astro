@@ -1,0 +1,100 @@
+---
+/**
+ * Agriva Home 01 offcanvas — mobile menu + contact panel
+ */
+import type { HeaderProps } from '@types/components/layout.js';
+import { company } from '@data/company.js';
+
+interface Props {
+  logo: HeaderProps['logo'];
+  navigation: HeaderProps['navigation'];
+  currentPath?: string;
+  phone?: string;
+  phoneHref?: string;
+}
+
+const { logo, navigation, currentPath = '/', phone, phoneHref } = Astro.props as Props;
+
+function isActive(href: string, exact?: boolean) {
+  if (exact) return href === currentPath;
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<div class="fix-area">
+  <div class="offcanvas__info">
+    <div class="offcanvas__wrapper">
+      <div class="offcanvas__content">
+        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+          <div class="offcanvas__logo">
+            <a href={logo.href ?? '/'}>
+              <img src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
+            </a>
+          </div>
+          <div class="offcanvas__close">
+            <button type="button" aria-label="Close menu">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="mobile-menu fix mb-3">
+          <nav class="mean-nav">
+            <ul>
+              {
+                navigation.map((item) => (
+                  <li class={isActive(item.href, item.exact) ? 'active' : ''}>
+                    {item.children?.length ? (
+                      <>
+                        <a href={item.href}>{item.label}</a>
+                        <ul>
+                          {item.children.map((child) => (
+                            <li>
+                              <a href={child.href}>{child.label}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <a href={item.href}>{item.label}</a>
+                    )}
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </div>
+        <div class="offcanvas__contact d-xl-block">
+          <h4 class="d-xl-block">Contact Info</h4>
+          <ul class="d-xl-block">
+            <li class="d-flex align-items-center">
+              <div class="offcanvas__contact-icon style-2">
+                <i class="fal fa-map-marker-alt" aria-hidden="true"></i>
+              </div>
+              <div class="offcanvas__contact-text">
+                <span>{company.address.line1}, {company.address.line2}</span>
+              </div>
+            </li>
+            <li class="d-flex align-items-center">
+              <div class="offcanvas__contact-icon style-2 mr-15">
+                <i class="fal fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="offcanvas__contact-text">
+                <a href={company.contact.emailHref}>{company.contact.email}</a>
+              </div>
+            </li>
+            <li class="d-flex align-items-center">
+              <div class="offcanvas__contact-icon style-2 mr-15">
+                <i class="far fa-phone" aria-hidden="true"></i>
+              </div>
+              <div class="offcanvas__contact-text">
+                <a href={phoneHref ?? company.contact.phoneHref}>{phone ?? company.contact.phone}</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="offcanvas__overlay"></div>

@@ -1,0 +1,71 @@
+---
+/**
+ * BrandCarousel — partner/client logo carousel
+ * @example
+ * <BrandCarousel items={brands} autoplay ariaLabel="Our partners" />
+ */
+import type { BrandCarouselProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+import Image from '@components/ui/Image.astro';
+
+const {
+  items,
+  autoplay = false,
+  class: className = '',
+  ariaLabel = 'Brand logos',
+} = Astro.props as BrandCarouselProps;
+---
+
+<div
+  class={cn('ds-brand-carousel', className)}
+  data-brand-carousel={autoplay ? 'autoplay' : undefined}
+  role="region"
+  aria-label={ariaLabel}
+>
+  <div class="ds-brand-carousel__track" tabindex="0">
+    {
+      items.map((item) => (
+        <div class="ds-brand-carousel__item">
+          {
+            item.href ? (
+              <a href={item.href} aria-label={item.label ?? item.image.alt}>
+                <Image
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  width={item.image.width}
+                  height={item.image.height}
+                  fit="contain"
+                />
+              </a>
+            ) : (
+              <Image
+                src={item.image.src}
+                alt={item.image.alt}
+                width={item.image.width}
+                height={item.image.height}
+                fit="contain"
+              />
+            )
+          }
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('[data-brand-carousel="autoplay"]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('.ds-brand-carousel__track');
+    if (!track || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let direction = 1;
+    const step = () => {
+      if (!track) return;
+      track.scrollLeft += direction * 2;
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 2) direction = -1;
+      if (track.scrollLeft <= 0) direction = 1;
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+</script>

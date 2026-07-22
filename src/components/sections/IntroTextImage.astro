@@ -1,0 +1,50 @@
+---
+/**
+ * IntroTextImage — two-column text + image split
+ * @example
+ * <IntroTextImage heading="About" body="..." image={{ src, alt }} imagePosition="right" />
+ */
+import type { IntroTextImageProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+import Container from '@components/layout/Container.astro';
+import Image from '@components/ui/Image.astro';
+import Button from '@components/ui/Button.astro';
+
+const {
+  heading,
+  body,
+  image,
+  imagePosition = 'right',
+  cta,
+  class: className = '',
+} = Astro.props as IntroTextImageProps;
+
+const paragraphs = Array.isArray(body) ? body : [body];
+const reverse = imagePosition === 'left';
+---
+
+<div class={cn('ds-split', reverse && 'ds-split--reverse', className)}>
+  <div class="ds-split__content ds-stack ds-stack--lg">
+    {heading && <h2 class="ds-h2">{heading}</h2>}
+    <div class="ds-stack">
+      {paragraphs.map((p) => <p class="ds-body">{p}</p>)}
+    </div>
+    {
+      cta && (
+        <Button variant="primary" href={cta.href} external={cta.external}>
+          {cta.label}
+        </Button>
+      )
+    }
+  </div>
+  <div class="ds-split__media">
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      aspect="landscape"
+      rounded="lg"
+    />
+  </div>
+</div>

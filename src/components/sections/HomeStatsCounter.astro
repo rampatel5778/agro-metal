@@ -1,0 +1,45 @@
+---
+/**
+ * Home Stats Counter — Agriva count-wrap / count-item-2 with Agrometal metrics
+ * @see docs/sections.md — Home section 5
+ */
+import type { HomeStatsCounterProps } from '@types/components/content.js';
+
+const { title, items } = Astro.props as HomeStatsCounterProps;
+---
+
+<section class="home-stats-section section-padding fix" aria-labelledby="home-stats-heading">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-4 tp_fade_anim" data-delay="0.3" data-fade-from="left">
+        <div class="section-title mb-0">
+          <h2 id="home-stats-heading" class="text-anim">{title}</h2>
+        </div>
+      </div>
+      {
+        items.map((item, index) => (
+          <div
+            class="col-lg-4 tp_fade_anim"
+            data-delay={(0.5 + index * 0.2).toFixed(1)}
+            data-fade-from="left"
+          >
+            <div class:list={['count-item-2', index === 1 && 'style-top']}>
+              <h2>
+                {item.prefix && <span>{item.prefix}</span>}
+                <span class="count" data-count-value={item.value}>{item.value}</span>
+                {item.suffix}
+              </h2>
+              <p>
+                <strong>{item.heading}</strong>
+                <br />
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script src="@scripts/agriva-counters.ts"></script>

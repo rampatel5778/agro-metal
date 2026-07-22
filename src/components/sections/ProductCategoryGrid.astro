@@ -1,0 +1,13 @@
+---
+/**
+ * ProductCategoryGrid — product sub-items with images
+ * @example
+ * <ProductCategoryGrid items={subProducts} columns={3} />
+ */
+import type { ProductCategoryGridProps } from '@types/components/business.js';
+import ProductCards from '@components/sections/ProductCards.astro';
+
+const props = Astro.props;
+---
+
+<ProductCards {...props} ariaLabel={props.ariaLabel ?? 'Product categories'} />

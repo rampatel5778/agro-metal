@@ -1,0 +1,46 @@
+---
+/**
+ * Home Feature Grid — Agriva feature-section-2 / feature-box-item-2 (8 commodities)
+ */
+import type { HomeFeatureGridProps } from '@types/components/content.js';
+
+const {
+  items,
+  maskSrc = '/assets/img/home-2/mask.png',
+  maskHoverSrc = '/assets/img/home-2/mask-2.png',
+} = Astro.props as HomeFeatureGridProps;
+---
+
+<section class="feature-section-2 section-padding home-feature-grid" aria-label="Commodity categories">
+  <div class="container">
+    <div class="row g-4 home-feature-grid__row">
+      {
+        items.map((item, index) => (
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 tp_fade_anim home-feature-grid__col"
+            data-delay={item.delay ?? (0.3 + (index % 3) * 0.2).toFixed(1)}
+            data-fade-from="left"
+          >
+            <div class:list={['feature-box-item-2 h-100', index === 0 && 'active']}>
+              <div class="masking-shape">
+                <img src={maskSrc} alt="" aria-hidden="true" />
+                <div class="masking-2">
+                  <img src={maskHoverSrc} alt="" aria-hidden="true" />
+                </div>
+                <div class="icon">
+                  <img src={item.iconSrc} alt="" width={44} height={44} loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="content">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script src="@scripts/feature-cards.ts"></script>

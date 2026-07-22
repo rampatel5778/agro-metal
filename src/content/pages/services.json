@@ -1,0 +1,144 @@
+{
+  "id": "services",
+  "slug": "services",
+  "path": "/services/",
+  "sourceFile": "services.html",
+  "template": "hub",
+  "seo": {
+    "title": "Services – Agrometal",
+    "description": "Agrometal services: commodity hedging, currency hedging, and end-to-end logistics solutions.",
+    "canonical": "/services/"
+  },
+  "hero": {
+    "title": "Services",
+    "subtitle": "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Co",
+    "bannerImage": {
+      "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/below-banner.webp",
+      "src": "/images/agrometal/2026/02/below-banner.webp",
+      "alt": "below banner",
+      "filename": "below-banner.webp"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "type": "text",
+      "heading": "Services",
+      "body": [
+        "About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Home About About Agrometal Our History Trading, Logistics & warehousing Products Ferrous Metals Non-Ferrous Metals Agricultural Commodities Services Commodity Hedging Currency Hedging Logistics Sustainability Contact Us Services Empowering Global Trade with Confidence At Agro Metal, we go beyond trading commodities. Our suite of strategic services helps clients manage risk, optimize operations, and secure reliable supply chains. With global expertise, robust market insights, and integrated logistics, we ensure your business thrives in a complex and dynamic market.",
+        "Currency Hedging Read More Logistics Read More Commodity Hedging Protect your business from price volatility in global commodity markets...",
+        "Currency Hedging Currency fluctuations can impact profitability in international trade...",
+        "Logistics Efficient logistics are critical to ensuring timely delivery, cost control, and supply chain reliability...",
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter"
+      ],
+      "image": {
+        "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/below-banner.webp",
+        "src": "/images/agrometal/2026/02/below-banner.webp",
+        "alt": "below banner",
+        "filename": "below-banner.webp"
+      }
+    },
+    {
+      "id": "section-1",
+      "type": "text",
+      "heading": "Empowering Global Trade with Confidence",
+      "body": [
+        "Currency Hedging Currency fluctuations can impact profitability in international trade...",
+        "Logistics Efficient logistics are critical to ensuring timely delivery, cost control, and supply chain reliability...",
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter"
+      ]
+    },
+    {
+      "id": "section-2",
+      "type": "text",
+      "heading": "Commodity Hedging",
+      "body": [
+        "Reliable, Sustainable & Globally Sourced Metals and Agricultural Commodities Contact Us Join Our Newsletter",
+        "About Agro Metal Get in touch Useful links Home About Products Services Sustainability Contact Us Our social networks:",
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-3",
+      "type": "text",
+      "heading": "Currency Hedging",
+      "body": [
+        "Close Lorem ipsum dolor sit amet, for consetetur sadipscing elitr"
+      ]
+    },
+    {
+      "id": "section-4",
+      "type": "text",
+      "heading": "Logistics",
+      "body": []
+    },
+    {
+      "id": "section-5",
+      "type": "text",
+      "heading": "Commodity Hedging",
+      "body": []
+    },
+    {
+      "id": "section-6",
+      "type": "text",
+      "heading": "Currency Hedging",
+      "body": []
+    },
+    {
+      "id": "section-7",
+      "type": "text",
+      "heading": "Logistics",
+      "body": []
+    },
+    {
+      "id": "video-cta",
+      "type": "video-cta",
+      "videoId": "nr3_0zjTlsI"
+    },
+    {
+      "id": "media-inventory",
+      "type": "raw-html",
+      "meta": {
+        "note": "Image inventory from source HTML — map to Agriva sections in Phase 1+",
+        "images": [
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/02/below-banner.webp",
+            "src": "/images/agrometal/2026/02/below-banner.webp",
+            "alt": "below banner",
+            "filename": "below-banner.webp"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Commodity-Hedging.png",
+            "src": "/images/agrometal/2026/03/Commodity-Hedging.png",
+            "alt": "Commodity Hedging",
+            "filename": "Commodity-Hedging.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Currency-Hedging.png",
+            "src": "/images/agrometal/2026/03/Currency-Hedging.png",
+            "alt": "Currency Hedging",
+            "filename": "Currency-Hedging.png"
+          },
+          {
+            "remoteUrl": "https://agrodemo.360websitedemo.com/wp-content/uploads/2026/03/Logistics.png",
+            "src": "/images/agrometal/2026/03/Logistics.png",
+            "alt": "Logistics",
+            "filename": "Logistics.png"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "extractedAt": "2026-07-20T13:22:41.278Z",
+    "remoteImageCount": 9,
+    "youtubeIds": [
+      "nr3_0zjTlsI"
+    ],
+    "notes": [
+      "Auto-extracted from WordPress/Elementor HTML — review before Phase 1 build",
+      "Headings found: 13",
+      "Paragraphs found: 7"
+    ]
+  }
+}

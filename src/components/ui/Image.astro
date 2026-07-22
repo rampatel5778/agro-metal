@@ -1,0 +1,93 @@
+---
+/**
+ * Image — responsive image wrapper with ds-img utilities
+ * @example
+ * <Image src="/images/photo.webp" alt="Description" aspect="landscape" />
+ */
+import type { ImageProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  aspect = 'none',
+  fit = 'cover',
+  rounded = 'none',
+  position = 'center',
+  lazy = true,
+  priority = false,
+  zoom = false,
+  overlay = false,
+  class: className = '',
+  ...rest
+} = Astro.props as ImageProps;
+
+const aspectClass: Record<typeof aspect, string> = {
+  video: 'ds-aspect-video',
+  square: 'ds-aspect-square',
+  portrait: 'ds-aspect-portrait',
+  landscape: 'ds-aspect-landscape',
+  none: '',
+};
+
+const roundedClass: Record<typeof rounded, string> = {
+  none: '',
+  lg: 'ds-img--rounded',
+  full: 'ds-img--rounded-full',
+};
+
+const positionClass = {
+  top: 'ds-img-pos-top',
+  center: 'ds-img-pos-center',
+  bottom: 'ds-img-pos-bottom',
+};
+
+const wrapClasses = cn(
+  aspect !== 'none' && 'ds-img-wrap',
+  zoom && 'ds-img-wrap--zoom',
+  overlay && 'ds-img-wrap--overlay',
+);
+
+const imgClasses = cn(
+  'ds-img',
+  fit === 'cover' ? 'ds-img--cover' : 'ds-img--contain',
+  roundedClass[rounded],
+  aspect !== 'none' && positionClass[position],
+  className,
+);
+
+const loading = priority ? 'eager' : lazy ? 'lazy' : undefined;
+const fetchpriority = priority ? ('high' as const) : undefined;
+---
+
+{
+  wrapClasses ? (
+    <div class={wrapClasses}>
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        class={imgClasses}
+        loading={loading}
+        fetchpriority={fetchpriority}
+        decoding="async"
+        {...rest}
+      />
+    </div>
+  ) : (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      class={imgClasses}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      decoding="async"
+      {...rest}
+    />
+  )
+}

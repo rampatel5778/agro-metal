@@ -1,0 +1,21 @@
+---
+/**
+ * TextBlock — heading + body paragraphs
+ * @example
+ * <TextBlock heading="Overview" body={['Paragraph one', 'Paragraph two']} />
+ */
+import type { TextBlockProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+
+const { heading, body, class: className = '' } = Astro.props as TextBlockProps;
+const paragraphs = Array.isArray(body) ? body : [body];
+---
+
+<div class={cn('ds-stack', className)}>
+  {heading && <h2 class="ds-h3">{heading}</h2>}
+  {
+    paragraphs.map((p) => (
+      <p class="ds-body">{p}</p>
+    ))
+  }
+</div>

@@ -1,0 +1,27 @@
+---
+/**
+ * TimelineHorizontal — horizontal scroll timeline
+ * @example
+ * <TimelineHorizontal items={milestones} heading="Milestones" />
+ */
+import type { TimelineHorizontalProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+import SectionTitle from '@components/layout/SectionTitle.astro';
+
+const { items, heading, class: className = '' } = Astro.props as TimelineHorizontalProps;
+---
+
+<div class={cn('ds-timeline ds-timeline--horizontal', className)}>
+  {heading && <SectionTitle title={heading} />}
+  <ol class="ds-timeline__track" tabindex="0" aria-label={heading ?? 'Timeline'}>
+    {
+      items.map((item) => (
+        <li class="ds-timeline__slide ds-card ds-card--timeline">
+          {item.year && <span class="ds-timeline__year">{item.year}</span>}
+          <h3 class="ds-card__title">{item.title}</h3>
+          {item.body && <p class="ds-card__text">{item.body}</p>}
+        </li>
+      ))
+    }
+  </ol>
+</div>

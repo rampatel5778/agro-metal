@@ -1,0 +1,46 @@
+---
+/**
+ * CertificationBadges — ISO/GATA/SGS logo row
+ * @example
+ * <CertificationBadges items={[{ image: { src, alt } }]} />
+ */
+import type { CertificationBadgesProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+import Image from '@components/ui/Image.astro';
+
+const {
+  items,
+  class: className = '',
+  ariaLabel = 'Certifications',
+} = Astro.props as CertificationBadgesProps;
+---
+
+<ul class={cn('ds-flex ds-flex--center', className)} aria-label={ariaLabel}>
+  {
+    items.map((item) => (
+      <li>
+        {
+          item.href ? (
+            <a href={item.href} aria-label={item.image.alt}>
+              <Image
+                src={item.image.src}
+                alt={item.image.alt}
+                width={item.image.width}
+                height={item.image.height}
+                fit="contain"
+              />
+            </a>
+          ) : (
+            <Image
+              src={item.image.src}
+              alt={item.image.alt}
+              width={item.image.width}
+              height={item.image.height}
+              fit="contain"
+            />
+          )
+        }
+      </li>
+    ))
+  }
+</ul>

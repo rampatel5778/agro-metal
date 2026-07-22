@@ -1,0 +1,74 @@
+---
+/**
+ * CounterStats — animated number counters
+ * @example
+ * <CounterStats items={[{ value: 20, suffix: '+', label: 'Years' }]} />
+ */
+import type { CounterStatsProps } from '@types/components/content.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  items,
+  class: className = '',
+  ariaLabel = 'Statistics',
+} = Astro.props as CounterStatsProps;
+---
+
+<ul class={cn('ds-grid ds-grid--4 ds-card--stat-list', className)} aria-label={ariaLabel}>
+  {
+    items.map((item) => (
+      <li class="ds-card ds-card--stat">
+        <p
+          class="ds-card__value"
+          data-counter
+          data-target={item.value}
+          data-prefix={item.prefix ?? ''}
+          data-suffix={item.suffix ?? ''}
+        >
+          {item.prefix ?? ''}0{item.suffix ?? ''}
+        </p>
+        <p class="ds-card__label">{item.label}</p>
+      </li>
+    ))
+  }
+</ul>
+
+<script>
+  function animateCounter(el: HTMLElement) {
+    const target = Number(el.dataset.target ?? 0);
+    const prefix = el.dataset.prefix ?? '';
+    const suffix = el.dataset.suffix ?? '';
+    const duration = 1500;
+    const start = performance.now();
+
+    function tick(now: number) {
+      const progress = Math.min((now - start) / duration, 1);
+      const value = Math.floor(progress * target);
+      el.textContent = `${prefix}${value}${suffix}`;
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = `${prefix}${target}${suffix}`;
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target as HTMLElement);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+    document.querySelectorAll('[data-counter]').forEach((el) => observer.observe(el));
+  } else {
+    document.querySelectorAll<HTMLElement>('[data-counter]').forEach((el) => {
+      const target = el.dataset.target ?? '0';
+      el.textContent = `${el.dataset.prefix ?? ''}${target}${el.dataset.suffix ?? ''}`;
+    });
+  }
+</script>

@@ -1,0 +1,18 @@
+---
+/**
+ * FooterBottom — copyright bar
+ * @example
+ * <FooterBottom copyright="© 2026 Agrometal. All rights reserved." />
+ */
+import type { FooterBottomProps } from '@types/components/layout.js';
+import { cn } from '@utils/classNames.js';
+import Container from '@components/layout/Container.astro';
+
+const { copyright, class: className = '' } = Astro.props as FooterBottomProps;
+---
+
+<div class={cn('ds-footer-bottom', className)}>
+  <Container>
+    <p>{copyright}</p>
+  </Container>
+</div>

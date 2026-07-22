@@ -1,0 +1,120 @@
+---
+/**
+ * Home About Stats — Agriva index.html about-section-2 (heading + stats + video)
+ */
+import type { HomeAboutStatsProps } from '@types/components/content.js';
+
+const {
+  title,
+  items,
+  youtubeId,
+  videoTitle = 'Agrometal',
+  assets = {
+    leftShape: '/assets/img/home-2/about-shape-1.png',
+    rightShape: '/assets/img/home-2/about-shape-2.png',
+    maize: '/assets/img/home-1/maize-1.png',
+    tractor: '/assets/img/home-2/tractor.png',
+    paddy: '/assets/img/home-2/paddy.png',
+  },
+} = Astro.props as HomeAboutStatsProps;
+
+const videoWatchUrl = `https://www.youtube.com/watch?v=${youtubeId}`;
+---
+
+<section
+  class="about-section-2 section-padding fix pt-0 home-about-stats"
+  aria-labelledby="home-about-stats-heading"
+>
+  <div class="left-shape">
+    <img src={assets.leftShape} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+  </div>
+  <div class="right-shape">
+    <img src={assets.rightShape} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+  </div>
+  <div class="maize-shape float-bob-y">
+    <img src={assets.maize} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+  </div>
+  <div class="maize-shape-2 float-bob-y">
+    <img src={assets.maize} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+  </div>
+
+  <div class="container">
+    <div class="section-title-area home-about-stats__title-area">
+      <div class="section-title">
+        <h2 id="home-about-stats-heading" class="text-anim">{title}</h2>
+      </div>
+    </div>
+
+    <div class="about-wrapper-2">
+      <div class="count-wrap">
+        {
+          items.map((item) => (
+            <div
+              class:list={[
+                'count-item-2',
+                item.emphasized && 'style-top',
+                item.emphasized && 'active',
+              ]}
+            >
+              <h2>
+                {item.prefix && <span class="count-prefix">{item.prefix}</span>}
+                <span class="count" data-count-value={item.value}>
+                  {item.value}
+                </span>
+                {item.suffix && <span class="count-suffix">{item.suffix}</span>}
+              </h2>
+              <p>
+                <strong>{item.heading}</strong>
+                <br />
+                {item.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="trac-wrap">
+        <div class="tractor-image float-bob-x">
+          <img src={assets.tractor} alt="" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="paddy-image">
+        <img src={assets.paddy} alt="" loading="lazy" decoding="async" />
+        <a
+          href={videoWatchUrl}
+          class="video-btn ripple-2"
+          data-home-about-video
+          data-youtube-id={youtubeId}
+          aria-label={`Watch ${videoTitle} on YouTube`}
+        >
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="home-about-stats-video-modal" class="home-video-modal" hidden>
+  <button
+    type="button"
+    class="home-video-modal__backdrop"
+    data-home-video-close
+    aria-label="Close video"
+  ></button>
+  <div class="home-video-modal__dialog" role="dialog" aria-modal="true" aria-label={videoTitle}>
+    <button type="button" class="home-video-modal__close" data-home-video-close aria-label="Close video">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <div class="home-video-modal__frame">
+      <iframe
+        title={videoTitle}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="@scripts/agriva-counters.ts"></script>
+<script src="@scripts/home-about-stats-video.ts"></script>

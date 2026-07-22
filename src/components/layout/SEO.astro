@@ -1,0 +1,47 @@
+---
+/**
+ * SEO — meta tags, Open Graph, Twitter Card
+ * @example
+ * <SEO title="About" description="..." canonical="https://agrometal.ae/about-us/" />
+ */
+import type { SeoProps } from '@types/components/layout.js';
+import { seoDefaults } from '@data/seo.js';
+
+const {
+  title,
+  description,
+  canonical,
+  siteName = seoDefaults.siteName,
+  defaultOgImage = seoDefaults.defaultOgImage,
+  locale = seoDefaults.locale,
+  twitterCard = seoDefaults.twitterCard,
+  robots = seoDefaults.robots,
+  ogImage,
+  noindex = false,
+} = Astro.props as SeoProps;
+
+const image = ogImage ?? defaultOgImage;
+const robotsContent = noindex ? 'noindex, nofollow' : robots;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={robotsContent} />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={image} />
+<meta property="og:locale" content={locale} />
+
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />

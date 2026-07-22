@@ -1,0 +1,47 @@
+---
+/**
+ * Input — text input with ds-input styling
+ * @example
+ * <Input id="name" name="name" label="Name" required />
+ */
+import type { InputProps } from '@types/components/forms.js';
+import FormField from '@components/forms/FormField.astro';
+import { cn } from '@utils/classNames.js';
+
+const {
+  id,
+  name,
+  label,
+  type = 'text',
+  placeholder,
+  required = false,
+  error,
+  hint,
+  value,
+  disabled = false,
+  autocomplete,
+  minLength,
+  maxLength,
+  class: className = '',
+} = Astro.props as InputProps;
+
+const describedBy = [hint && `${id}-hint`, error && `${id}-error`].filter(Boolean).join(' ') || undefined;
+---
+
+<FormField id={id} name={name} label={label} required={required} error={error} hint={hint}>
+  <input
+    type={type}
+    id={id}
+    name={name}
+    class={cn('ds-input', className)}
+    placeholder={placeholder}
+    required={required}
+    disabled={disabled}
+    value={value}
+    autocomplete={autocomplete}
+    minlength={minLength}
+    maxlength={maxLength}
+    aria-invalid={error ? 'true' : undefined}
+    aria-describedby={describedBy}
+  />
+</FormField>

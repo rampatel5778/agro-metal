@@ -1,0 +1,40 @@
+---
+/**
+ * FormField — shared label, hint, error wrapper
+ * @example
+ * <FormField id="email" name="email" label="Email" required><Input slot /></FormField>
+ */
+import type { FormFieldProps } from '@types/components/forms.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  id,
+  name,
+  label,
+  required = false,
+  error,
+  hint,
+  class: className = '',
+} = Astro.props as FormFieldProps;
+---
+
+<div class={cn('ds-field', error && 'ds-field--error', className)}>
+  <label class="ds-field__label" for={id}>
+    {label}
+    {required && (
+      <span class="ds-field__required" aria-hidden="true">
+        *
+      </span>
+    )}
+    {required && <span class="ds-sr-only">(required)</span>}
+  </label>
+  {hint && <p class="ds-field__hint" id={`${id}-hint`}>{hint}</p>}
+  <div class="ds-field__control">
+    <slot />
+  </div>
+  {error && (
+    <p class="ds-field__error" id={`${id}-error`} role="alert">
+      {error}
+    </p>
+  )}
+</div>

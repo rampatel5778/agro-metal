@@ -1,0 +1,29 @@
+---
+/**
+ * ValueCards — about page values with left border accent
+ * @example
+ * <ValueCards items={values} columns={3} />
+ */
+import type { ValueCardsProps } from '@types/components/business.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  items,
+  columns = 3,
+  class: className = '',
+  ariaLabel = 'Our values',
+} = Astro.props as ValueCardsProps;
+
+const colClass = `ds-grid--${columns}` as const;
+---
+
+<ul class={cn('ds-grid', colClass, className)} aria-label={ariaLabel}>
+  {
+    items.map((item) => (
+      <li class="ds-card ds-card--value">
+        <h3 class="ds-card__title">{item.title}</h3>
+        {item.description && <p class="ds-card__text">{item.description}</p>}
+      </li>
+    ))
+  }
+</ul>

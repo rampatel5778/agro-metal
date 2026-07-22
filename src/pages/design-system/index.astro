@@ -1,0 +1,363 @@
+---
+/**
+ * Design System Showcase — INTERNAL DEVELOPMENT ONLY
+ * @route /design-system/
+ * Not linked in production navigation. noindex.
+ */
+import '@styles/global.css';
+import Icon from '@components/ui/Icon.astro';
+import DsImage from '@components/ui/DsImage.astro';
+import { colorTokens, spacingTokens } from '@lib/design-system/tokens';
+import { GOOGLE_FONTS_URL } from '@data/constants';
+
+const sampleImg = '/images/agrometal/2026/02/below-banner.webp';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Design System — Agrometal (Internal)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href={GOOGLE_FONTS_URL} rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="ds-skip-link">Skip to showcase</a>
+
+    <header class="ds-section ds-section--dark">
+      <div class="ds-container">
+        <p class="ds-eyebrow">Phase 3 — Internal Only</p>
+        <h1 class="ds-display">Agrometal Design System</h1>
+        <p class="ds-lead" style="margin-top: 1rem; max-width: 40rem; opacity: 0.9;">
+          Enterprise tokens and primitives mapped from the Agriva template. All business components
+          (Header, Footer, Hero, sections) are built in Phase 4+.
+        </p>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- COLORS -->
+      <section class="ds-section" aria-labelledby="ds-colors">
+        <div class="ds-container">
+          <h2 id="ds-colors" class="ds-h2">Colors</h2>
+          <p class="ds-body" style="margin: 1rem 0 2rem;">docs/colors.md — Agrometal primary #D95648</p>
+          <div class="ds-swatches">
+            {
+              colorTokens.map((t) => (
+                <div class="ds-swatch">
+                  <div class="ds-swatch__color" style={`background: ${t.hex}`} />
+                  <div class="ds-swatch__label">
+                    {t.name}
+                    <br />
+                    {t.hex}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+          <hr class="ds-divider" />
+          <div class="ds-flex ds-showcase-row" style="margin-top: 1.5rem;">
+            <div class="ds-contrast-panel ds-contrast-panel--primary">Primary on white text</div>
+            <div class="ds-contrast-panel ds-contrast-panel--dark">Dark panel text</div>
+            <div class="ds-contrast-panel">Default text panel</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section class="ds-section ds-section--muted" aria-labelledby="ds-type">
+        <div class="ds-container ds-stack ds-stack--lg">
+          <h2 id="ds-type" class="ds-h2">Typography</h2>
+          <p class="ds-display">Display — Instrument Sans</p>
+          <p class="ds-h1">Heading 1 — Delivering Quality Products</p>
+          <p class="ds-h2">Heading 2 — Global Commodity Trading</p>
+          <p class="ds-h3">Heading 3 — Ferrous Metals</p>
+          <p class="ds-h4">Heading 4 — Product Category</p>
+          <p class="ds-h5">Heading 5 — Section Label</p>
+          <p class="ds-h6">Heading 6 — Small Title</p>
+          <p class="ds-lead">Lead — Bridging global agriculture and mining commodities.</p>
+          <p class="ds-body-lg">Body large — Inter 1.25rem for intro paragraphs.</p>
+          <p class="ds-body">Body — Standard paragraph text at 16px with 1.75 line height.</p>
+          <p class="ds-body-sm">Body small — Secondary information at 14px.</p>
+          <p class="ds-caption">Caption — Metadata and fine print</p>
+          <p class="ds-label">Label — Form field label</p>
+          <p class="ds-btn-text">Button Text — Call to action</p>
+          <blockquote class="ds-quote">Quote — Trusted supplier delivering metals globally.</blockquote>
+          <p class="ds-eyebrow">Eyebrow Label</p>
+          <a href="#" class="ds-link">Text link with hover underline</a>
+          <ul class="ds-list">
+            <li>Unordered list item one</li>
+            <li>Unordered list item two</li>
+          </ul>
+          <ol class="ds-list ds-list--ordered">
+            <li>Ordered step one</li>
+            <li>Ordered step two</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section class="ds-section" aria-labelledby="ds-buttons">
+        <div class="ds-container">
+          <h2 id="ds-buttons" class="ds-h2">Buttons</h2>
+          <p class="ds-body" style="margin: 1rem 0 2rem;">Template .theme-btn circle-reveal hover</p>
+
+          <h3 class="ds-h4" style="margin-bottom: 1rem;">Variants</h3>
+          <div class="ds-showcase-row">
+            <button type="button" class="ds-btn ds-btn--md ds-btn--primary">Primary</button>
+            <button type="button" class="ds-btn ds-btn--md ds-btn--secondary">Secondary</button>
+            <button type="button" class="ds-btn ds-btn--md ds-btn--accent">Accent</button>
+            <button type="button" class="ds-btn ds-btn--md ds-btn--outline">Outline</button>
+            <button type="button" class="ds-btn ds-btn--md ds-btn--ghost">Ghost</button>
+            <button type="button" class="ds-btn ds-btn--md ds-btn--link">
+              Link <span class="ds-btn__arrow">→</span>
+            </button>
+            <button type="button" class="ds-btn ds-btn--icon" aria-label="Search">
+              <Icon name="magnifying-glass" decorative />
+            </button>
+          </div>
+
+          <h3 class="ds-h4" style="margin: 2rem 0 1rem;">Sizes</h3>
+          <div class="ds-showcase-row">
+            <button type="button" class="ds-btn ds-btn--sm ds-btn--primary">Small</button>
+            <button type="button" class="ds-btn ds-btn--md ds-btn--primary">Medium</button>
+            <button type="button" class="ds-btn ds-btn--lg ds-btn--primary">Large</button>
+            <button type="button" class="ds-btn ds-btn--cta">CTA Button</button>
+          </div>
+
+          <h3 class="ds-h4" style="margin: 2rem 0 1rem;">States</h3>
+          <div class="ds-showcase-row">
+            <button type="button" class="ds-btn ds-btn--md ds-btn--primary" disabled>Disabled</button>
+            <button type="button" class="ds-btn ds-btn--md ds-btn--primary ds-btn--loading" aria-busy="true">
+              Loading
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMS -->
+      <section class="ds-section ds-section--muted" aria-labelledby="ds-forms">
+        <div class="ds-container ds-container--narrow">
+          <h2 id="ds-forms" class="ds-h2">Forms</h2>
+          <p class="ds-body" style="margin: 1rem 0 2rem;">Styling only — no submission logic (Phase 4+)</p>
+
+          <div class="ds-field">
+            <label class="ds-field__label" for="ds-name">Your Name</label>
+            <input class="ds-input" id="ds-name" type="text" placeholder="Your Name*" />
+          </div>
+
+          <div class="ds-field ds-field--error">
+            <label class="ds-field__label" for="ds-email">Email (error)</label>
+            <input class="ds-input" id="ds-email" type="email" value="invalid" aria-invalid="true" />
+            <span class="ds-field__error">Please enter a valid email address.</span>
+          </div>
+
+          <div class="ds-field ds-field--success">
+            <label class="ds-field__label" for="ds-phone">Phone (success)</label>
+            <input class="ds-input" id="ds-phone" type="tel" value="+971 4 434 1284" />
+            <span class="ds-field__success">Looks good.</span>
+          </div>
+
+          <div class="ds-field">
+            <label class="ds-field__label" for="ds-msg">Message</label>
+            <textarea class="ds-textarea" id="ds-msg" placeholder="Your Message"></textarea>
+          </div>
+
+          <div class="ds-field">
+            <label class="ds-field__label" for="ds-select">Select</label>
+            <select class="ds-select" id="ds-select">
+              <option>Ferrous Metals</option>
+              <option>Non-Ferrous Metals</option>
+              <option>Agricultural Commodities</option>
+            </select>
+          </div>
+
+          <label class="ds-checkbox">
+            <input class="ds-checkbox__input" type="checkbox" checked />
+            <span class="ds-checkbox__label">Subscribe to newsletter</span>
+          </label>
+
+          <label class="ds-radio" style="margin-top: 1rem;">
+            <input class="ds-radio__input" type="radio" name="ds-radio" checked />
+            <span class="ds-radio__label">Commodity Hedging</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section class="ds-section" aria-labelledby="ds-cards">
+        <div class="ds-container">
+          <h2 id="ds-cards" class="ds-h2">Cards</h2>
+          <div class="ds-grid ds-grid--3" style="margin-top: 2rem;">
+            <article class="ds-card ds-card--feature ds-card--lift">
+              <div class="ds-card__icon"><Icon name="wheat-awn" decorative /></div>
+              <h3 class="ds-card__title">Feature Card</h3>
+              <p class="ds-card__text">Agricultural commodities trading worldwide.</p>
+            </article>
+
+            <article class="ds-card ds-card--product ds-card--lift">
+              <div class="ds-card__media">
+                <DsImage src={sampleImg} alt="Product sample" aspect="portrait" fit="cover" lazy />
+                <span class="ds-badge ds-card__tag">Products</span>
+              </div>
+              <div class="ds-card__body">
+                <h3 class="ds-card__title">Product Card</h3>
+                <p class="ds-card__text">Ferrous metals product range.</p>
+              </div>
+            </article>
+
+            <article class="ds-card ds-card--stat">
+              <div class="ds-card__value">780K+</div>
+              <div class="ds-card__label">Metric Tons Traded</div>
+            </article>
+
+            <article class="ds-card ds-card--value">
+              <h3 class="ds-card__title">Value Card</h3>
+              <p class="ds-card__text">Integrity and transparency in every transaction.</p>
+            </article>
+
+            <article class="ds-card ds-card--timeline">
+              <div class="ds-card__period">2003–2010</div>
+              <h3 class="ds-card__title">Timeline Card</h3>
+              <p class="ds-card__text">Building the foundation.</p>
+            </article>
+
+            <article class="ds-card ds-card--icon">
+              <div class="ds-card__icon"><Icon name="truck" decorative /></div>
+              <div>
+                <h3 class="ds-card__title">Icon Card</h3>
+                <p class="ds-card__text">Global logistics services.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BADGES & UTILITIES -->
+      <section class="ds-section ds-section--muted" aria-labelledby="ds-badges">
+        <div class="ds-container">
+          <h2 id="ds-badges" class="ds-h2">Badges, Tags & Utilities</h2>
+          <div class="ds-showcase-row" style="margin-top: 1.5rem;">
+            <span class="ds-badge">Default</span>
+            <span class="ds-badge ds-badge--secondary">Secondary</span>
+            <span class="ds-badge ds-badge--success">Success</span>
+            <span class="ds-badge ds-badge--warning">Warning</span>
+            <span class="ds-badge ds-badge--error">Error</span>
+            <span class="ds-tag">Tag</span>
+            <span class="ds-chip"><Icon name="check" size="sm" decorative /> Chip</span>
+            <span class="ds-status ds-status--success">Active</span>
+            <span class="ds-status ds-status--error">Error</span>
+          </div>
+          <p class="ds-body" style="margin-top: 1.5rem;">
+            Highlight: <span class="ds-highlight">commodity trading</span> in text.
+          </p>
+          <p class="ds-h3 ds-text-gradient" style="margin-top: 1rem;">Text gradient heading</p>
+        </div>
+      </section>
+
+      <!-- SPACING -->
+      <section class="ds-section" aria-labelledby="ds-spacing">
+        <div class="ds-container ds-container--narrow">
+          <h2 id="ds-spacing" class="ds-h2">Spacing Scale</h2>
+          {
+            spacingTokens.map((s) => (
+              <div class="ds-spacing-demo">
+                <div class="ds-spacing-demo__block" style={`width: ${s.value}`} />
+                <span class="ds-caption">
+                  {s.name}: {s.value}
+                </span>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- ICONS -->
+      <section class="ds-section ds-section--muted" aria-labelledby="ds-icons">
+        <div class="ds-container">
+          <h2 id="ds-icons" class="ds-h2">Icons (Font Awesome)</h2>
+          <div class="ds-showcase-row" style="margin-top: 1.5rem; font-size: 1.5rem; color: var(--color-primary);">
+            <Icon name="arrow-right" label="Arrow right" />
+            <Icon name="phone" label="Phone" />
+            <Icon name="envelope" label="Email" />
+            <Icon name="location-dot" label="Location" />
+            <Icon name="leaf" label="Sustainability" size="lg" />
+            <Icon name="gear" spin decorative />
+            <Icon name="sync" pulse decorative />
+            <Icon name="arrow-right" rotate={90} decorative />
+          </div>
+        </div>
+      </section>
+
+      <!-- IMAGES -->
+      <section class="ds-section" aria-labelledby="ds-images">
+        <div class="ds-container">
+          <h2 id="ds-images" class="ds-h2">Images</h2>
+          <div class="ds-grid ds-grid--3" style="margin-top: 2rem;">
+            <div>
+              <p class="ds-label">Aspect video + cover</p>
+              <DsImage src={sampleImg} alt="Landscape" aspect="video" fit="cover" zoom />
+            </div>
+            <div>
+              <p class="ds-label">Portrait + overlay</p>
+              <DsImage src={sampleImg} alt="Portrait" aspect="portrait" overlay rounded="lg" />
+            </div>
+            <div>
+              <p class="ds-label">Rounded full</p>
+              <DsImage
+                src="/images/agrometal/2026/02/header-logo_agro_new-01.svg"
+                alt="Logo"
+                aspect="square"
+                fit="contain"
+                rounded="full"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANIMATIONS -->
+      <section class="ds-section ds-section--muted" aria-labelledby="ds-animate">
+        <div class="ds-container">
+          <h2 id="ds-animate" class="ds-h2">Animations</h2>
+          <p class="ds-body ds-reduced-motion-only" style="margin: 1rem 0;">
+            Reduced motion is enabled — animations disabled.
+          </p>
+          <div class="ds-grid ds-grid--4 ds-motion-safe-only" style="margin-top: 1.5rem;">
+            <div class="ds-card ds-card__body ds-animate-fade-in-up">Fade In Up</div>
+            <div class="ds-card ds-card__body ds-animate-slide-in-left ds-delay-1">Slide Left</div>
+            <div class="ds-card ds-card__body ds-animate-scale-in ds-delay-2">Scale In</div>
+            <div class="ds-card ds-card__body ds-hover-lift">Hover Lift</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LAYOUT -->
+      <section class="ds-section" aria-labelledby="ds-layout">
+        <div class="ds-container">
+          <h2 id="ds-layout" class="ds-h2">Layout</h2>
+          <div class="ds-split" style="margin-top: 2rem;">
+            <div class="ds-stack">
+              <h3 class="ds-h4">Split layout</h3>
+              <p class="ds-body">Two-column grid at 64rem+. Used for text + image sections.</p>
+            </div>
+            <div class="ds-card ds-card__body">Column B</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ds-section ds-section--dark">
+      <div class="ds-container">
+        <p class="ds-caption" style="color: rgb(255 255 255 / 0.7);">
+          Agrometal Design System v1.0 — Phase 3 — Not for production navigation
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

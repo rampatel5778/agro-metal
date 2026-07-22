@@ -1,0 +1,199 @@
+/**
+ * Design System — complete CSS variable system
+ * docs/colors.md | docs/typography.md | docs/animations.md
+ */
+@theme {
+  /* ─── Primary / Brand ─── */
+  --color-primary: #d95648;
+  --color-primary-dark: #b8453a;
+  --color-primary-light: #e8786c;
+  --color-primary-rgb: 217 86 72;
+
+  --color-secondary: #f5d83e;
+  --color-secondary-dark: #e0c42a;
+  --color-accent: #11a21b;
+  --color-accent-dark: #0d8616;
+
+  /* Legacy aliases (template compatibility) */
+  --color-theme: #d95648;
+  --color-theme-dark: #b8453a;
+  --color-theme-yellow: #f5d83e;
+  --color-theme-green: #11a21b;
+
+  /* ─── Neutral ─── */
+  --color-header: #2f2f2f;
+  --color-text: #50624a;
+  --color-text-muted: #6b7f65;
+  --color-border: #02060a;
+  --color-border-muted: rgb(2 6 10 / 0.12);
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* ─── Semantic ─── */
+  --color-success: #11a21b;
+  --color-success-bg: #e8f5e9;
+  --color-warning: #c9970a;
+  --color-warning-bg: #fff8e1;
+  --color-error: #c8433a;
+  --color-error-bg: #fdecea;
+  --color-info: #50624a;
+  --color-info-bg: #f5f6f4;
+
+  /* ─── Background / Surface ─── */
+  --color-bg: #f5f6f4;
+  --color-bg-dark: #50624a;
+  --color-bg-footer: #012804;
+  --color-bg-header: #2f2f2f;
+  --color-surface: #ffffff;
+  --color-surface-muted: #eef0ed;
+  --color-surface-elevated: #ffffff;
+
+  /* ─── Overlays & Gradients ─── */
+  --overlay-dark: rgb(0 0 0 / 0.55);
+  --overlay-dark-strong: rgb(0 0 0 / 0.72);
+  --overlay-light: rgb(255 255 255 / 0.85);
+  --gradient-hero: linear-gradient(180deg, rgb(0 0 0 / 0.15) 0%, rgb(0 0 0 / 0.55) 100%);
+  --gradient-card: linear-gradient(180deg, transparent 0%, rgb(0 0 0 / 0.6) 100%);
+  --gradient-theme: linear-gradient(135deg, #d95648 0%, #b8453a 100%);
+
+  /* ─── Typography ─── */
+  --font-heading: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-icon: 'Font Awesome 6 Pro', sans-serif;
+
+  --text-display: clamp(2.5rem, 6vw, 4.6875rem);
+  --text-h1: clamp(1.875rem, 5vw, 4.6875rem);
+  --text-h2: clamp(1.625rem, 4vw, 3.125rem);
+  --text-h3: clamp(1.25rem, 2.5vw, 1.5rem);
+  --text-h4: clamp(1.125rem, 2vw, 1.25rem);
+  --text-h5: 1.125rem;
+  --text-h6: 1rem;
+  --text-lead: 1.25rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.75rem;
+  --text-label: 0.875rem;
+  --text-btn: 1rem;
+
+  --leading-display: 1.1;
+  --leading-heading: 1.2;
+  --leading-body: 1.75;
+  --leading-tight: 1.35;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.05em;
+
+  /* ─── Spacing scale ─── */
+  --spacing-section: 7.5rem;
+  --spacing-section-md: 6.25rem;
+  --spacing-section-sm: 5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-stack: 1.5rem;
+
+  /* ─── Layout widths ─── */
+  --width-content: 48rem;
+  --width-page: 75rem;
+  --width-wide: 90rem;
+
+  /* ─── Radius ─── */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-btn: 0.5rem;
+  --radius-full: 9999px;
+
+  /* ─── Shadows ─── */
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-sm: 0 2px 8px rgb(0 0 0 / 0.08);
+  --shadow-card: 0 1px 14px rgb(0 0 0 / 0.13);
+  --shadow-header: 0 2px 20px rgb(0 0 0 / 0.08);
+  --shadow-lift: 0 12px 32px rgb(0 0 0 / 0.12);
+  --shadow-focus: 0 0 0 3px rgb(217 86 72 / 0.35);
+
+  /* ─── Opacity ─── */
+  --opacity-disabled: 0.55;
+  --opacity-muted: 0.72;
+  --opacity-overlay: 0.55;
+
+  /* ─── Transitions & Animation ─── */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0, 0.96, 0.58, 1.1);
+  --ease-in-out: ease-in-out;
+  --duration-instant: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+  --duration-btn-hover: 800ms;
+
+  /* ─── Breakpoints ─── */
+  --breakpoint-sm: 36rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 74.9375rem;
+  --breakpoint-2xl: 87.4375rem;
+  --breakpoint-3xl: 99.9375rem;
+  --breakpoint-4xl: 118.6875rem;
+
+  /* ─── Z-index ─── */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* ─── Accessibility ─── */
+  --color-focus-ring: #d95648;
+  --outline-focus-width: 3px;
+  --outline-focus-offset: 2px;
+  --color-selection-bg: rgb(217 86 72 / 0.25);
+  --color-selection-text: #2f2f2f;
+  --min-touch-target: 2.75rem;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Semantic aliases for components & legacy references */
+  --primary: var(--color-primary);
+  --primary-dark: var(--color-primary-dark);
+  --secondary: var(--color-secondary);
+  --accent: var(--color-accent);
+  --neutral-header: var(--color-header);
+  --neutral-text: var(--color-text);
+  --background: var(--color-bg);
+  --surface: var(--color-surface);
+  --border-default: var(--color-border-muted);
+
+  --theme: var(--color-primary);
+  --theme-dark: var(--color-primary-dark);
+  --header-color: var(--color-header);
+  --text-color: var(--color-text);
+  --bg-color: var(--color-bg);
+  --footer-bg: var(--color-bg-footer);
+
+  --space-section: var(--spacing-section-sm);
+  --radius-default: var(--radius-md);
+  --shadow-default: var(--shadow-card);
+  --animate-duration: var(--duration-normal);
+  --animate-ease: var(--ease-default);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --space-section: var(--spacing-section-md);
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --space-section: var(--spacing-section);
+  }
+}
+
+::selection {
+  background-color: var(--color-selection-bg);
+  color: var(--color-selection-text);
+}

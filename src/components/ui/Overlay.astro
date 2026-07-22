@@ -1,0 +1,21 @@
+---
+/**
+ * Overlay — dark/gradient overlay wrapper
+ * @example
+ * <Overlay variant="dark"><Image ... /></Overlay>
+ */
+import type { OverlayProps } from '@types/components/ui.js';
+import { cn } from '@utils/classNames.js';
+
+const { variant = 'dark', class: className = '' } = Astro.props as OverlayProps;
+
+const variantMap = {
+  dark: 'ds-overlay-dark',
+  'dark-strong': 'ds-overlay-dark ds-overlay-dark-strong',
+  gradient: 'ds-gradient-overlay',
+};
+---
+
+<div class={cn(variantMap[variant], className)}>
+  <slot />
+</div>

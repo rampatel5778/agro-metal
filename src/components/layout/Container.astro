@@ -1,0 +1,31 @@
+---
+/**
+ * Container — responsive max-width wrapper
+ * @example
+ * <Container width="narrow"><slot /></Container>
+ */
+import type { ContainerProps } from '@types/components/layout.js';
+import { cn } from '@utils/classNames.js';
+
+const {
+  width = 'default',
+  class: className = '',
+  id,
+  ariaLabel,
+} = Astro.props as ContainerProps;
+
+const widthMap = {
+  default: '',
+  narrow: 'ds-container--narrow',
+  wide: 'ds-container--wide',
+  fluid: 'ds-container--fluid',
+};
+---
+
+<div
+  class={cn('ds-container', widthMap[width], className)}
+  id={id}
+  aria-label={ariaLabel}
+>
+  <slot />
+</div>

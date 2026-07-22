@@ -1,0 +1,74 @@
+---
+/**
+ * Design System — Icon wrapper (Font Awesome 6 Pro)
+ * @see docs/components.md | public/assets/css/all.min.css
+ */
+export type IconStyle = 'solid' | 'regular' | 'light' | 'thin' | 'brands';
+export type IconSize = 'xs' | 'sm' | 'lg' | 'xl' | '2x' | '1x';
+
+interface Props {
+  /** Icon name without fa- prefix, e.g. "arrow-right" */
+  name: string;
+  style?: IconStyle;
+  size?: IconSize;
+  /** Tailwind or custom color class */
+  class?: string;
+  color?: string;
+  rotate?: 90 | 180 | 270;
+  spin?: boolean;
+  pulse?: boolean;
+  /** Accessible label — required unless decorative=true */
+  label?: string;
+  /** Hide from screen readers when purely decorative */
+  decorative?: boolean;
+}
+
+const {
+  name,
+  style = 'solid',
+  size = '1x',
+  class: className = '',
+  color,
+  rotate,
+  spin = false,
+  pulse = false,
+  label,
+  decorative = false,
+} = Astro.props;
+
+const stylePrefix: Record<IconStyle, string> = {
+  solid: 'fa-solid',
+  regular: 'fa-regular',
+  light: 'fa-light',
+  thin: 'fa-thin',
+  brands: 'fa-brands',
+};
+
+const sizeClass = size === '1x' ? '' : `fa-${size}`;
+
+const classes = [
+  stylePrefix[style],
+  `fa-${name}`,
+  sizeClass,
+  spin && 'fa-spin',
+  pulse && 'fa-pulse',
+  rotate === 90 && 'fa-rotate-90',
+  rotate === 180 && 'fa-rotate-180',
+  rotate === 270 && 'fa-rotate-270',
+  'ds-icon',
+  className,
+]
+  .filter(Boolean)
+  .join(' ');
+
+const styleAttr = color ? `--ds-icon-color: ${color}` : undefined;
+---
+
+<i
+  class={classes}
+  style={styleAttr}
+  data-color={color ? '' : undefined}
+  aria-hidden={decorative ? 'true' : undefined}
+  aria-label={!decorative ? label : undefined}
+  role={!decorative && label ? 'img' : undefined}
+></i>

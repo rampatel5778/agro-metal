@@ -27,6 +27,12 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    preview: {
+      allowedHosts: ['agro-metal.onrender.com', '.onrender.com'],
+    },
+    server: {
+      allowedHosts: ['agro-metal.onrender.com', '.onrender.com'],
+    },
     resolve: {
       alias: {
         '@components': path.resolve(__dirname, './src/components'),

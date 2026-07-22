@@ -8,12 +8,16 @@ import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro'
 import AboutVolumeCounters from '@components/sections/AboutVolumeCounters.astro';
 import AboutCertifications from '@components/sections/AboutCertifications.astro';
 import AboutDifferentiators from '@components/sections/AboutDifferentiators.astro';
+import AboutMissionVision from '@components/sections/AboutMissionVision.astro';
+import AboutValues from '@components/sections/AboutValues.astro';
 import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
 import {
   aboutHero,
   aboutVolumeStats,
   aboutCertifications,
   aboutDifferentiators,
+  aboutMissionVision,
+  aboutValues,
 } from '@data/pages/about-us.js';
 
 const layout = getSiteLayout(Astro.url.pathname);
@@ -24,8 +28,11 @@ const layout = getSiteLayout(Astro.url.pathname);
   <AboutVolumeCounters {...aboutVolumeStats} />
   <AboutCertifications {...aboutCertifications} />
   <AboutDifferentiators {...aboutDifferentiators} />
+  <AboutMissionVision {...aboutMissionVision} />
+  <AboutValues {...aboutValues} />
 </BaseLayout>
 
+<script is:inline src="/assets/js/bootstrap.bundle.min.js"></script>
 <script is:inline src="/assets/js/wow.min.js"></script>
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {

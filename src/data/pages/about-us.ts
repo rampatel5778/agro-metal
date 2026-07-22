@@ -113,3 +113,80 @@ export const aboutDifferentiators = {
     },
   ],
 } as const;
+
+/** Mission & Vision — Agriva about.html our-history-section-3 (no years) */
+export const aboutMissionVision = {
+  eyebrow: 'Our Purpose',
+  title:
+    'Driving sustainable global trade through ethical sourcing, innovation, and responsible growth worldwide.',
+  imageSrc: '/assets/img/home-3/history-2010.jpg',
+  imageAlt: 'Agricultural field operations',
+  mission: {
+    tabLabel: 'Our Mission',
+    heading: 'Mission',
+    body: 'Deliver metals and agriculture globally with transparency, efficiency, sustainability, and lasting partner value.',
+  },
+  vision: {
+    tabLabel: 'Our Vision',
+    heading: 'Vision',
+    body: 'Connecting industries worldwide with essential resources through seamless, responsible, and innovative trade solutions.',
+  },
+} as const;
+
+/** Our Values — Agriva index-4.html why-choose-us-box (6 cards) */
+export const aboutValues = {
+  eyebrow: 'Principles',
+  title: 'Our Values',
+  description:
+    'These values define who we are at Agro Metal FZCO and are the cornerstone of our sustainable growth for our clients, partners, communities, and people.',
+  items: [
+    {
+      iconSrc: '/assets/img/home-3/icon/05.svg',
+      title: 'Integrity-Empowering Ethical Choices',
+      bullets: [
+        'Conducting business with honesty, transparency, and fairness.',
+        'Upholding commitments and ethical sourcing.',
+      ],
+    },
+    {
+      iconSrc: '/assets/img/home-3/icon/06.svg',
+      title: 'Reliability – Dependable & Consistent',
+      bullets: [
+        'Ensuring secure supply chains and consistent service.',
+        'Proactively managing risks and mitigating disruptions.',
+      ],
+    },
+    {
+      iconSrc: '/assets/img/home-3/icon/07.svg',
+      title: 'Customer Focus – Your Success First',
+      bullets: [
+        'Tailoring solutions to meet client needs.',
+        'Building long-term partnerships based on trust and communication.',
+      ],
+    },
+    {
+      iconSrc: '/assets/img/home-3/icon/08.svg',
+      title: 'Excellence – Constantly Improving',
+      bullets: [
+        'Driving innovation and continuous improvement.',
+        'Investing in people and celebrating achievement.',
+      ],
+    },
+    {
+      iconSrc: '/assets/img/home-3/icon/03.svg',
+      title: 'Sustainability – People, Planet, Prosperity',
+      bullets: [
+        'Minimizing environmental impact and ethical sourcing.',
+        'Supporting communities and responsible resource management.',
+      ],
+    },
+    {
+      iconSrc: '/assets/img/home-3/icon/04.svg',
+      title: 'Collaboration – One Team, Global Impact',
+      bullets: [
+        'Fostering teamwork, diversity, and inclusion.',
+        'Working closely with partners, suppliers, and clients to achieve shared goals.',
+      ],
+    },
+  ],
+} as const;

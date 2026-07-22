@@ -1,0 +1,68 @@
+---
+/**
+ * About Our Values — Agriva index-4.html why-choose-us-box (6-card grid)
+ */
+import type { AboutValuesProps } from '@types/components/content.js';
+
+const {
+  eyebrow = 'Our Values',
+  title = 'Our Values',
+  description,
+  items,
+} = Astro.props as AboutValuesProps;
+---
+
+<section
+  class="why-choose-us-section-4 section-padding fix section-bg-3 about-values"
+  aria-labelledby="about-values-heading"
+>
+  <div class="container">
+    <div class="section-title text-center about-values__header">
+      {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+      <h2 id="about-values-heading" class="text-anim">{title}</h2>
+      {
+        description && (
+          <p class="about-values__intro wow fadeInUp" data-wow-delay=".25s">
+            {description}
+          </p>
+        )
+      }
+    </div>
+
+    <div class="why-choose-us-wrapper-4">
+      <div class="row g-4">
+        {
+          items.map((item, index) => {
+            const step = String(index + 1).padStart(2, '0');
+            return (
+              <div
+                class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+                data-wow-delay={`${(0.2 + (index % 3) * 0.15).toFixed(2)}s`}
+              >
+                <div class="why-choose-us-box about-values__card">
+                  <span class="about-values__step" aria-hidden="true">
+                    {step}
+                  </span>
+                  <div class="top-content">
+                    <div class="icon">
+                      <img src={item.iconSrc} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <h3>{item.title}</h3>
+                  </div>
+                  <ul class="about-values__bullets">
+                    {item.bullets.map((bullet) => (
+                      <li>
+                        <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</section>

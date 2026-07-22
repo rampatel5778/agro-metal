@@ -1,0 +1,82 @@
+---
+/**
+ * About Mission & Vision — Agriva about.html our-history-section-3
+ * Year list, year scroll, and cabbage decoration removed
+ */
+import type { AboutMissionVisionProps } from '@types/components/content.js';
+
+const {
+  eyebrow = 'Our Purpose',
+  title,
+  imageSrc = '/assets/img/home-3/history-2010.jpg',
+  imageAlt = 'Agrometal',
+  mission,
+  vision,
+} = Astro.props as AboutMissionVisionProps;
+
+const missionId = 'about-tab-mission';
+const visionId = 'about-tab-vision';
+---
+
+<section
+  class="our-history-section-3 section-padding about-mission-vision"
+  aria-labelledby="about-mission-vision-heading"
+>
+  <div class="container custom-container">
+    <div class="our-history-wrapper">
+      <div class="history-image">
+        <img src={imageSrc} alt={imageAlt} loading="lazy" decoding="async" />
+      </div>
+
+      <div class="our-history-content">
+        <div class="section-title mb-0">
+          {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+          <h2 id="about-mission-vision-heading" class="text-anim">{title}</h2>
+        </div>
+
+        <ul class="nav" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              href={`#${missionId}`}
+              class="nav-link active"
+              data-bs-toggle="tab"
+              role="tab"
+              aria-controls={missionId}
+              aria-selected="true"
+            >
+              {mission.tabLabel}
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              href={`#${visionId}`}
+              class="nav-link"
+              data-bs-toggle="tab"
+              role="tab"
+              aria-controls={visionId}
+              aria-selected="false"
+              tabindex="-1"
+            >
+              {vision.tabLabel}
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div id={missionId} class="tab-pane fade active show" role="tabpanel">
+            <div class="content">
+              <h3>{mission.heading}</h3>
+              <p class="mb-0">{mission.body}</p>
+            </div>
+          </div>
+          <div id={visionId} class="tab-pane fade" role="tabpanel">
+            <div class="content">
+              <h3>{vision.heading}</h3>
+              <p class="mb-0">{vision.body}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

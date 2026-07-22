@@ -279,6 +279,36 @@ export interface AboutDifferentiatorsProps {
   class?: string;
 }
 
+export interface AboutMissionVisionTab {
+  tabLabel: string;
+  heading: string;
+  body: string;
+}
+
+export interface AboutMissionVisionProps {
+  eyebrow?: string;
+  title: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  mission: AboutMissionVisionTab;
+  vision: AboutMissionVisionTab;
+  class?: string;
+}
+
+export interface AboutValueItem {
+  iconSrc: string;
+  title: string;
+  bullets: string[];
+}
+
+export interface AboutValuesProps {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  items: AboutValueItem[];
+  class?: string;
+}
+
 export interface HomeTextMarqueeProps {
   text: string;
   repetitions?: number;

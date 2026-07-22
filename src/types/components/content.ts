@@ -309,6 +309,19 @@ export interface AboutValuesProps {
   class?: string;
 }
 
+export interface AboutGrowthStrategyItem {
+  title: string;
+  description: string;
+}
+
+export interface AboutGrowthStrategyProps {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  items: AboutGrowthStrategyItem[];
+  class?: string;
+}
+
 export interface HomeTextMarqueeProps {
   text: string;
   repetitions?: number;

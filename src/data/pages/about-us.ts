@@ -190,3 +190,43 @@ export const aboutValues = {
     },
   ],
 } as const;
+
+/** Growth Strategy — custom Strategy Rail (Agriva tokens) */
+export const aboutGrowthStrategy = {
+  eyebrow: 'Growth Strategy',
+  title: 'Growth Strategy & Strategic Expansion',
+  description:
+    "Agro Metal's growth framework centers on vertical integration, regional expansion, product diversification, and digital modernization—each aligned to global supply and demand shifts in agricultural commodities, metals, and mining.",
+  items: [
+    {
+      title: 'Vertical Integration',
+      description:
+        'Strengthening operational control across sourcing, logistics, processing, and mining to improve efficiency and supply security.',
+    },
+    {
+      title: 'Geographic Expansion',
+      description:
+        'Extending our market reach across Africa, Asia, MENA, and Europe through strategic alliances and local market development.',
+    },
+    {
+      title: 'Product Diversification',
+      description:
+        'Scaling volumes and expanding into a broader commodity mix including grains, oilseeds, edible oils, copper, zinc, and industrial metals to serve global food and industrial demand',
+    },
+    {
+      title: 'Digital Transformation',
+      description:
+        'Deploying analytics, digital platforms, and risk management systems to enhance margins, optimize decisions, and support customized client solutions.',
+    },
+    {
+      title: 'Mining Integration',
+      description:
+        'Leveraging African copper and zinc assets to secure raw materials and unlock margin advantages across our trading ecosystem.',
+    },
+    {
+      title: 'Responsible Development',
+      description:
+        'Investing in sustainable mining, community initiatives, and environmental stewardship to support long-term enterprise value',
+    },
+  ],
+} as const;

@@ -28,6 +28,9 @@
 .why-choose-us-section-4 {
   font-family: "DM Sans", sans-serif;
 }
+.about-growth-strategy {
+  font-family: "DM Sans", sans-serif;
+}
 .home-timeline-section {
   font-family: "DM Sans", sans-serif;
 }
@@ -821,6 +824,193 @@ body.home-video-modal-open {
 .page-about .about-values__card:hover .about-values__bullets li,
 .page-about .about-values__card:hover .about-values__bullets i {
   color: var(--white);
+}
+
+/* About Growth Strategy — custom Strategy Rail (Agriva tokens) */
+.page-about .about-growth-strategy {
+  background-color: rgb(245, 246, 244);
+}
+
+.page-about .about-growth-strategy__header {
+  max-width: 860px;
+  margin: 0 auto 56px;
+}
+
+.page-about .about-growth-strategy__header h2 {
+  text-transform: capitalize;
+}
+
+.page-about .about-growth-strategy__intro {
+  margin: 18px auto 0;
+  color: rgb(80, 98, 74);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.page-about .about-growth-strategy__rail {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0;
+}
+
+.page-about .about-growth-strategy__rail::before {
+  content: "";
+  position: absolute;
+  left: 48px;
+  top: 28px;
+  bottom: 28px;
+  width: 2px;
+  background: rgba(17, 162, 27, 0.2);
+}
+
+.page-about .about-growth-strategy__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  padding: 10px 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.page-about .about-growth-strategy__marker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 22px;
+}
+
+.page-about .about-growth-strategy__number {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(17, 162, 27);
+  transition: color 0.35s ease, -webkit-text-stroke 0.35s ease;
+}
+
+.page-about .about-growth-strategy__dot {
+  width: 14px;
+  height: 14px;
+  margin-top: 14px;
+  border-radius: 50%;
+  border: 2px solid rgb(17, 162, 27);
+  background: var(--white);
+  transition: background-color 0.35s ease, transform 0.35s ease;
+}
+
+.page-about .about-growth-strategy__card {
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  border: 1px solid var(--header);
+  border-radius: 10px;
+  padding: 28px 30px;
+  transition: transform 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+  overflow: hidden;
+}
+
+.page-about .about-growth-strategy__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0;
+  right: 0;
+  left: auto;
+  background: linear-gradient(90deg, var(--theme3) 2.34%, var(--theme3) 100%);
+  border-radius: 10px;
+  z-index: -1;
+  transition: width 0.45s ease;
+}
+
+.page-about .about-growth-strategy__title {
+  margin: 0 0 12px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--header);
+  text-transform: capitalize;
+  transition: color 0.35s ease;
+}
+
+.page-about .about-growth-strategy__body {
+  margin: 0;
+  color: rgb(80, 98, 74);
+  font-size: 16px;
+  line-height: 1.7;
+  transition: color 0.35s ease;
+}
+
+.page-about .about-growth-strategy__step.active .about-growth-strategy__number,
+.page-about .about-growth-strategy__step:hover .about-growth-strategy__number,
+.page-about .about-growth-strategy__step:focus-within .about-growth-strategy__number {
+  color: rgb(17, 162, 27);
+  -webkit-text-stroke: 0;
+}
+
+.page-about .about-growth-strategy__step.active .about-growth-strategy__dot,
+.page-about .about-growth-strategy__step:hover .about-growth-strategy__dot,
+.page-about .about-growth-strategy__step:focus-within .about-growth-strategy__dot {
+  background: rgb(17, 162, 27);
+  transform: scale(1.15);
+}
+
+.page-about .about-growth-strategy__step.active .about-growth-strategy__card,
+.page-about .about-growth-strategy__step:hover .about-growth-strategy__card,
+.page-about .about-growth-strategy__step:focus-within .about-growth-strategy__card {
+  transform: translateY(-6px);
+  border-color: rgb(17, 162, 27);
+}
+
+.page-about .about-growth-strategy__step.active .about-growth-strategy__card::before,
+.page-about .about-growth-strategy__step:hover .about-growth-strategy__card::before,
+.page-about .about-growth-strategy__step:focus-within .about-growth-strategy__card::before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.page-about .about-growth-strategy__step.active .about-growth-strategy__title,
+.page-about .about-growth-strategy__step:hover .about-growth-strategy__title,
+.page-about .about-growth-strategy__step:focus-within .about-growth-strategy__title,
+.page-about .about-growth-strategy__step.active .about-growth-strategy__body,
+.page-about .about-growth-strategy__step:hover .about-growth-strategy__body,
+.page-about .about-growth-strategy__step:focus-within .about-growth-strategy__body {
+  color: var(--white);
+}
+
+@media (max-width: 767px) {
+  .page-about .about-growth-strategy__rail::before {
+    left: 28px;
+  }
+
+  .page-about .about-growth-strategy__step {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .page-about .about-growth-strategy__number {
+    font-size: 28px;
+  }
+
+  .page-about .about-growth-strategy__marker {
+    padding-top: 18px;
+  }
+
+  .page-about .about-growth-strategy__card {
+    padding: 22px 20px;
+  }
+
+  .page-about .about-growth-strategy__title {
+    font-size: 18px;
+  }
 }
 
 /* Home vertical timeline — alternating cards + center line */

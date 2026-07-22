@@ -10,6 +10,7 @@ import AboutCertifications from '@components/sections/AboutCertifications.astro'
 import AboutDifferentiators from '@components/sections/AboutDifferentiators.astro';
 import AboutMissionVision from '@components/sections/AboutMissionVision.astro';
 import AboutValues from '@components/sections/AboutValues.astro';
+import AboutGrowthStrategy from '@components/sections/AboutGrowthStrategy.astro';
 import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
 import {
   aboutHero,
@@ -18,6 +19,7 @@ import {
   aboutDifferentiators,
   aboutMissionVision,
   aboutValues,
+  aboutGrowthStrategy,
 } from '@data/pages/about-us.js';
 
 const layout = getSiteLayout(Astro.url.pathname);
@@ -30,6 +32,7 @@ const layout = getSiteLayout(Astro.url.pathname);
   <AboutDifferentiators {...aboutDifferentiators} />
   <AboutMissionVision {...aboutMissionVision} />
   <AboutValues {...aboutValues} />
+  <AboutGrowthStrategy {...aboutGrowthStrategy} />
 </BaseLayout>
 
 <script is:inline src="/assets/js/bootstrap.bundle.min.js"></script>

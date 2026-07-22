@@ -87,6 +87,17 @@ export interface BreadcrumbHeroProps {
   class?: string;
 }
 
+/** Agriva template breadcrumb-wrapper — inner page title banner */
+export interface AgrivaBreadcrumbHeroProps {
+  title: string;
+  breadcrumbs?: BreadcrumbItem[];
+  /** Agriva curved desktop background — default breadcrumb.png */
+  backgroundImageSrc?: string;
+  /** Mobile / tablet full-bleed photo — default breadcrumb-2.jpg */
+  topImageSrc?: string;
+  class?: string;
+}
+
 export interface SeoProps extends Partial<PageSeo> {
   title: string;
   description: string;

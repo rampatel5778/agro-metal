@@ -27,7 +27,7 @@ function animateCount(element: HTMLElement): void {
 
 function initCountUp(): void {
   const counters = document.querySelectorAll<HTMLElement>(
-    '.home-stats-section .count, .home-about-stats .count',
+    '.home-stats-section .count, .home-about-stats .count, .about-statistics-section .count',
   );
   if (counters.length === 0) return;
 

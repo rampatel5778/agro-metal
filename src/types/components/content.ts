@@ -236,6 +236,49 @@ export interface HomeStatsCounterProps {
   class?: string;
 }
 
+export interface AboutVolumeCounterItem {
+  value: number;
+  suffix?: string;
+  prefix?: string;
+  heading: string;
+  description: string;
+}
+
+export interface AboutVolumeCountersProps {
+  eyebrow?: string;
+  title: string;
+  items: AboutVolumeCounterItem[];
+  class?: string;
+}
+
+export interface AboutCertificationItem {
+  iconSrc: string;
+  label: string;
+  detail?: string;
+}
+
+export interface AboutCertificationsProps {
+  title: string;
+  items: AboutCertificationItem[];
+  backgroundImageSrc?: string;
+  class?: string;
+}
+
+export interface AboutDifferentiatorItem {
+  iconSrc: string;
+  title: string;
+  description: string;
+}
+
+export interface AboutDifferentiatorsProps {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  items: AboutDifferentiatorItem[];
+  backgroundImageSrc?: string;
+  class?: string;
+}
+
 export interface HomeTextMarqueeProps {
   text: string;
   repetitions?: number;

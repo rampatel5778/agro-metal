@@ -1,0 +1,43 @@
+---
+/**
+ * About certifications — Agriva about-2.html our-imapact-section
+ * Image column pattern adapted for ISO / GATA / SGS badges
+ */
+import type { AboutCertificationsProps } from '@types/components/content.js';
+
+const {
+  title,
+  items,
+  backgroundImageSrc = '/assets/img/home-3/team/team-bg.jpg',
+} = Astro.props as AboutCertificationsProps;
+---
+
+<section
+  class="our-imapact-section section-padding fix bg-cover about-certifications"
+  style={`background-image: url('${backgroundImageSrc}');`}
+  aria-labelledby="about-certifications-heading"
+>
+  <div class="container">
+    <div class="our-impact-wrapper">
+      <h2 id="about-certifications-heading" class="wow fadeInUp" data-wow-delay=".2s" set:html={title} />
+      <div class="imapct-item">
+        {
+          items.map((item, index) => (
+            <div
+              class="icon-items wow fadeInUp"
+              data-wow-delay={`${(0.4 + index * 0.2).toFixed(1)}s`}
+            >
+              <div class="icon">
+                <img src={item.iconSrc} alt="" loading="lazy" decoding="async" />
+              </div>
+              <div class="content">
+                <h3>{item.label}</h3>
+                {item.detail && <h4>{item.detail}</h4>}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

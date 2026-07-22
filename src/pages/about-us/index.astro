@@ -1,10 +1,36 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('about-us');
+/**
+ * About Agrometal — /about-us/
+ * @see docs/sections.md
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import AboutVolumeCounters from '@components/sections/AboutVolumeCounters.astro';
+import AboutCertifications from '@components/sections/AboutCertifications.astro';
+import AboutDifferentiators from '@components/sections/AboutDifferentiators.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  aboutHero,
+  aboutVolumeStats,
+  aboutCertifications,
+  aboutDifferentiators,
+} from '@data/pages/about-us.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-about">
+  <AgrivaBreadcrumbHero {...aboutHero} />
+  <AboutVolumeCounters {...aboutVolumeStats} />
+  <AboutCertifications {...aboutCertifications} />
+  <AboutDifferentiators {...aboutDifferentiators} />
+</BaseLayout>
+
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>

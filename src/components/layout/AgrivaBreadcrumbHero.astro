@@ -1,0 +1,57 @@
+---
+/**
+ * Agriva inner-page breadcrumb hero — breadcrumb-wrapper from about-2.html
+ * Desktop: breadcrumb.png curved layout + dark title + pill breadcrumbs
+ * Mobile: breadcrumb-2.jpg full-bleed photo + white title
+ */
+import type { AgrivaBreadcrumbHeroProps } from '@types/components/layout.js';
+
+const {
+  title,
+  breadcrumbs = [],
+  backgroundImageSrc = '/assets/img/breadcrumb.png',
+  topImageSrc = '/assets/img/breadcrumb-2.jpg',
+  class: className = '',
+} = Astro.props as AgrivaBreadcrumbHeroProps;
+---
+
+<div
+  class:list={['breadcrumb-wrapper', 'bg-cover', className]}
+  style={`background-image: url('${backgroundImageSrc}');`}
+>
+  <div class="top-image">
+    <img src={topImageSrc} alt="" loading="eager" decoding="async" />
+  </div>
+  <div class="container">
+    <div class="page-heading">
+      <div class="breadcrumb-sub-title">
+        <h1 class="wow fadeInUp" data-wow-delay=".3s">{title}</h1>
+      </div>
+      {
+        breadcrumbs.length > 0 && (
+          <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+            {
+              breadcrumbs.flatMap((crumb, index) => {
+                const item = (
+                  <li>
+                    {crumb.href ? (
+                      <a href={crumb.href}>
+                        <i class="fa-solid fa-house" aria-hidden="true"></i> {crumb.label}
+                      </a>
+                    ) : (
+                      crumb.label
+                    )}
+                  </li>
+                );
+                if (index < breadcrumbs.length - 1) {
+                  return [item, <li>:</li>];
+                }
+                return [item];
+              })
+            }
+          </ul>
+        )
+      }
+    </div>
+  </div>
+</div>

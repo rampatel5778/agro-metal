@@ -1,0 +1,64 @@
+---
+/**
+ * About differentiators — Agriva about.html work-process-section
+ * 5 process-card boxes (template has 4; same hover/active effect)
+ */
+import type { AboutDifferentiatorsProps } from '@types/components/content.js';
+
+const {
+  eyebrow,
+  title,
+  description,
+  items,
+  backgroundImageSrc = '/assets/img/home-3/work-process-bg.png',
+} = Astro.props as AboutDifferentiatorsProps;
+---
+
+<section
+  class="work-process-section section-padding fix bg-cover about-differentiators"
+  style={`background-image: url('${backgroundImageSrc}');`}
+  aria-labelledby="about-differentiators-heading"
+>
+  <div class="container">
+    <div class="section-title text-center">
+      {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+      <h2 id="about-differentiators-heading" class="section-title text-anim">
+        {title}
+      </h2>
+      {
+        description && (
+          <p class="about-differentiators__intro wow fadeInUp" data-wow-delay=".35s">
+            {description}
+          </p>
+        )
+      }
+    </div>
+
+    <div class="about-differentiators__grid">
+      {
+        items.map((item, index) => {
+          const step = String(index + 1).padStart(2, '0');
+          const elevated = index % 2 === 1;
+          return (
+            <div
+              class="tp_fade_anim"
+              data-delay={(0.2 + index * 0.15).toFixed(2)}
+              data-fade-from="left"
+            >
+              <div class:list={['process-card', elevated && 'card-style', index === 0 && 'active']}>
+                <div class="card-icon">
+                  <img src={item.iconSrc} alt="" loading="lazy" decoding="async" />
+                  <span>{step}</span>
+                </div>
+                <h3 class="card-title">{item.title}</h3>
+                <p class="card-description">{item.description}</p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<script src="@scripts/agriva-process-cards.ts"></script>

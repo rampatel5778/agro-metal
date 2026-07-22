@@ -1,10 +1,58 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('non-ferrous-metals');
+/**
+ * Non-Ferrous Metals — /products/non-ferrous-metals/
+ * 1. Agriva breadcrumb hero
+ * 2. Intro — about-section-4
+ * 3. Product forms — shop-card-items
+ * 4. Industries we serve — project-card-items-4
+ * 5. Trends & Insights — feature-card-item
+ * 6. Closing video CTA — drone-video-section
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import ProductCategoryIntro from '@components/sections/ProductCategoryIntro.astro';
+import ProductMetalForms from '@components/sections/ProductMetalForms.astro';
+import ProductIndustries from '@components/sections/ProductIndustries.astro';
+import ProductTrends from '@components/sections/ProductTrends.astro';
+import ProductClosingCta from '@components/sections/ProductClosingCta.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  nonFerrousHero,
+  nonFerrousIntro,
+  nonFerrousProductGroups,
+  nonFerrousIndustries,
+  nonFerrousTrends,
+  nonFerrousClosingCta,
+} from '@data/pages/non-ferrous-metals.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-products page-product-category page-non-ferrous">
+  <AgrivaBreadcrumbHero {...nonFerrousHero} />
+  <ProductCategoryIntro {...nonFerrousIntro} />
+
+  <div id="non-ferrous-products" class="product-category-products">
+    {
+      nonFerrousProductGroups.map((group, index) => (
+        <ProductMetalForms
+          {...group}
+          class={index % 2 === 1 ? 'product-metal-forms--alt' : ''}
+        />
+      ))
+    }
+  </div>
+
+  <ProductIndustries {...nonFerrousIndustries} />
+  <ProductTrends {...nonFerrousTrends} />
+  <ProductClosingCta {...nonFerrousClosingCta} />
+</BaseLayout>
+
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>

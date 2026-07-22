@@ -224,6 +224,7 @@ export interface HomeProductCardsProps {
 
 /** Products hub — Agriva section-title intro above product cards */
 export interface ProductsRangeIntroProps {
+  eyebrow?: string;
   title: string;
   description: string;
   class?: string;
@@ -400,5 +401,79 @@ export interface HeroVideoProps {
   iconSrc?: string;
   arrowLeftSrc?: string;
   arrowRightSrc?: string;
+  class?: string;
+}
+
+/** Product detail intro — Agriva about-section-4 (content left, image right) */
+export interface ProductCategoryIntroProps {
+  id?: string;
+  title: string;
+  paragraphs: string[];
+  imageSrc: string;
+  imageAlt: string;
+  cta?: import('@types/cta.js').CTA;
+  class?: string;
+}
+
+/** Product form card (image + label) — Agriva shop-card-items */
+export interface ProductMetalFormItem {
+  title: string;
+  /** Optional sub-products / grades shown under the title */
+  forms?: string[];
+  imageSrc: string;
+  imageAlt?: string;
+}
+
+/** One metal group (Copper, Zinc, …) with form grid */
+export interface ProductMetalFormsProps {
+  id: string;
+  title: string;
+  description?: string;
+  items: ProductMetalFormItem[];
+  class?: string;
+}
+
+/** Industries we serve — Agriva project-card-items-4 */
+export interface ProductIndustryItem {
+  title: string;
+  imageSrc: string;
+  imageAlt?: string;
+}
+
+export interface ProductIndustriesProps {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  items: ProductIndustryItem[];
+  class?: string;
+}
+
+/** Trends & Insights — Agriva feature-section / feature-card-item */
+export interface ProductTrendItem {
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt?: string;
+  iconSrc: string;
+}
+
+export interface ProductTrendsProps {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  items: ProductTrendItem[];
+  class?: string;
+}
+
+/** Closing video CTA — Agriva drone-video-section + YouTube background */
+export interface ProductClosingCtaProps {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  youtubeId?: string;
+  posterSrc?: string;
+  cta: import('@types/cta.js').CTA;
   class?: string;
 }

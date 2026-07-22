@@ -1,0 +1,71 @@
+---
+/**
+ * Industries we serve — Agriva project-section-4 / project-card-items-4
+ * Photo cards with title overlay (6 industries).
+ */
+import type { ProductIndustriesProps } from '@types/components/content.js';
+
+const {
+  id = 'industries-we-serve',
+  eyebrow = 'End Markets',
+  title,
+  description,
+  items,
+  class: className = '',
+} = Astro.props as ProductIndustriesProps;
+
+const headingId = `${id}-heading`;
+---
+
+<section
+  id={id}
+  class:list={[
+    'project-section-4',
+    'section-padding',
+    'fix',
+    'product-industries',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div class="section-title text-center product-industries__header">
+      {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+      <h2 id={headingId} class="text-anim">{title}</h2>
+      {
+        description && (
+          <p class="product-industries__intro wow fadeInUp" data-wow-delay=".25s">
+            {description}
+          </p>
+        )
+      }
+    </div>
+
+    <div class="row g-4 product-industries__grid">
+      {
+        items.map((item, index) => (
+          <div
+            class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+            data-wow-delay={`${(0.2 + (index % 3) * 0.12).toFixed(2)}s`}
+          >
+            <div class="project-card-items-4 product-industries__card">
+              <div class="project-image">
+                <img
+                  src={item.imageSrc}
+                  alt={item.imageAlt ?? item.title}
+                  loading="lazy"
+                  decoding="async"
+                  width="700"
+                  height="818"
+                />
+                <div class="content">
+                  <h3>{item.title}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

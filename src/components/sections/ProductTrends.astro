@@ -1,0 +1,79 @@
+---
+/**
+ * Trends & Insights — Agriva feature-section / feature-card-item
+ * Editorial 3-up cards: image + icon + title + short copy (no Read More).
+ */
+import type { ProductTrendsProps } from '@types/components/content.js';
+
+const {
+  id = 'trends-insights',
+  eyebrow = 'Market Outlook',
+  title,
+  description,
+  items,
+  class: className = '',
+} = Astro.props as ProductTrendsProps;
+
+const headingId = `${id}-heading`;
+const colClass =
+  items.length <= 3
+    ? 'col-xl-4 col-lg-6 col-md-6'
+    : 'col-xl-3 col-lg-6 col-md-6';
+---
+
+<section
+  id={id}
+  class:list={[
+    'feature-section',
+    'section-padding',
+    'fix',
+    'product-trends',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div class="section-title text-center product-trends__header">
+      {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+      <h2 id={headingId} class="text-anim">{title}</h2>
+      {
+        description && (
+          <p class="product-trends__intro wow fadeInUp" data-wow-delay=".25s">
+            {description}
+          </p>
+        )
+      }
+    </div>
+
+    <div class="row g-4 product-trends__grid">
+      {
+        items.map((item, index) => (
+          <div
+            class:list={[colClass, 'wow', 'fadeInUp']}
+            data-wow-delay={`${(0.2 + index * 0.12).toFixed(2)}s`}
+          >
+            <div class="feature-card-item product-trends__card h-100">
+              <div class="feature-image">
+                <img
+                  src={item.imageSrc}
+                  alt={item.imageAlt ?? item.title}
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="400"
+                />
+                <div class="icon">
+                  <img src={item.iconSrc} alt="" aria-hidden="true" width="44" height="44" />
+                </div>
+              </div>
+              <div class="content">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

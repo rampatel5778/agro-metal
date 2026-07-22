@@ -1,0 +1,80 @@
+---
+/**
+ * Product metal forms — Agriva shop-section / shop-card-items
+ * Metal title + description + image/label product-form grid (no cart/price).
+ */
+import type { ProductMetalFormsProps } from '@types/components/content.js';
+
+const {
+  id,
+  title,
+  description,
+  items,
+  class: className = '',
+} = Astro.props as ProductMetalFormsProps;
+
+const headingId = `${id}-heading`;
+const colClass =
+  items.length <= 3
+    ? 'col-xl-4 col-lg-4 col-md-6'
+    : 'col-xl-3 col-lg-6 col-md-6';
+---
+
+<section
+  id={id}
+  class:list={[
+    'shop-section',
+    'section-padding',
+    'fix',
+    'product-metal-forms',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div class="section-title product-metal-forms__header mb-0">
+      <h2 id={headingId} class="text-anim">{title}</h2>
+      {
+        description && (
+          <p class="product-metal-forms__intro wow fadeInUp" data-wow-delay=".25s">
+            {description}
+          </p>
+        )
+      }
+    </div>
+
+    <div class="row g-4 product-metal-forms__grid">
+      {
+        items.map((item, index) => (
+          <div
+            class:list={[colClass, 'wow', 'fadeInUp']}
+            data-wow-delay={`${(0.2 + (index % 4) * 0.1).toFixed(2)}s`}
+          >
+            <div class="shop-card-items product-metal-forms__card">
+              <div class="shop-image">
+                <img
+                  src={item.imageSrc}
+                  alt={item.imageAlt ?? item.title}
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
+                />
+              </div>
+              <div class="shop-content">
+                <h3>{item.title}</h3>
+                {
+                  item.forms && item.forms.length > 0 && (
+                    <p class="product-metal-forms__forms">
+                      {item.forms.join(' · ')}
+                    </p>
+                  )
+                }
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

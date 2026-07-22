@@ -1,0 +1,66 @@
+---
+/**
+ * Closing video CTA — Agriva drone-video-section
+ * YouTube muted loop background + headline + Contact button (no tag chips).
+ */
+import type { ProductClosingCtaProps } from '@types/components/content.js';
+
+const {
+  id = 'closing-cta',
+  eyebrow,
+  title,
+  youtubeId = 'nr3_0zjTlsI',
+  posterSrc = '/assets/img/home-3/video-bg.jpg',
+  cta,
+  class: className = '',
+} = Astro.props as ProductClosingCtaProps;
+
+const headingId = `${id}-heading`;
+const embedSrc = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&playlist=${youtubeId}&controls=0&rel=0&playsinline=1&modestbranding=1`;
+---
+
+<section
+  id={id}
+  class:list={[
+    'drone-video-section',
+    'section-padding',
+    'fix',
+    'product-closing-cta',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div
+      class="drone-video-wrapper bg-cover product-closing-cta__wrapper"
+      style={`background-image: url(${posterSrc});`}
+    >
+      <div class="product-closing-cta__media" aria-hidden="true">
+        <iframe
+          src={embedSrc}
+          title=""
+          tabindex="-1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </div>
+      <div class="product-closing-cta__overlay" aria-hidden="true"></div>
+
+      <div class="drone-video-content product-closing-cta__content">
+        <div class="section-title mb-0">
+          {
+            eyebrow && (
+              <span class="sub-title-3 text-white style-border">{eyebrow}</span>
+            )
+          }
+          <h2 id={headingId} class="text-anim text-white">
+            {title}
+          </h2>
+        </div>
+        <a href={cta.href} class="theme-btn theme-btn-3 product-closing-cta__btn">
+          {cta.label}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

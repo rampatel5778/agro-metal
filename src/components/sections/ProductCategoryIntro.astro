@@ -1,0 +1,80 @@
+---
+/**
+ * Product category intro — Agriva index-4 about-section-4
+ * Content left (title + paragraphs + CTA) | image right. No icon/checklist chrome.
+ */
+import type { ProductCategoryIntroProps } from '@types/components/content.js';
+
+const {
+  id = 'product-category-intro',
+  title,
+  paragraphs,
+  imageSrc,
+  imageAlt,
+  cta,
+  class: className = '',
+} = Astro.props as ProductCategoryIntroProps;
+
+const headingId = `${id}-heading`;
+---
+
+<section
+  id={id}
+  class:list={[
+    'about-section-4',
+    'section-padding',
+    'fix',
+    'product-category-intro',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <div class="container">
+    <div class="about-wrapper-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6 order-lg-1">
+          <div class="about-content product-category-intro__content">
+            <div class="section-title mb-0">
+              <h2 id={headingId} class="text-anim">{title}</h2>
+            </div>
+            {
+              paragraphs.map((paragraph, index) => (
+                <p
+                  class:list={['text', 'product-category-intro__text', 'wow', 'fadeInUp']}
+                  data-wow-delay={`${(0.25 + index * 0.1).toFixed(2)}s`}
+                >
+                  {paragraph}
+                </p>
+              ))
+            }
+            {
+              cta && (
+                <a
+                  href={cta.href}
+                  class="theme-btn theme-btn-3 product-category-intro__cta wow fadeInUp"
+                  data-wow-delay=".45s"
+                >
+                  {cta.label}
+                </a>
+              )
+            }
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-lg-2">
+          <div class="about-image product-category-intro__image wow fadeInRight" data-wow-delay=".3s">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              class="img-custom-anim-right"
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="805"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

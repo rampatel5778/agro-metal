@@ -15,6 +15,7 @@ export const productsHero = {
 
 /** Our Product Range — Agriva section-title (title + supporting copy) */
 export const productsRangeIntro = {
+  eyebrow: 'What We Supply',
   title: 'Our Product Range',
   description:
     'Metals, minerals, agricultural commodities, and energy products sourced globally with reliable supply and quality.',

@@ -15,6 +15,7 @@ export const productsHero = {
 
 /** Our Product Range — Agriva section-title (title + supporting copy) */
 export const productsRangeIntro = {
+  id: 'products-range',
   eyebrow: 'What We Supply',
   title: 'Our Product Range',
   description:

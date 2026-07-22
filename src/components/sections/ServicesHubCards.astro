@@ -1,0 +1,58 @@
+---
+/**
+ * Services hub cards — Agriva service-section-4 / service-card-items-2 style-2
+ * Tags + image + title (green accent bar). No paragraph / Read More.
+ */
+import type { ServicesHubCardsProps } from '@types/components/content.js';
+
+const { items, class: className = '' } = Astro.props as ServicesHubCardsProps;
+---
+
+<section
+  class:list={[
+    'service-section-4',
+    'section-padding',
+    'fix',
+    'services-hub-cards',
+    className,
+  ]}
+  aria-label="Services"
+>
+  <div class="container">
+    <div class="row g-4">
+      {
+        items.map((item, index) => (
+          <div
+            class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+            data-wow-delay={`${(0.2 + index * 0.12).toFixed(2)}s`}
+          >
+            <a
+              href={item.href}
+              class="service-card-items-2 style-2 h-100 services-hub-cards__link"
+              aria-label={item.title}
+            >
+              <div class="top-content">
+                <div class="tag-list">
+                  {item.tags.map((tag) => (
+                    <span>{tag}</span>
+                  ))}
+                </div>
+              </div>
+              <div class="service-image">
+                <img
+                  src={item.imageSrc}
+                  alt=""
+                  width={856}
+                  height={1000}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h2>{item.title}</h2>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

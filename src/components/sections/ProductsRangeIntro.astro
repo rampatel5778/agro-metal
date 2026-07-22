@@ -1,29 +1,32 @@
 ---
 /**
- * Products Range Intro — centered Agriva section-title
- * Eyebrow + title + supporting copy (cards stay separate below).
+ * Hub range intro — centered Agriva section-title
+ * Used on Products + Services hubs (eyebrow + title + supporting copy).
  */
 import type { ProductsRangeIntroProps } from '@types/components/content.js';
 
 const {
+  id = 'hub-range',
   eyebrow = 'What We Supply',
   title,
   description,
   class: className = '',
 } = Astro.props as ProductsRangeIntroProps;
+
+const headingId = `${id}-heading`;
 ---
 
 <section
-  class:list={['section-padding', 'fix', 'products-range-intro', className]}
-  aria-labelledby="products-range-heading"
+  class:list={['section-padding', 'fix', 'hub-range-intro', 'products-range-intro', className]}
+  aria-labelledby={headingId}
 >
   <div class="container">
-    <div class="section-title text-center products-range-intro__header">
+    <div class="section-title text-center hub-range-intro__header products-range-intro__header">
       {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
-      <h2 id="products-range-heading" class="text-anim">
+      <h2 id={headingId} class="text-anim">
         {title}
       </h2>
-      <p class="products-range-intro__text wow fadeInUp" data-wow-delay=".25s">
+      <p class="hub-range-intro__text products-range-intro__text wow fadeInUp" data-wow-delay=".25s">
         {description}
       </p>
     </div>

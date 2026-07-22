@@ -224,9 +224,24 @@ export interface HomeProductCardsProps {
 
 /** Products hub — Agriva section-title intro above product cards */
 export interface ProductsRangeIntroProps {
+  id?: string;
   eyebrow?: string;
   title: string;
   description: string;
+  class?: string;
+}
+
+/** Services hub card — Agriva service-card-items-2 style-2 */
+export interface ServicesHubCardItem {
+  title: string;
+  href: string;
+  imageSrc: string;
+  imageAlt: string;
+  tags: string[];
+}
+
+export interface ServicesHubCardsProps {
+  items: ServicesHubCardItem[];
   class?: string;
 }
 

@@ -1,10 +1,35 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('services');
+/**
+ * Services hub — /services/
+ * 1. Agriva breadcrumb hero
+ * 2. Centered hub intro (same heading style as Products)
+ * 3. Service cards — Agriva service-card-items-2 style-2
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import ProductsRangeIntro from '@components/sections/ProductsRangeIntro.astro';
+import ServicesHubCards from '@components/sections/ServicesHubCards.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  servicesHero,
+  servicesRangeIntro,
+  servicesHubCards,
+} from '@data/pages/services.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-services">
+  <AgrivaBreadcrumbHero {...servicesHero} />
+  <ProductsRangeIntro {...servicesRangeIntro} />
+  <ServicesHubCards {...servicesHubCards} />
+</BaseLayout>
+
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>

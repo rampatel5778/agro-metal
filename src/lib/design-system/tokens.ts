@@ -4,7 +4,7 @@
 export const colorTokens = [
   { name: 'Primary', var: '--color-primary', hex: '#D95648' },
   { name: 'Primary Dark', var: '--color-primary-dark', hex: '#B8453A' },
-  { name: 'Secondary', var: '--color-secondary', hex: '#F5D83E' },
+  { name: 'Secondary', var: '--color-secondary', hex: '#11A21B' },
   { name: 'Accent', var: '--color-accent', hex: '#11A21B' },
   { name: 'Header', var: '--color-header', hex: '#2F2F2F' },
   { name: 'Text', var: '--color-text', hex: '#50624A' },

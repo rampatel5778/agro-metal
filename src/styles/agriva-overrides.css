@@ -15,19 +15,70 @@ button.theme-btn-2 {
   border: 1px solid var(--theme3) !important;
 }
 
-/* Outline / ghost yellow buttons → green outline */
+/* Outline / ghost theme buttons → solid green + white label */
 .theme-btn-2.border-btn,
-a.theme-btn-2.border-btn {
-  background-color: rgba(17, 162, 27, 0.12) !important;
+a.theme-btn-2.border-btn,
+.theme-btn.style-2,
+.theme-btn.style-border,
+.about-us-two-wrapper .about-us-content .about-us-btn-item .theme-btn,
+.faq-wrapper-3 .faq-content .theme-btn,
+.why-choose-us-wrapper-2 .why-choose-us-content .choose-us-btn-item .theme-btn,
+.news-card-item .news-content .theme-btn,
+.hero-1 .hero-main-box .hero-btn .theme-btn.style-border,
+.hero-2 .hero-portfolio-revealing-slide .hero-button .theme-btn-2.border-btn,
+.about-wrapper .about-content .about-button .theme-btn.style-2 {
+  background-color: var(--theme3) !important;
   border: 1px solid var(--theme3) !important;
-  color: var(--theme3) !important;
+  color: var(--white) !important;
+}
+
+/* Same black circle-reveal hover as .theme-btn / .theme-btn-2 / .theme-btn-3 */
+.theme-btn-2.border-btn::before,
+a.theme-btn-2.border-btn::before,
+.theme-btn.style-2::before,
+.theme-btn.style-border::before,
+.about-us-two-wrapper .about-us-content .about-us-btn-item .theme-btn::before,
+.faq-wrapper-3 .faq-content .theme-btn::before,
+.why-choose-us-wrapper-2 .why-choose-us-content .choose-us-btn-item .theme-btn::before,
+.news-card-item .news-content .theme-btn::before,
+.hero-1 .hero-main-box .hero-btn .theme-btn.style-border::before,
+.hero-2 .hero-portfolio-revealing-slide .hero-button .theme-btn-2.border-btn::before,
+.about-wrapper .about-content .about-button .theme-btn.style-2::before {
+  background-color: var(--header) !important;
+}
+
+.theme-btn-2.border-btn::after,
+a.theme-btn-2.border-btn::after,
+.theme-btn.style-2::after,
+.theme-btn.style-border::after,
+.about-us-two-wrapper .about-us-content .about-us-btn-item .theme-btn::after,
+.faq-wrapper-3 .faq-content .theme-btn::after,
+.why-choose-us-wrapper-2 .why-choose-us-content .choose-us-btn-item .theme-btn::after,
+.news-card-item .news-content .theme-btn::after,
+.hero-1 .hero-main-box .hero-btn .theme-btn.style-border::after,
+.hero-2 .hero-portfolio-revealing-slide .hero-button .theme-btn-2.border-btn::after,
+.about-wrapper .about-content .about-button .theme-btn.style-2::after {
+  background-color: rgba(47, 47, 47, 0.3) !important;
 }
 
 .theme-btn-2.border-btn:hover,
 .theme-btn-2.border-btn:focus-visible,
 a.theme-btn-2.border-btn:hover,
-a.theme-btn-2.border-btn:focus-visible {
+a.theme-btn-2.border-btn:focus-visible,
+.about-us-two-wrapper .about-us-content .about-us-btn-item .theme-btn:hover,
+.about-us-two-wrapper .about-us-content .about-us-btn-item .theme-btn:focus-visible,
+.faq-wrapper-3 .faq-content .theme-btn:hover,
+.faq-wrapper-3 .faq-content .theme-btn:focus-visible,
+.why-choose-us-wrapper-2 .why-choose-us-content .choose-us-btn-item .theme-btn:hover,
+.why-choose-us-wrapper-2 .why-choose-us-content .choose-us-btn-item .theme-btn:focus-visible,
+.news-card-item .news-content .theme-btn:hover,
+.news-card-item .news-content .theme-btn:focus-visible,
+.theme-btn.style-2:hover,
+.theme-btn.style-2:focus-visible,
+.theme-btn.style-border:hover,
+.theme-btn.style-border:focus-visible {
   color: var(--white) !important;
+  border-color: var(--header) !important;
 }
 
 /* Button hover: circle reveal fills black; keep labels/icons readable.
@@ -749,6 +800,9 @@ button.theme-btn-2:focus-visible,
 
 .about-us-two-wrapper .about-us-content .about-us-btn-item .theme-btn {
   text-transform: capitalize;
+  background-color: var(--theme3);
+  border: 1px solid var(--theme3);
+  color: var(--white);
 }
 
 /* Feature commodity grid ? 8 cards using Agriva feature-box-item-2 */
@@ -1051,17 +1105,17 @@ body.home-video-modal-open {
   text-transform: capitalize;
 }
 
-/* Home stats counter ? Agriva count-item-2 (Home 01 yellow stroke style) */
+/* Home stats counter — Agriva count-item-2 (green stroke style) */
 .home-stats-section .count-item-2 h2 {
   font-weight: 600;
   font-size: 200px;
   color: transparent;
   line-height: 94%;
-  -webkit-text-stroke: 1px rgb(245, 216, 62);
+  -webkit-text-stroke: 1px rgb(17, 162, 27);
 }
 
 .home-stats-section .count-item-2.active h2 {
-  color: var(--theme2);
+  color: var(--theme3);
   -webkit-text-stroke: 0;
 }
 
@@ -1730,13 +1784,13 @@ body.home-video-modal-open {
 
 .home-timeline-step.is-active .home-timeline-step__dot {
   transform: translate(-50%, -50%) scale(1.35);
-  border-color: var(--theme2);
-  background: var(--theme2);
-  box-shadow: 0 0 0 4px rgb(245 216 62 / 0.3), 0 0 0 14px rgb(245 216 62 / 0.12);
+  border-color: var(--theme3);
+  background: var(--theme3);
+  box-shadow: 0 0 0 4px rgb(17 162 27 / 0.3), 0 0 0 14px rgb(17 162 27 / 0.12);
 }
 
 .home-timeline-step.is-active .home-timeline-step__connector {
-  background: var(--theme2);
+  background: var(--theme3);
 }
 
 .home-timeline-card {
@@ -1759,7 +1813,7 @@ body.home-video-modal-open {
 
 .home-timeline-step.is-active .home-timeline-card {
   opacity: 1;
-  border-color: rgb(245 216 62 / 0.45);
+  border-color: rgb(17 162 27 / 0.45);
   box-shadow: 0 20px 54px rgb(123 153 110 / 0.18);
   transform: translateY(-2px);
 }
@@ -1793,8 +1847,8 @@ body.home-video-modal-open {
 }
 
 .home-timeline-step.is-active .home-timeline-card__badge {
-  background: var(--theme2);
-  color: var(--header);
+  background: var(--theme3);
+  color: var(--white);
 }
 
 .home-timeline-card__title {

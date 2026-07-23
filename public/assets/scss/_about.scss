@@ -326,7 +326,7 @@
                 font-size: 200px;
                 color: transparent;
                 line-height: 94%;
-                -webkit-text-stroke: 1px rgba(245, 216, 62, 1);
+                -webkit-text-stroke: 1px rgba(17, 162, 27, 1);
                 @include breakpoint (max-xxl) {
                     font-size: 90px;
                 }
@@ -383,7 +383,7 @@
 
             img {
                 @include imgw;
-                filter: drop-shadow(0px 4px 150px rgba(245, 216, 62, 0.5));
+                filter: drop-shadow(0px 4px 150px rgba(17, 162, 27, 0.5));
             }
         }
     }

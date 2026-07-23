@@ -9,15 +9,15 @@
   --color-primary-light: #e8786c;
   --color-primary-rgb: 217 86 72;
 
-  --color-secondary: #f5d83e;
-  --color-secondary-dark: #e0c42a;
+  --color-secondary: #11a21b;
+  --color-secondary-dark: #0d8616;
   --color-accent: #11a21b;
   --color-accent-dark: #0d8616;
 
   /* Legacy aliases (template compatibility) */
   --color-theme: #d95648;
   --color-theme-dark: #b8453a;
-  --color-theme-yellow: #f5d83e;
+  --color-theme-yellow: #11a21b; /* formerly yellow; now brand green */
   --color-theme-green: #11a21b;
 
   /* ─── Neutral ─── */

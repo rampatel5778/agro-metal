@@ -73,8 +73,8 @@
   }
 
   .ds-badge--secondary {
-    background: rgb(245 216 62 / 0.25);
-    color: var(--color-header);
+    background: rgb(17 162 27 / 0.15);
+    color: var(--color-accent);
   }
 
   .ds-badge--success {
@@ -142,7 +142,7 @@
   }
 
   .ds-highlight {
-    background: linear-gradient(transparent 60%, rgb(245 216 62 / 0.45) 60%);
+    background: linear-gradient(transparent 60%, rgb(17 162 27 / 0.35) 60%);
     padding-inline: 0.15em;
   }
 

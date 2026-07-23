@@ -12,7 +12,7 @@ export default {
         theme: {
           DEFAULT: '#d95648',
           dark: '#b8453a',
-          yellow: '#f5d83e',
+          yellow: '#11a21b', /* remapped to brand green */
           green: '#11a21b',
         },
         header: '#2f2f2f',
@@ -26,7 +26,7 @@ export default {
           muted: '#eef0ed',
         },
         success: '#11a21b',
-        warning: '#f5d83e',
+        warning: '#11a21b',
         error: '#c8433a',
       },
       fontFamily: {

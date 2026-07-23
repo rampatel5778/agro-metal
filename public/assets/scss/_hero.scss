@@ -699,16 +699,16 @@
                         padding: 13px 24px 13px;
                     }
                     &.border-btn {
-                        background-color: rgba(245, 216, 62, 0.12);
-                        border: 1px solid rgba(245, 216, 62, 1);
-                        color: rgba(245, 216, 62, 1);
+                        background-color: rgba(17, 162, 27, 0.12);
+                        border: 1px solid rgba(17, 162, 27, 1);
+                        color: rgba(17, 162, 27, 1);
 
                         &::before {
                             background-color: $theme-color-2;
                         }
 
                         &::after {
-                            background-color: rgba(245, 216, 62, 0.12);
+                            background-color: rgba(17, 162, 27, 0.12);
                         }
 
                         &:hover {
@@ -1213,7 +1213,7 @@
 
             .theme-btn {
                 &.style-2 {
-                    background: rgba(245, 216, 62, 0.12);
+                    background: rgba(17, 162, 27, 0.12);
                     border: 1px solid #11A21B;
                     color: rgba(17, 162, 27, 1);
 

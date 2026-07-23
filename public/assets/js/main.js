@@ -1441,8 +1441,8 @@
             if (activeItem) {
                 const dot = activeItem.querySelector("span");
                 const link = activeItem.querySelector("h3 a");
-                if (dot) dot.style.backgroundColor = "#F5D83E";
-                if (link) link.style.color = "#F5D83E";
+                if (dot) dot.style.backgroundColor = "#11A21B";
+                if (link) link.style.color = "#11A21B";
             }
 
             if (numberEl) {

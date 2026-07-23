@@ -2152,12 +2152,12 @@ body.page-home {
 }
 
 /* Non-Ferrous ? Closing video CTA (drone-video-section) */
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta {
   font-family: "DM Sans", sans-serif;
   background: var(--white);
 }
 
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__wrapper {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__wrapper {
   overflow: hidden;
   min-height: 520px;
   display: flex;
@@ -2165,7 +2165,7 @@ body.page-home {
   padding: 80px 60px 60px;
 }
 
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__media {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__media {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -2173,7 +2173,7 @@ body.page-home {
   overflow: hidden;
 }
 
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__media iframe {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__media iframe {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2185,7 +2185,7 @@ body.page-home {
   border: 0;
 }
 
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__overlay {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -2197,17 +2197,17 @@ body.page-home {
   );
 }
 
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__content {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content {
   position: relative;
   z-index: 2;
   max-width: 640px;
 }
 
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__content .section-title .sub-title-3 {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content .section-title .sub-title-3 {
   margin-bottom: 16px;
 }
 
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__content .section-title h2 {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content .section-title h2 {
   margin-bottom: 0;
   text-transform: none;
   font-size: clamp(1.75rem, 2.6vw, 2.75rem);
@@ -2215,24 +2215,24 @@ body.page-home {
   max-width: 18ch;
 }
 
-:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__btn {
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__btn {
   margin-top: 28px;
 }
 
 @media (max-width: 991px) {
-  :is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__wrapper {
+  :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__wrapper {
     min-height: 440px;
     padding: 60px 40px 48px;
   }
 }
 
 @media (max-width: 767px) {
-  :is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__wrapper {
+  :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__wrapper {
     min-height: 400px;
     padding: 48px 28px 36px;
   }
 
-  :is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__content .section-title h2 {
+  :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content .section-title h2 {
     max-width: none;
   }
 }
@@ -2683,5 +2683,182 @@ body.page-home {
 @media (max-width: 991px) {
   .page-sustainability .sustainability-looking-ahead__image img {
     min-height: 280px;
+  }
+}
+
+/* Contact Us — Agriva contact-info-section + contact-section */
+.page-contact .contact-info,
+.page-contact .contact-form-map {
+  font-family: "DM Sans", sans-serif;
+}
+
+.page-contact .contact-info .section-title h2 {
+  text-transform: none;
+  max-width: 18ch;
+}
+
+.page-contact .info-right-content p {
+  text-transform: none;
+}
+
+.page-contact .info-right-content .cont span,
+.page-contact .info-right-content .cont h3,
+.page-contact .contact-info-left-content .cont span,
+.page-contact .contact-info-left-content .cont h3 {
+  text-transform: none;
+}
+
+.page-contact .contact-info__fax {
+  margin: 6px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(80, 98, 74);
+  text-transform: none;
+}
+
+.page-contact .contact-info__fax span {
+  margin-right: 4px;
+  color: rgb(142, 142, 142);
+}
+
+.page-contact .contact-info__fax a {
+  color: var(--header);
+  font-weight: 600;
+}
+
+.page-contact .contact-info__directions {
+  margin-top: 28px;
+}
+
+.page-contact .info-right-content .cont h3 a {
+  color: var(--header);
+  text-decoration: none;
+}
+
+.page-contact .info-right-content .cont h3 a:hover {
+  color: var(--theme3);
+}
+
+/* Center icon glyphs inside green circles */
+.page-contact .contact-info .icon-item {
+  align-items: center;
+}
+
+.page-contact .contact-info .icon-item .icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1 !important;
+  padding: 0;
+}
+
+.page-contact .contact-info .icon-item .icon img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  object-fit: contain;
+}
+
+.page-contact .contact-info .icon-item .icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-size: 18px;
+}
+
+.page-contact .contact-form-map {
+  overflow: hidden;
+}
+
+.page-contact .contact-form-map .contact-form .form-clt span {
+  text-transform: none;
+}
+
+/* Equal-height form + map via CSS grid */
+.page-contact .contact-form-map .contact-wrapper > .row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.page-contact .contact-form-map .contact-wrapper > .row > [class*="col-"] {
+  width: 100%;
+  max-width: none;
+  flex: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-contact .contact-form-map .contact-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.page-contact .contact-form-map .contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-contact .contact-form-map .contact-form form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-contact .contact-form-map .contact-form .row {
+  flex: 1;
+}
+
+.page-contact .contact-form-map .contact-form-map__message-col,
+.page-contact .contact-form-map .contact-form-map__message-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-contact .contact-form-map .contact-form textarea {
+  flex: 1;
+  min-height: 120px;
+}
+
+.page-contact .contact-form-map .contact-map {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.page-contact .contact-form-map .contact-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+  min-height: 0 !important;
+  border: 0;
+  border-radius: 20px;
+}
+
+@media (max-width: 991px) {
+  .page-contact .contact-info .section-title h2 {
+    max-width: none;
+  }
+
+  .page-contact .contact-form-map .contact-wrapper > .row {
+    grid-template-columns: 1fr;
+  }
+
+  .page-contact .contact-form-map .contact-map {
+    min-height: 360px;
+    height: 360px;
   }
 }

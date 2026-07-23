@@ -571,3 +571,33 @@ export interface SustainabilityLookingAheadProps {
   imageAlt: string;
   class?: string;
 }
+
+/** Contact info strip — Agriva contact-info-section */
+export interface ContactInfoProps {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  description: string;
+  phoneLabel?: string;
+  phone: string;
+  phoneHref: string;
+  faxLabel?: string;
+  fax: string;
+  faxHref: string;
+  emailLabel?: string;
+  email: string;
+  emailHref: string;
+  addressLabel?: string;
+  addressLines: string[];
+  directionsLabel?: string;
+  directionsHref: string;
+  class?: string;
+}
+
+/** Contact form + map — Agriva contact-section */
+export interface ContactFormMapProps {
+  id?: string;
+  mapEmbedUrl: string;
+  mapTitle?: string;
+  class?: string;
+}

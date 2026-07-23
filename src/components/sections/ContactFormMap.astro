@@ -1,0 +1,135 @@
+---
+/**
+ * Contact form + map — Agriva contact-section
+ * Left: Name / Phone / Email / Message (existing-site fields)
+ * Right: Google Maps embed
+ * Form is UI-only until Resend API is wired.
+ */
+import type { ContactFormMapProps } from '@types/components/content.js';
+
+const {
+  id = 'contact-form-map',
+  mapEmbedUrl,
+  mapTitle = 'Agro Metal office location — Jebel Ali, Dubai',
+  class: className = '',
+} = Astro.props as ContactFormMapProps;
+---
+
+<section
+  id={id}
+  class:list={[
+    'contact-section',
+    'section-padding',
+    'fix',
+    'section-bg-3',
+    'contact-form-map',
+    className,
+  ]}
+  aria-label="Contact form and map"
+>
+  <div class="left-shape float-bob-x" aria-hidden="true">
+    <img src="/assets/img/inner-page/service/tree.png" alt="" loading="lazy" decoding="async" />
+  </div>
+  <div class="maize-shape float-bob-x" aria-hidden="true">
+    <img src="/assets/img/inner-page/service/maize.png" alt="" loading="lazy" decoding="async" />
+  </div>
+
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="contact-content">
+            <div class="contact-form">
+              <form id="contact-form" name="contact" method="post" action="#" data-form-ui-only novalidate>
+                <div class="row g-3">
+                  <div class="col-lg-12">
+                    <div class="form-clt">
+                      <span>Your Name</span>
+                      <input
+                        type="text"
+                        name="name"
+                        id="contact-name"
+                        placeholder="Your Name*"
+                        required
+                        autocomplete="name"
+                        aria-label="Your Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-clt">
+                      <span>Your Phone</span>
+                      <input
+                        type="tel"
+                        name="phone"
+                        id="contact-phone"
+                        placeholder="Your Phone*"
+                        required
+                        autocomplete="tel"
+                        aria-label="Your Phone"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-clt">
+                      <span>Your Email</span>
+                      <input
+                        type="email"
+                        name="email"
+                        id="contact-email"
+                        placeholder="Your Email*"
+                        required
+                        autocomplete="email"
+                        aria-label="Your Email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12 contact-form-map__message-col">
+                    <div class="form-clt contact-form-map__message-field">
+                      <span>Message</span>
+                      <textarea
+                        name="message"
+                        id="contact-message"
+                        cols="30"
+                        rows="6"
+                        placeholder="Your Message"
+                        aria-label="Your Message"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-clt">
+                      <button type="submit" class="theme-btn theme-btn-3">Send Message</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="contact-map">
+            <iframe
+              src={mapEmbedUrl}
+              title={mapTitle}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+    });
+  });
+</script>

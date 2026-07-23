@@ -24,9 +24,8 @@ const companyData = {
     footer: `${ASSET_PATHS.agrometalImages}/2026/03/footer-logo_agro_new-01-02.svg`,
   },
   mapEmbedUrl:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178!2d55.027!3d25.005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzE4LjAiTiA1NcKwMDEnMzcuMiJF!5e0!3m2!1sen!2sae!4v1600000000000!5m2!1sen!2sae',
-  mapDirectionsUrl:
-    'https://www.google.com/maps/search/?api=1&query=Jebel+Ali+Dubai+UAE+Agrometal',
+    'https://www.google.com/maps?q=Office+LB04124,+P.O.Box+262679,+Jebel+Ali,+Dubai,+United+Arab+Emirates&z=15&output=embed',
+  mapDirectionsUrl: 'https://maps.app.goo.gl/3onGKx991d1gLJ6C8',
 } satisfies CompanySchema;
 
 export const company = companySchema.parse(companyData);

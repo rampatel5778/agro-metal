@@ -1,10 +1,39 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('contact-us');
+/**
+ * Contact Us — /contact-us/
+ * 1. Agriva breadcrumb hero
+ * 2. Contact info — contact-info-section
+ * 3. Form + map — contact-section
+ * 4. Closing video CTA — drone-video-section
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import ContactInfo from '@components/sections/ContactInfo.astro';
+import ContactFormMap from '@components/sections/ContactFormMap.astro';
+import ProductClosingCta from '@components/sections/ProductClosingCta.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  contactHero,
+  contactInfo,
+  contactFormMap,
+  contactClosingCta,
+} from '@data/pages/contact-us.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-contact">
+  <AgrivaBreadcrumbHero {...contactHero} />
+  <ContactInfo {...contactInfo} />
+  <ContactFormMap {...contactFormMap} />
+  <ProductClosingCta {...contactClosingCta} />
+</BaseLayout>
+
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>

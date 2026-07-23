@@ -158,8 +158,6 @@ button.theme-btn-2:focus-visible,
 
 /* Icons on green surfaces → white (skip icons that sit on white sub-circles) */
 .footer-section-2 .footer-top-item .icon-item .icon img,
-.feature-section-2 .feature-box-item-2 .masking-shape .icon img,
-.feature-section-2 .feature-box-item-2.active .masking-shape .icon img,
 .why-choose-us-wrapper-4 .why-choose-us-box:hover .top-content .icon img,
 .page-about .about-values__card:hover .top-content .icon img,
 .page-trading-logistics .trading-business-model__card:hover .top-content .icon img,
@@ -359,6 +357,111 @@ button.theme-btn-2:focus-visible,
 
 .header-1 .header-left {
   flex-shrink: 0;
+}
+
+/*
+ * Header phone CTA — full clickable chip.
+ * Match .theme-btn-2 box model (padding/font/line-height) so heights align.
+ * Non-sticky: Agriva glass. Sticky (was black): brand orange + same hover.
+ */
+.header-1 .header-main .header-right .header-btn .header-phone-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  gap: 5px;
+  margin: 0;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px; /* same as body / .theme-btn-2 */
+  text-decoration: none;
+  text-align: center;
+  color: var(--white) !important;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.header-1 .header-main .header-right .header-btn .header-phone-btn i {
+  color: var(--white) !important;
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.header-1 .header-main .header-right .header-btn .header-phone-btn::before {
+  content: "";
+  background-color: var(--header);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  clip-path: circle(0% at 50% 50%);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
+  z-index: -1;
+}
+
+.header-1 .header-main .header-right .header-btn .header-phone-btn:hover::before {
+  clip-path: circle(100% at 50% 50%);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 4s;
+  transition-delay: 200ms;
+}
+
+.header-1 .header-main .header-right .header-btn .header-phone-btn::after {
+  content: "";
+  background-color: rgba(47, 47, 47, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  clip-path: circle(0% at 50% 50%);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
+  z-index: -1;
+}
+
+.header-1 .header-main .header-right .header-btn .header-phone-btn:hover::after {
+  clip-path: circle(100% at 50% 50%);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 4s;
+}
+
+.header-1 .header-main .header-right .header-btn .header-phone-btn:hover,
+.header-1 .header-main .header-right .header-btn .header-phone-btn:focus-visible {
+  color: var(--white) !important;
+}
+
+.header-1 .header-main .header-right .header-btn .header-phone-btn:hover i,
+.header-1 .header-main .header-right .header-btn .header-phone-btn:focus-visible i {
+  color: var(--white) !important;
+}
+
+/* Only the former black (sticky) chip becomes orange — not the transparent state */
+.sticky.header-1 .header-main .header-right .header-btn .header-phone-btn {
+  background-color: var(--theme) !important;
+  border-color: var(--theme) !important;
+}
+
+@media (max-width: 1600px) {
+  .header-1 .header-main .header-right .header-btn .header-phone-btn {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .header-1 .header-main .header-right .header-btn .header-phone-btn {
+    display: none;
+  }
 }
 
 /* Home 01: transparent header over hero; white bar only when sticky */
@@ -964,18 +1067,17 @@ button.theme-btn-2:focus-visible,
 
 .feature-section-2 .feature-box-item-2 .masking-shape .icon img {
   display: block;
-  width: 44px;
-  height: 44px;
-  max-width: 44px;
+  width: 58px;
+  height: 58px;
+  max-width: 58px;
   object-fit: contain;
-  /* Green mask: white icons */
-  filter: brightness(0) invert(1);
+  /* White commodity icons (pre-converted); keep white on green + black masks */
+  filter: none;
   transition: filter 0.3s ease;
 }
 
 .feature-section-2 .feature-box-item-2.active .masking-shape .icon img {
-  /* Black mask on hover/active: keep white */
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 .feature-section-2 .feature-box-item-2 .masking-shape > img,

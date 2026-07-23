@@ -13,7 +13,7 @@ import { ASSET_PATHS, VIDEOS } from '../constants.js';
 
 
 const imageBase = `${ASSET_PATHS.agrometalImages}/2026/02`;
-const iconBase = `${ASSET_PATHS.templateAssets}/img/home-2/icon`;
+const commodityIconBase = `${ASSET_PATHS.agrometalImages}/2025/12/commodity-icons-white`;
 
 
 
@@ -53,48 +53,48 @@ export const homeIntro = {
 
 } as const;
 
-/** Commodity icons — Agriva feature-box-item-2 (8 cards, yellow mask icons) */
+/** Commodity icons — Agriva feature-box-item-2 with white WordPress commodity icons */
 export const homeCommodityIcons = {
   items: [
     {
       title: 'Zinc',
       description: 'Ingots, Alloys, And Sheets For Galvanizing',
-      iconSrc: `${iconBase}/01.svg`,
+      iconSrc: `${commodityIconBase}/zinc-white.webp`,
     },
     {
       title: 'Copper',
       description: 'Cathodes, Rods, Wires, And Pipes',
-      iconSrc: `${iconBase}/02.svg`,
+      iconSrc: `${commodityIconBase}/copper-white.webp`,
     },
     {
       title: 'Lithium',
       description: 'Carbonate, Hydroxide, And Spodumene',
-      iconSrc: `${iconBase}/03.svg`,
+      iconSrc: `${commodityIconBase}/lithium-white.webp`,
     },
     {
       title: 'Ferrous Metals',
       description: 'Iron Ore, Steel Products, And More',
-      iconSrc: `${iconBase}/04.svg`,
+      iconSrc: `${commodityIconBase}/ferrous-white.webp`,
     },
     {
       title: 'Corn',
       description: 'For Feed, Consumption, And Industrial Use',
-      iconSrc: `${iconBase}/05.svg`,
+      iconSrc: `${commodityIconBase}/corn-white.webp`,
     },
     {
       title: 'Wheat',
       description: 'Premium Quality For Food And Feed',
-      iconSrc: `${iconBase}/06.svg`,
+      iconSrc: `${commodityIconBase}/wheat-white.webp`,
     },
     {
       title: 'Barley',
       description: 'For Brewing, Feed, And Food Products',
-      iconSrc: `${iconBase}/07.svg`,
+      iconSrc: `${commodityIconBase}/barley-white.webp`,
     },
     {
       title: 'Oilseeds',
       description: 'Soybeans, Sunflower, And Rapeseed',
-      iconSrc: `${iconBase}/08.svg`,
+      iconSrc: `${commodityIconBase}/oilseeds-white.webp`,
     },
   ],
 } as const;

@@ -69,10 +69,10 @@ function navItemClass(item: NavigationItem): string {
         </div>
         <div class="header-right d-flex justify-content-end align-items-center">
           <div class="header-btn">
-            <span>
+            <a href={phoneHref} class="header-phone-btn">
               <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
-              <a href={phoneHref}>{phone}</a>
-            </span>
+              {phone}
+            </a>
             <div class="header-button">
               <a href={contactCta.href} class="theme-btn-2 style-btns">
                 {contactCta.label}

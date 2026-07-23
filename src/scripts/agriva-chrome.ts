@@ -1,6 +1,6 @@
 /**
- * Agriva Home 01 chrome — sticky header, offcanvas, search, back-to-top
- * Vanilla JS subset (no ScrollSmoother / custom cursor)
+ * Agriva Home 01 chrome — sticky header, offcanvas, back-to-top
+ * Vanilla JS subset (no ScrollSmoother / custom cursor / jQuery meanmenu)
  */
 export function initAgrivaChrome(): void {
   initStickyHeader();
@@ -20,25 +20,36 @@ function initStickyHeader(): void {
 }
 
 function initOffcanvas(): void {
-  const openBtn = document.querySelector('.sidebar__toggle');
+  const openBtn = document.querySelector<HTMLElement>('.sidebar__toggle');
   const closeBtns = document.querySelectorAll('.offcanvas__close, .offcanvas__overlay');
-  const panel = document.querySelector('.offcanvas__info');
+  const panel = document.querySelector<HTMLElement>('.offcanvas__info');
   const overlay = document.querySelector('.offcanvas__overlay');
+  if (!panel || !openBtn) return;
+
+  const setExpanded = (expanded: boolean) => {
+    openBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    openBtn.setAttribute('aria-label', expanded ? 'Close menu' : 'Open menu');
+    panel.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+  };
 
   const open = () => {
-    panel?.classList.add('info-open');
+    panel.classList.add('info-open');
     overlay?.classList.add('overlay-open');
     document.body.classList.add('overflow-hidden');
+    setExpanded(true);
+    const closeBtn = panel.querySelector<HTMLElement>('.offcanvas__close button');
+    closeBtn?.focus();
   };
 
   const close = () => {
-    panel?.classList.remove('info-open');
+    panel.classList.remove('info-open');
     overlay?.classList.remove('overlay-open');
     document.body.classList.remove('overflow-hidden');
+    setExpanded(false);
   };
 
-  openBtn?.addEventListener('click', open);
-  openBtn?.addEventListener('keydown', (event) => {
+  openBtn.addEventListener('click', open);
+  openBtn.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       open();
@@ -47,6 +58,35 @@ function initOffcanvas(): void {
 
   closeBtns.forEach((btn) => {
     btn.addEventListener('click', close);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && panel.classList.contains('info-open')) {
+      close();
+      openBtn.focus();
+    }
+  });
+
+  // Close drawer when a real nav link is followed
+  panel.querySelectorAll('.mean-nav a:not(.mean-expand)').forEach((link) => {
+    link.addEventListener('click', () => close());
+  });
+
+  // Agriva meanmenu-style accordion (plus / minus)
+  panel.querySelectorAll('.mean-expand').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      const li = btn.closest('li');
+      if (!li) return;
+      const icon = btn.querySelector('i');
+      const expanded = li.classList.toggle('dropdown-open');
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      btn.classList.toggle('mean-clicked', expanded);
+      if (icon) {
+        icon.classList.toggle('fa-plus', !expanded);
+        icon.classList.toggle('fa-minus', expanded);
+      }
+    });
   });
 }
 

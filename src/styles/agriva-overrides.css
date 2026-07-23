@@ -2,6 +2,34 @@
  * Agriva Home 01 overrides ? hero video background, logo sizing, global resets
  */
 
+/* Button hover: circle reveal fills black; keep labels/icons readable.
+   Some page rules set `color` without :hover and beat Agriva `.theme-btn-2:hover`. */
+a.theme-btn:hover,
+a.theme-btn:focus-visible,
+button.theme-btn:hover,
+button.theme-btn:focus-visible,
+.theme-btn:hover,
+.theme-btn:focus-visible,
+a.theme-btn-2:hover,
+a.theme-btn-2:focus-visible,
+button.theme-btn-2:hover,
+button.theme-btn-2:focus-visible,
+.theme-btn-2:hover,
+.theme-btn-2:focus-visible,
+.theme-btn-2.style-btns:hover,
+.theme-btn-2.style-btns:focus-visible,
+.theme-btn-2.border-btn:hover,
+.theme-btn-2.border-btn:focus-visible {
+  color: var(--white) !important;
+}
+
+.theme-btn:hover img,
+.theme-btn:focus-visible img,
+.theme-btn-2:hover img,
+.theme-btn-2:focus-visible img {
+  filter: brightness(0) invert(1);
+}
+
 /* Prevent project global.css from overriding Agriva chrome typography */
 .header-1,
 .hero-section.hero-2,
@@ -165,6 +193,77 @@
   max-width: none;
 }
 
+/* ─── Header responsive (<1200px) — Agriva meanScreenWidth + Bootstrap xl ─── */
+/* Use 1199.98px so hamburger (d-xl-none) and hidden desktop nav stay in sync. */
+/* Desktop (≥1200px) unchanged: do not alter rules outside these blocks. */
+@media (max-width: 1199.98px) {
+  /* Hide desktop nav — Agriva meanmenu moves it into offcanvas */
+  .header-1 .mean__menu-wrapper {
+    display: none !important;
+  }
+
+  .header-1 .header-main {
+    min-height: 70px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .header-1 .header-logo img,
+  .header-1 .header-logo-2 img {
+    height: 48px;
+  }
+
+  .header-1 .sidebar__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 22px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-1 .header-logo img,
+  .header-1 .header-logo-2 img {
+    height: 42px;
+  }
+}
+
+/* Offcanvas mobile menu accordion (meanmenu without jQuery) */
+.offcanvas__info .mean-nav > ul > li {
+  position: relative;
+}
+
+.offcanvas__info .mean-nav > ul > li > ul.submenu {
+  display: none;
+  padding-left: 12px;
+  margin: 0 0 8px;
+  list-style: none;
+}
+
+.offcanvas__info .mean-nav > ul > li.dropdown-open > ul.submenu {
+  display: block;
+}
+
+.offcanvas__info .offcanvas__logo img {
+  height: 48px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+/* Agriva: 450px drawer → 300px at ≤450; safe-area for notched phones */
+@media (max-width: 450px) {
+  .offcanvas__info {
+    width: 300px;
+    max-width: 100%;
+    padding-top: env(safe-area-inset-top, 0);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+}
+
 .header-1 h1,
 .header-1 h2,
 .header-1 h3,
@@ -249,6 +348,164 @@
   height: 115px;
   width: auto;
   max-width: none;
+}
+
+/* Center phone/email SVG icons inside yellow circles (Agriva line-height doesn't center <img>) */
+.footer-section-2 .footer-top-item .icon-item {
+  align-items: center;
+}
+
+.footer-section-2 .footer-top-item .icon-item .icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1 !important;
+  padding: 0;
+  overflow: hidden;
+}
+
+.footer-section-2 .footer-top-item .icon-item .icon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  object-fit: contain;
+}
+
+/* ─── Footer responsive — desktop (≥1400px) logo/spacing unchanged ─── */
+@media (max-width: 1399.98px) {
+  .footer-section-2 .footer-logo img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .footer-section-2 .footer-top-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .footer-section-2 .footer-top-item .footer-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .footer-section-2 .footer-logo a {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .footer-section-2 .footer-logo img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  .footer-section-2 .footer-top-item .footer-right-item {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .footer-section-2 .footer-top-item .social-icon {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-section-2 .footer-top-item .icon-item {
+    justify-content: center;
+    width: 100%;
+    max-width: 360px;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .footer-section-2 .footer-widget-wrapper-2 .single-footer-widget .widget-head {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer-section-2 .footer-logo a {
+    max-width: 360px;
+  }
+
+  .footer-section-2 .footer-logo img {
+    max-width: 360px;
+  }
+
+  .footer-section-2 .footer-top-item .icon-item .cont h4 {
+    font-size: 18px;
+  }
+
+  .footer-section-2 .footer-widget-wrapper-2 .row > [class*='col-'] {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-section-2 .footer-logo a {
+    max-width: 300px;
+  }
+
+  .footer-section-2 .footer-logo img {
+    max-width: 300px;
+  }
+
+  .footer-section-2 .footer-top-item .icon-item .cont {
+    text-align: left;
+  }
+
+  .footer-section-2 .footer-top-item .icon-item .cont h4 {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .footer-section-2 .footer-top-item .social-icon {
+    gap: 12px;
+  }
+
+  .footer-section-2 .footer-contact-content .form-clt .theme-btn-2 {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 469.98px) {
+  .footer-section-2 .footer-logo a {
+    max-width: 280px;
+  }
+
+  .footer-section-2 .footer-logo img {
+    max-width: 280px;
+  }
+
+  .footer-section-2 .footer-contact-content .form-clt input {
+    padding-right: 132px;
+  }
+
+  .footer-section-2 .footer-contact-content .form-clt .theme-btn-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .footer-section-2 .footer-bottom .footer-wrapper p {
+    font-size: 14px;
+    text-align: center;
+    padding-inline: 8px;
+  }
 }
 
 .about-us-two-section h1,
@@ -1435,9 +1692,35 @@ body.page-home {
 .home-split-cta .about-wrapper .about-image img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 20px;
+}
+
+/* Desktop: image column matches content height, then grows a little taller */
+@media (min-width: 992px) {
+  .home-split-cta .about-wrapper > .row {
+    align-items: stretch !important;
+  }
+
+  .home-split-cta .about-wrapper > .row > [class*='col-']:has(.about-image) {
+    display: flex;
+  }
+
+  .home-split-cta .about-wrapper .about-image {
+    flex: 1 1 auto;
+    align-self: stretch;
+    height: calc(100% + 48px);
+    margin-block: -24px;
+  }
+
+  .home-split-cta .about-wrapper .about-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    aspect-ratio: unset;
+    object-fit: cover;
+  }
 }
 
 .home-split-cta .about-wrapper .about-content {
@@ -1477,6 +1760,11 @@ body.page-home {
   background-color: var(--theme2);
   color: var(--header);
   text-transform: capitalize;
+}
+
+.home-split-cta .about-button .theme-btn-2:hover,
+.home-split-cta .about-button .theme-btn-2:focus-visible {
+  color: var(--white);
 }
 
 .home-split-cta .container,

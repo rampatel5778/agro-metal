@@ -521,3 +521,53 @@ export interface ServiceWhyChooseProps {
   imageAlt: string;
   class?: string;
 }
+
+/** Sustainability ESG intro — Agriva about-section-3 */
+export interface SustainabilityEsgIntroProps {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  secondaryImageSrc?: string;
+  secondaryImageAlt?: string;
+  panelTitle: string;
+  panelItems: string[];
+  panelBgSrc?: string;
+  class?: string;
+}
+
+/** Sustainability ESG pillars — Agriva pricing-section-2 / pricing-box-items */
+export interface SustainabilityEsgPillarBullet {
+  label: string;
+  description: string;
+}
+
+export interface SustainabilityEsgPillar {
+  title: string;
+  description: string;
+  iconSrc: string;
+  iconAlt?: string;
+  bullets: SustainabilityEsgPillarBullet[];
+}
+
+export interface SustainabilityEsgPillarsProps {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  items: SustainabilityEsgPillar[];
+  class?: string;
+}
+
+/** Sustainability Looking Ahead — Agriva about-us-two-section (image | checklist) */
+export interface SustainabilityLookingAheadProps {
+  id?: string;
+  title: string;
+  description: string;
+  goals: string[];
+  closing: string;
+  imageSrc: string;
+  imageAlt: string;
+  class?: string;
+}

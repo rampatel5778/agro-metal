@@ -2152,12 +2152,12 @@ body.page-home {
 }
 
 /* Non-Ferrous ? Closing video CTA (drone-video-section) */
-:is(.page-product-category, .page-service-detail) .product-closing-cta {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta {
   font-family: "DM Sans", sans-serif;
   background: var(--white);
 }
 
-:is(.page-product-category, .page-service-detail) .product-closing-cta__wrapper {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__wrapper {
   overflow: hidden;
   min-height: 520px;
   display: flex;
@@ -2165,7 +2165,7 @@ body.page-home {
   padding: 80px 60px 60px;
 }
 
-:is(.page-product-category, .page-service-detail) .product-closing-cta__media {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__media {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -2173,7 +2173,7 @@ body.page-home {
   overflow: hidden;
 }
 
-:is(.page-product-category, .page-service-detail) .product-closing-cta__media iframe {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__media iframe {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2185,7 +2185,7 @@ body.page-home {
   border: 0;
 }
 
-:is(.page-product-category, .page-service-detail) .product-closing-cta__overlay {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -2197,17 +2197,17 @@ body.page-home {
   );
 }
 
-:is(.page-product-category, .page-service-detail) .product-closing-cta__content {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__content {
   position: relative;
   z-index: 2;
   max-width: 640px;
 }
 
-:is(.page-product-category, .page-service-detail) .product-closing-cta__content .section-title .sub-title-3 {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__content .section-title .sub-title-3 {
   margin-bottom: 16px;
 }
 
-:is(.page-product-category, .page-service-detail) .product-closing-cta__content .section-title h2 {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__content .section-title h2 {
   margin-bottom: 0;
   text-transform: none;
   font-size: clamp(1.75rem, 2.6vw, 2.75rem);
@@ -2215,24 +2215,24 @@ body.page-home {
   max-width: 18ch;
 }
 
-:is(.page-product-category, .page-service-detail) .product-closing-cta__btn {
+:is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__btn {
   margin-top: 28px;
 }
 
 @media (max-width: 991px) {
-  :is(.page-product-category, .page-service-detail) .product-closing-cta__wrapper {
+  :is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__wrapper {
     min-height: 440px;
     padding: 60px 40px 48px;
   }
 }
 
 @media (max-width: 767px) {
-  :is(.page-product-category, .page-service-detail) .product-closing-cta__wrapper {
+  :is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__wrapper {
     min-height: 400px;
     padding: 48px 28px 36px;
   }
 
-  :is(.page-product-category, .page-service-detail) .product-closing-cta__content .section-title h2 {
+  :is(.page-product-category, .page-service-detail, .page-sustainability) .product-closing-cta__content .section-title h2 {
     max-width: none;
   }
 }
@@ -2420,6 +2420,268 @@ body.page-home {
 
 @media (max-width: 991px) {
   .page-service-detail .service-why-choose__image img {
+    min-height: 280px;
+  }
+}
+
+/* Sustainability ESG intro — Agriva about-section-3 */
+.page-sustainability .sustainability-esg-intro {
+  font-family: "DM Sans", sans-serif;
+  background:
+    radial-gradient(ellipse 70% 55% at 8% 20%, rgba(17, 162, 27, 0.07), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 92% 75%, rgba(17, 162, 27, 0.05), transparent 55%),
+    var(--white);
+  overflow: hidden;
+}
+
+.page-sustainability .sustainability-esg-intro__content .section-title h2 {
+  text-transform: none;
+  max-width: 16ch;
+}
+
+.page-sustainability .sustainability-esg-intro__text {
+  max-width: 36rem;
+  color: rgb(80, 98, 74);
+  font-size: 16px;
+  line-height: 1.75;
+  text-transform: none;
+}
+
+.page-sustainability .sustainability-esg-intro__images {
+  margin-top: 28px;
+  gap: 16px;
+}
+
+.page-sustainability .sustainability-esg-intro__images .about-image img {
+  object-fit: cover;
+}
+
+.page-sustainability .sustainability-esg-intro__panel {
+  background-color: #0f2e16;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.page-sustainability .sustainability-esg-intro__panel .about-right-item {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.page-sustainability .sustainability-esg-intro__panel .about-right-item h3 {
+  font-size: 28px;
+  margin-bottom: 28px;
+  text-transform: none;
+}
+
+.page-sustainability .sustainability-esg-intro__list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.page-sustainability .sustainability-esg-intro__list .list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-sustainability .sustainability-esg-intro__list .list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-transform: none;
+  margin: 0;
+}
+
+.page-sustainability .sustainability-esg-intro__list .list li i {
+  margin-top: 3px;
+  color: #9fe07a;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+  .page-sustainability .sustainability-esg-intro__content .section-title h2 {
+    max-width: none;
+  }
+
+  .page-sustainability .sustainability-esg-intro__panel {
+    min-height: 320px;
+    margin-top: 8px;
+  }
+}
+
+/* Sustainability ESG pillars — Agriva pricing-section-2 */
+.page-sustainability .sustainability-esg-pillars {
+  font-family: "DM Sans", sans-serif;
+  background: #f7f8f5;
+}
+
+.page-sustainability .sustainability-esg-pillars__header {
+  margin-bottom: 20px;
+}
+
+.page-sustainability .sustainability-esg-pillars__card {
+  height: 100%;
+  padding: 36px 28px 32px;
+  overflow: hidden;
+}
+
+.page-sustainability .sustainability-esg-pillars__header-block {
+  margin-bottom: 22px;
+}
+
+.page-sustainability .sustainability-esg-pillars__icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.page-sustainability .sustainability-esg-pillars__icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.page-sustainability .sustainability-esg-pillars__card .pricing-header h3 {
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  text-transform: none;
+}
+
+.page-sustainability .sustainability-esg-pillars__card .pricing-header p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  opacity: 0.92;
+  text-transform: none;
+}
+
+.page-sustainability .sustainability-esg-pillars__list {
+  margin-top: 0;
+}
+
+.page-sustainability .sustainability-esg-pillars__list ul li {
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+  text-transform: none;
+}
+
+.page-sustainability .sustainability-esg-pillars__list ul li span {
+  display: block;
+}
+
+.page-sustainability .sustainability-esg-pillars__list ul li strong {
+  font-weight: 700;
+}
+
+.page-sustainability .sustainability-esg-pillars__list ul li i {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.page-sustainability .sustainability-esg-pillars__card:hover .sustainability-esg-pillars__icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sustainability Looking Ahead — Agriva about-us-two-section (single image) */
+.page-sustainability .sustainability-looking-ahead {
+  font-family: "DM Sans", sans-serif;
+  background: var(--white);
+}
+
+.page-sustainability .sustainability-looking-ahead__image {
+  max-width: none;
+}
+
+.page-sustainability .sustainability-looking-ahead__image img {
+  width: 100%;
+  height: auto;
+  min-height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.page-sustainability .sustainability-looking-ahead__content .section-title h2 {
+  text-transform: none;
+  margin-bottom: 12px;
+}
+
+.page-sustainability .sustainability-looking-ahead__intro {
+  max-width: 34rem;
+  color: rgb(80, 98, 74);
+  font-size: 16px;
+  line-height: 1.75;
+  text-transform: none;
+  margin-bottom: 22px;
+}
+
+.page-sustainability .sustainability-looking-ahead__list {
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+  max-width: 34rem;
+}
+
+.page-sustainability .sustainability-looking-ahead__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgb(47, 47, 47);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
+  text-transform: none;
+}
+
+.page-sustainability .sustainability-looking-ahead__list li:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+/* Beat Agriva .about-us-two-wrapper .list li i { color: rgb(200, 67, 58) } */
+.page-sustainability .about-us-two-wrapper .about-us-content .list.sustainability-looking-ahead__list li i,
+.page-sustainability .sustainability-looking-ahead__list li i {
+  margin-top: 3px;
+  margin-right: 0;
+  color: var(--theme3);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.page-sustainability .sustainability-looking-ahead__closing {
+  max-width: 34rem;
+  margin: 0;
+  color: rgb(80, 98, 74);
+  font-size: 16px;
+  line-height: 1.75;
+  text-transform: none;
+}
+
+@media (max-width: 991px) {
+  .page-sustainability .sustainability-looking-ahead__image img {
     min-height: 280px;
   }
 }

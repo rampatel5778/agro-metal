@@ -1,10 +1,52 @@
 ---
-import '@styles/global.css';
-import { getRouteMeta } from '@utils/route';
-const meta = getRouteMeta('sustainability');
+/**
+ * Sustainability — /sustainability/
+ * 1. Agriva breadcrumb hero
+ * 2. ESG Commitment intro — about-section-3
+ * 3. ESG pillars — pricing-section-2
+ * 4. Looking Ahead — about-us-two-section
+ * 5. Closing video CTA — drone-video-section
+ */
+import BaseLayout from '@components/layout/BaseLayout.astro';
+import AgrivaBreadcrumbHero from '@components/layout/AgrivaBreadcrumbHero.astro';
+import SustainabilityEsgIntro from '@components/sections/SustainabilityEsgIntro.astro';
+import SustainabilityEsgPillars from '@components/sections/SustainabilityEsgPillars.astro';
+import SustainabilityLookingAhead from '@components/sections/SustainabilityLookingAhead.astro';
+import ProductClosingCta from '@components/sections/ProductClosingCta.astro';
+import { getSiteLayout } from '@lib/layout/getSiteLayout.js';
+import {
+  sustainabilityHero,
+  sustainabilityEsgIntro,
+  sustainabilityEsgPillars,
+  sustainabilityLookingAhead,
+  sustainabilityClosingCta,
+} from '@data/pages/sustainability.js';
+
+const layout = getSiteLayout(Astro.url.pathname);
 ---
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Agrometal</title></head>
-  <body data-phase={meta.phase} data-route={meta.path} data-page={meta.pageId}><main id="main-content"></main></body>
-</html>
+
+<BaseLayout {...layout} bodyClass="page-sustainability">
+  <AgrivaBreadcrumbHero {...sustainabilityHero} />
+  <SustainabilityEsgIntro {...sustainabilityEsgIntro} />
+  <SustainabilityEsgPillars {...sustainabilityEsgPillars} />
+  <SustainabilityLookingAhead {...sustainabilityLookingAhead} />
+  <ProductClosingCta {...sustainabilityClosingCta} />
+</BaseLayout>
+
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>
+
+<script is:inline src="/assets/js/wow.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof WOW !== 'undefined') {
+      new WOW({ live: false, mobile: true }).init();
+    }
+  });
+</script>

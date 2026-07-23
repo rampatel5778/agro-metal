@@ -1,0 +1,90 @@
+---
+/**
+ * Sustainability ESG pillars — Agriva pricing-section-2 / pricing-box-items
+ * Three equal columns: icon + title + intro + bullet list (no price/CTA).
+ */
+import type { SustainabilityEsgPillarsProps } from '@types/components/content.js';
+
+const {
+  id = 'sustainability-esg-pillars',
+  eyebrow,
+  title,
+  items,
+  class: className = '',
+} = Astro.props as SustainabilityEsgPillarsProps;
+
+const headingId = title ? `${id}-heading` : undefined;
+---
+
+<section
+  id={id}
+  class:list={['pricing-section-2', 'section-padding', 'fix', 'sustainability-esg-pillars', className]}
+  aria-labelledby={headingId}
+  aria-label={title ? undefined : 'ESG pillars'}
+>
+  <div class="container">
+    {
+      (eyebrow || title) && (
+        <div class="section-title text-center sustainability-esg-pillars__header">
+          {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+          {title && (
+            <h2 id={headingId} class="text-anim">
+              {title}
+            </h2>
+          )}
+        </div>
+      )
+    }
+
+    <div class="row g-4">
+      {
+        items.map((item, index) => (
+          <div
+            class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+            data-wow-delay={`${(0.2 + index * 0.1).toFixed(2)}s`}
+          >
+            <div
+              class="pricing-box-items mt-0 bg-cover sustainability-esg-pillars__card"
+              style="background-image: url(/assets/img/home-3/footer-bg-2.jpg);"
+            >
+              <div class="nexella-hover-bx hover-bx" aria-hidden="true" />
+              <div class="nexella-hover-bx hover-bx2" aria-hidden="true" />
+              <div class="nexella-hover-bx hover-bx3" aria-hidden="true" />
+              <div class="nexella-hover-bx hover-bx4" aria-hidden="true" />
+
+              <div class="pricing-header sustainability-esg-pillars__header-block">
+                <div class="sustainability-esg-pillars__icon">
+                  <img
+                    src={item.iconSrc}
+                    alt={item.iconAlt || ''}
+                    loading="lazy"
+                    decoding="async"
+                    width="96"
+                    height="96"
+                  />
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+
+              <div class="pricing-list sustainability-esg-pillars__list">
+                <ul>
+                  {
+                    item.bullets.map((bullet) => (
+                      <li>
+                        <i class="fa-solid fa-arrow-up-right" aria-hidden="true" />
+                        <span>
+                          <strong>{bullet.label}</strong>: {bullet.description}
+                        </span>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

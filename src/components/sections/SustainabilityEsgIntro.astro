@@ -1,0 +1,108 @@
+---
+/**
+ * Sustainability ESG intro — Agriva about-section-3
+ * Left: eyebrow + headline + body + image stack
+ * Right: ESG at a glance panel (pillar teasers only)
+ */
+import type { SustainabilityEsgIntroProps } from '@types/components/content.js';
+
+const {
+  id = 'sustainability-esg-intro',
+  eyebrow,
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+  secondaryImageSrc,
+  secondaryImageAlt = '',
+  panelTitle,
+  panelItems,
+  panelBgSrc = '/assets/img/home-3/about-shape.png',
+  class: className = '',
+} = Astro.props as SustainabilityEsgIntroProps;
+
+const headingId = `${id}-heading`;
+---
+
+<section
+  id={id}
+  class:list={['about-section-3', 'section-padding', 'fix', 'sustainability-esg-intro', className]}
+  aria-labelledby={headingId}
+>
+  <div class="chili-shape float-bob-y" aria-hidden="true">
+    <img src="/assets/img/home-3/chili.png" alt="" loading="lazy" decoding="async" />
+  </div>
+  <div class="tree-shape float-bob-y" aria-hidden="true">
+    <img src="/assets/img/home-3/about-shape-2.png" alt="" loading="lazy" decoding="async" />
+  </div>
+
+  <div class="container">
+    <div class="about-wrapper-3">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-xl-6 col-lg-7">
+          <div class="about-content sustainability-esg-intro__content">
+            <div class="section-title mb-0">
+              {eyebrow && <span class="sub-title-3">{eyebrow}</span>}
+              <h2 id={headingId} class="text-anim">{title}</h2>
+            </div>
+            <p class="text sustainability-esg-intro__text wow fadeInUp" data-wow-delay=".25s">
+              {description}
+            </p>
+
+            <div class="about-image-item sustainability-esg-intro__images wow fadeInUp" data-wow-delay=".35s">
+              <div class="about-image">
+                <img
+                  src={imageSrc}
+                  alt={imageAlt}
+                  class="img-custom-anim-left"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
+                />
+              </div>
+              {
+                secondaryImageSrc && (
+                  <div class="about-image">
+                    <img
+                      src={secondaryImageSrc}
+                      alt={secondaryImageAlt}
+                      loading="lazy"
+                      decoding="async"
+                      width="600"
+                      height="450"
+                    />
+                  </div>
+                )
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-5">
+          <div
+            class="about-box bg-cover sustainability-esg-intro__panel wow fadeInRight"
+            data-wow-delay=".3s"
+            style={`background-image: url(${panelBgSrc});`}
+          >
+            <div class="about-right-item">
+              <h3>{panelTitle}</h3>
+              <div class="list-item sustainability-esg-intro__list">
+                <ul class="list">
+                  {
+                    panelItems.map((item) => (
+                      <li>
+                        <i class="fa-solid fa-circle-check" aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

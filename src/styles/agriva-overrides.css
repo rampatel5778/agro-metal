@@ -109,6 +109,106 @@ button.theme-btn-2:focus-visible,
   filter: brightness(0) invert(1);
 }
 
+/*
+ * Green surface → white foreground (text / icons), including hover.
+ * Applies wherever bg is brand green (--theme2 / --theme3 / #11A21B).
+ */
+.theme-btn-2,
+.theme-btn-2.style-btns,
+.theme-btn.theme-btn-3,
+.theme-btn-2.border-btn,
+.about-us-two-wrapper .about-us-content .about-us-btn-item .theme-btn,
+.faq-wrapper-3 .faq-content .theme-btn,
+.footer-section-2 .footer-top-item .icon-item .icon,
+.footer-section-2 .footer-top-item .social-icon a:hover,
+.footer-section-2 .footer-top-item .footer-right-item .social-icon a:hover,
+.footer-bottom .footer-wrapper .social-icon a:hover,
+.offcanvas__wrapper .offcanvas__content .offcanvas__contact .social-icon a:hover,
+.team-card-item .team-image .social-icon a:hover,
+.team-card-items-2 .team-image .social-icon a:hover,
+.team-card-items-4 .team-image .social-icon a:hover,
+.team-details-wrapper .team-details-content .social-icon a:hover,
+.home-timeline-card__badge,
+.home-timeline-step.is-active .home-timeline-card__badge,
+.process-card.active .card-title,
+.process-card.active .card-description,
+.feature-box-item-2.active .content h3,
+.feature-box-item-2.active .content p,
+.feature-box-item-2.active .content h3 a,
+.feature-box-item-2.active .content a,
+.why-choose-us-wrapper-4 .why-choose-us-box:hover,
+.why-choose-us-wrapper-4 .why-choose-us-box:hover .top-content h3,
+.why-choose-us-wrapper-4 .why-choose-us-box:hover p,
+.why-choose-us-wrapper-4 .why-choose-us-box:hover a,
+.page-about .about-values__card:hover .top-content h3,
+.page-about .about-values__card:hover .about-values__bullets li,
+.page-about .about-values__card:hover .about-values__bullets i,
+.page-trading-logistics .trading-business-model__card:hover .top-content h3,
+.page-trading-logistics .trading-business-model__card:hover > p,
+.page-trading-logistics .trading-supply-chain__card:hover .top-content h3,
+.page-trading-logistics .trading-supply-chain__card:hover > p,
+.page-services .services-hub-cards .service-card-items-2.style-2:hover h2,
+.page-services .services-hub-cards .service-card-items-2.style-2:hover p,
+.home-product-cards .service-card-items-2:hover h3,
+.home-product-cards .service-card-items-2:hover h3 a,
+.home-product-cards .service-card-items-2:hover .top-content p,
+.home-product-cards .service-card-items-2:hover .top-content .tag-list span {
+  color: var(--white) !important;
+}
+
+/* Icons on green surfaces → white (skip icons that sit on white sub-circles) */
+.footer-section-2 .footer-top-item .icon-item .icon img,
+.feature-section-2 .feature-box-item-2 .masking-shape .icon img,
+.feature-section-2 .feature-box-item-2.active .masking-shape .icon img,
+.why-choose-us-wrapper-4 .why-choose-us-box:hover .top-content .icon img,
+.page-about .about-values__card:hover .top-content .icon img,
+.page-trading-logistics .trading-business-model__card:hover .top-content .icon img,
+.page-trading-logistics .trading-supply-chain__card:hover .top-content .icon img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* About process cards: icon sits on a white circle — keep green on active/hover */
+.process-card.active .card-icon img,
+.page-about .about-differentiators .process-card.active .card-icon img,
+.process-card.active .card-icon span,
+.page-about .about-differentiators .process-card.active .card-icon span {
+  filter: none !important;
+  color: var(--theme3) !important;
+  border-color: var(--theme3) !important;
+}
+
+.process-card.active .card-icon,
+.page-about .about-differentiators .process-card.active .card-icon {
+  background-color: var(--white) !important;
+}
+
+.process-card.active .card-icon span,
+.page-about .about-differentiators .process-card.active .card-icon span {
+  background-color: var(--white) !important;
+}
+
+/* Home + Products hub cards: green hover fill → white copy */
+.home-product-cards .service-card-items-2:hover h3,
+.home-product-cards .service-card-items-2:hover h3 a,
+.home-product-cards .service-card-items-2:hover .top-content p,
+.home-product-cards .service-card-items-2:hover .top-content .tag-list span,
+.page-products .home-product-cards .service-card-items-2:hover h3,
+.page-products .home-product-cards .service-card-items-2:hover h3 a,
+.page-products .home-product-cards .service-card-items-2:hover .top-content p,
+.page-products .home-product-cards .service-card-items-2:hover .top-content .tag-list span {
+  color: var(--white) !important;
+}
+
+.home-product-cards .service-card-items-2:hover .top-content .tag-list span,
+.page-products .home-product-cards .service-card-items-2:hover .top-content .tag-list span {
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Prevent Agriva from forcing dark text on green social hover */
+.footer-section-2 .footer-top-item .footer-right-item .social-icon a:hover {
+  color: var(--white) !important;
+}
+
 /* Prevent project global.css from overriding Agriva chrome typography */
 .header-1,
 .home-hero,
@@ -868,13 +968,13 @@ button.theme-btn-2:focus-visible,
   height: 44px;
   max-width: 44px;
   object-fit: contain;
-  /* Yellow mask: force black (Agriva SVGs mix white strokes + dark fills) */
-  filter: brightness(0);
+  /* Green mask: white icons */
+  filter: brightness(0) invert(1);
   transition: filter 0.3s ease;
 }
 
 .feature-section-2 .feature-box-item-2.active .masking-shape .icon img {
-  /* Black mask on hover/active: force white */
+  /* Black mask on hover/active: keep white */
   filter: brightness(0) invert(1);
 }
 
@@ -890,7 +990,7 @@ button.theme-btn-2:focus-visible,
 
 .feature-box-item-2.active .content h3,
 .feature-box-item-2.active .content p {
-  color: var(--header);
+  color: var(--white);
 }
 
 /* Home about stats ? Agriva about-section-2 (heading only + video in paddy area) */
@@ -1099,10 +1199,26 @@ body.home-video-modal-open {
 .home-product-cards .service-card-items-2 h3,
 .home-product-cards .service-card-items-2 .top-content p {
   text-transform: none;
+  transition: color 0.4s ease;
 }
 
 .home-product-cards .service-card-items-2 h3 {
   text-transform: capitalize;
+}
+
+.home-product-cards .service-card-items-2 .top-content .tag-list span {
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.home-product-cards .service-card-items-2:hover h3,
+.home-product-cards .service-card-items-2:hover h3 a,
+.home-product-cards .service-card-items-2:hover .top-content p,
+.home-product-cards .service-card-items-2:hover .top-content .tag-list span {
+  color: var(--white) !important;
+}
+
+.home-product-cards .service-card-items-2:hover .top-content .tag-list span {
+  border-color: rgba(255, 255, 255, 0.35) !important;
 }
 
 /* Home stats counter — Agriva count-item-2 (green stroke style) */
@@ -1257,6 +1373,12 @@ body.home-video-modal-open {
   width: 64px;
   height: 64px;
   object-fit: contain;
+  /* Icons sit on a white circle — stay green even when card is green */
+  filter: none;
+}
+
+.page-about .about-differentiators .process-card.active .card-icon img {
+  filter: none !important;
 }
 
 .page-about .about-differentiators .process-card .card-title {

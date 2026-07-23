@@ -381,7 +381,7 @@ span {
   border: 1px solid var(--theme2);
 }
 .theme-btn-2.style-btns:hover {
-  color: var(--theme2);
+  color: var(--white);
 }
 
 .link-btn-2 {
@@ -3206,6 +3206,7 @@ span {
 .footer-bottom .footer-wrapper .social-icon a:hover {
   background-color: var(--theme3);
   border: 1px solid var(--theme3);
+  color: var(--white);
 }
 
 .footer-section-2 .footer-top-item {
@@ -3256,7 +3257,7 @@ span {
 .footer-section-2 .footer-top-item .footer-right-item .social-icon a:hover {
   background-color: var(--theme2);
   border: 1px solid var(--theme2);
-  color: var(--header);
+  color: var(--white);
 }
 .footer-section-2 .footer-top-item .footer-right-item .icon-item {
   display: flex;
@@ -6053,7 +6054,7 @@ span {
 }
 .why-choose-us-wrapper-2 .why-choose-us-content .choose-us-btn-item .theme-btn:hover {
   border: 1px solid var(--header);
-  color: var(--theme2);
+  color: var(--white);
 }
 .why-choose-us-wrapper-2 .why-choose-us-content .choose-us-btn-item .icon-item {
   display: flex;
@@ -12396,6 +12397,7 @@ span {
 .team-card-item .team-image .social-icon a:hover {
   background-color: var(--theme3);
   border: 1px solid var(--theme3);
+  color: var(--white);
 }
 .team-card-item .team-image .team-content {
   left: 50%;
@@ -12508,6 +12510,7 @@ span {
 .team-card-items-2 .team-image .social-icon a:hover {
   background-color: var(--theme3);
   border: 1px solid var(--theme3);
+  color: var(--white);
 }
 .team-card-items-2 .team-content {
   margin-top: 30px;
@@ -12878,6 +12881,7 @@ span {
 }
 .team-card-items-4 .team-image .social-icon a:hover {
   background-color: var(--theme3);
+  color: var(--white);
 }
 .team-card-items-4 .team-content {
   margin-top: 30px;

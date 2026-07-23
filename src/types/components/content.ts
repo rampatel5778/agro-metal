@@ -402,11 +402,11 @@ export interface HomeTextMarqueeProps {
 
 export interface HeroVideoProps {
   youtubeId: string;
-  /** Main hero headline */
-  title: string;
+  /** Main hero headline — omit for video-only hero */
+  title?: string;
   eyebrow?: string;
   description?: string;
-  primaryCta: import('@types/cta.js').CTA;
+  primaryCta?: import('@types/cta.js').CTA;
   secondaryCta?: import('@types/cta.js').CTA;
   bottomBar?: {
     heading: string;

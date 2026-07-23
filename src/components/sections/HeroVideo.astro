@@ -19,7 +19,12 @@ const {
 } = Astro.props as HeroVideoProps;
 ---
 
-<section class="hero-section hero-2 fix" data-hero-video aria-labelledby="hero-heading">
+<section
+  class="hero-section hero-2 fix"
+  data-hero-video
+  aria-label={title ? undefined : 'Home hero'}
+  aria-labelledby={title ? 'hero-heading' : undefined}
+>
   <div class="hero-portfolio-revealing-slider">
     <div class="hero-portfolio-revealing-slider-slides">
       <div class="hero-portfolio-revealing-slide s-active">
@@ -37,30 +42,46 @@ const {
               tabindex="-1"
             ></iframe>
           </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-9">
-                <div class="hero-portfolio-revealing-slide-content">
-                  <div class="icon">
-                    <img src={iconSrc} alt="" />
-                  </div>
-                  {eyebrow && <span>{eyebrow}</span>}
-                  <h1 id="hero-heading" class="hero-portfolio-revealing-slide-heading" set:html={title} />
-                  {description && <p>{description}</p>}
-                  <div class="hero-button" data-animation="fadeInUp" data-delay="1.5s">
-                    <a href={primaryCta.href} class="theme-btn-2">{primaryCta.label}</a>
-                    {
-                      secondaryCta && (
-                        <a href={secondaryCta.href} class="theme-btn-2 border-btn">
-                          {secondaryCta.label}
-                        </a>
-                      )
-                    }
+          {
+            (eyebrow || title || description || primaryCta || secondaryCta) && (
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-9">
+                    <div class="hero-portfolio-revealing-slide-content">
+                      {iconSrc && (
+                        <div class="icon">
+                          <img src={iconSrc} alt="" />
+                        </div>
+                      )}
+                      {eyebrow && <span>{eyebrow}</span>}
+                      {title && (
+                        <h1
+                          id="hero-heading"
+                          class="hero-portfolio-revealing-slide-heading"
+                          set:html={title}
+                        />
+                      )}
+                      {description && <p>{description}</p>}
+                      {(primaryCta || secondaryCta) && (
+                        <div class="hero-button" data-animation="fadeInUp" data-delay="1.5s">
+                          {primaryCta && (
+                            <a href={primaryCta.href} class="theme-btn-2">
+                              {primaryCta.label}
+                            </a>
+                          )}
+                          {secondaryCta && (
+                            <a href={secondaryCta.href} class="theme-btn-2 border-btn">
+                              {secondaryCta.label}
+                            </a>
+                          )}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            )
+          }
         </div>
       </div>
     </div>

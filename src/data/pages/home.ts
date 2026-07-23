@@ -17,50 +17,19 @@ const iconBase = `${ASSET_PATHS.templateAssets}/img/home-2/icon`;
 
 
 
-/** Hero — RevSlider slide in Agriva hero-2 layout */
-
+/** Hero — RevSlider slide in Agriva hero-2 layout (video + bottom bar only) */
 export const homeHero = {
-
   youtubeId: VIDEOS.homeHero,
-
   videoTitle: 'Agro Metal Intro Video Final V2',
-
-  title: "Delivering the<br />World's Essential<br />Resources.",
-
-  primaryCta: {
-
-    label: 'Know more',
-
-    href: '/about-us/',
-
-  } satisfies CTA,
-
-  secondaryCta: {
-
-    label: 'Contact Us',
-
-    href: '/contact-us/',
-
-  } satisfies CTA,
-
   bottomBar: {
-
     heading: 'Agro Metal FZCO',
-
     items: [
-
       'Ferrous Metals',
-
       'Non-Ferrous Metals',
-
       'Agricultural Commodities',
-
       'Sustainability Driven',
-
     ],
-
   },
-
 } as const;
 
 

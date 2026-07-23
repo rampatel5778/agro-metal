@@ -51,6 +51,22 @@ export const homeIntro = {
     href: '/about-us/',
   } satisfies CTA,
 
+  /** Tall right column: vertical mining haul truck (replaces Agriva tractor stock) */
+  images: {
+    top: {
+      src: '/assets/img/inner-page/about/01.jpg',
+      animation: 'img-custom-anim-top',
+    },
+    left: {
+      src: '/assets/img/inner-page/about/02.jpg',
+      animation: 'img-custom-anim-left',
+    },
+    right: {
+      src: `${ASSET_PATHS.agrometalImages}/2026/03/2.webp`,
+      animation: 'img-custom-anim-right',
+    },
+  },
+
 } as const;
 
 /** Commodity icons — Agriva feature-box-item-2 with white WordPress commodity icons */

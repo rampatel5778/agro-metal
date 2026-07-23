@@ -414,8 +414,6 @@ export interface HeroVideoProps {
   };
   videoTitle?: string;
   iconSrc?: string;
-  arrowLeftSrc?: string;
-  arrowRightSrc?: string;
   class?: string;
 }
 

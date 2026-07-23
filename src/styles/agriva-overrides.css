@@ -2,6 +2,34 @@
  * Agriva Home 01 overrides ? hero video background, logo sizing, global resets
  */
 
+/* Sitewide: yellow .theme-btn-2 → green fill + white label (match .theme-btn-3 / View Products) */
+.theme-btn-2,
+a.theme-btn-2,
+button.theme-btn-2 {
+  background-color: var(--theme3) !important;
+  color: var(--white) !important;
+  border-color: var(--theme3);
+}
+
+.theme-btn-2.style-btns {
+  border: 1px solid var(--theme3) !important;
+}
+
+/* Outline / ghost yellow buttons → green outline */
+.theme-btn-2.border-btn,
+a.theme-btn-2.border-btn {
+  background-color: rgba(17, 162, 27, 0.12) !important;
+  border: 1px solid var(--theme3) !important;
+  color: var(--theme3) !important;
+}
+
+.theme-btn-2.border-btn:hover,
+.theme-btn-2.border-btn:focus-visible,
+a.theme-btn-2.border-btn:hover,
+a.theme-btn-2.border-btn:focus-visible {
+  color: var(--white) !important;
+}
+
 /* Button hover: circle reveal fills black; keep labels/icons readable.
    Some page rules set `color` without :hover and beat Agriva `.theme-btn-2:hover`. */
 a.theme-btn:hover,
@@ -32,6 +60,7 @@ button.theme-btn-2:focus-visible,
 
 /* Prevent project global.css from overriding Agriva chrome typography */
 .header-1,
+.home-hero,
 .hero-section.hero-2,
 .footer-section-2,
 .about-section-2,
@@ -281,20 +310,20 @@ button.theme-btn-2:focus-visible,
   color: var(--white);
 }
 
-.hero-portfolio-revealing-slide-inner--video {
+/* ─── Home hero (rebuilt): full-viewport video + bottom bar overlay ─── */
+.home-hero {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 560px;
+  max-height: none;
+  overflow: hidden;
+  background: #0f1a0a;
+  isolation: isolate;
 }
 
-.hero-portfolio-revealing-slide-inner--video::before {
-  z-index: 1;
-}
-
-.hero-portfolio-revealing-slide-inner--video .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-video-bg {
+.home-hero__media {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -302,18 +331,194 @@ button.theme-btn-2:focus-visible,
   pointer-events: none;
 }
 
-.hero-video-bg iframe {
+.home-hero__media iframe {
   position: absolute;
   top: 50%;
   left: 50%;
   width: max(100%, 177.78vh);
   height: max(100%, 56.25vw);
+  min-width: 100%;
+  min-height: 100%;
   transform: translate(-50%, -50%);
   border: 0;
 }
 
-.hero-video-bg--static {
-  background: #162609 center / cover no-repeat;
+.home-hero__shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* Block YouTube chrome / click targets while keeping visual playback */
+.home-hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.home-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 120px 0 140px;
+  text-align: center;
+  color: var(--white);
+}
+
+.home-hero__title {
+  color: var(--white);
+  margin: 0;
+}
+
+.home-hero__eyebrow,
+.home-hero__desc {
+  color: var(--white);
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+/* Agriva index.html .hero-border-item — exact spacing, no pagination */
+.home-hero .hero-border-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  z-index: 3;
+  padding: 25px 120px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-hero .hero-border-item .hero-bottom-item {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  min-width: 0;
+  width: 100%;
+}
+
+.home-hero .hero-border-item .hero-bottom-item h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.home-hero .hero-border-item .hero-bottom-item .hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.home-hero .hero-border-item .hero-bottom-item .hero-list span {
+  position: relative;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.home-hero .hero-border-item .hero-bottom-item .hero-list span::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 8px;
+  left: -20px;
+}
+
+.home-hero .hero-border-item .hero-bottom-item .hero-list span i {
+  margin-right: 10px;
+  color: var(--white);
+}
+
+@media (max-width: 1399.98px) {
+  .home-hero .hero-border-item {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item {
+    gap: 32px;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item .hero-list {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .home-hero .hero-border-item {
+    bottom: 16px;
+    padding: 18px 24px 0;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item {
+    flex-wrap: wrap;
+    gap: 14px 24px;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item h2 {
+    font-size: 16px;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item .hero-list {
+    gap: 20px 28px;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item .hero-list span {
+    font-size: 14px;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item .hero-list span::before {
+    left: -14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-hero {
+    min-height: 520px;
+  }
+
+  .home-hero .hero-border-item {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item h2,
+  .home-hero .hero-border-item .hero-bottom-item .hero-list span {
+    white-space: normal;
+  }
+
+  .home-hero .hero-border-item .hero-bottom-item .hero-list span::before {
+    display: none;
+  }
 }
 
 .footer-section-2 {
@@ -350,7 +555,7 @@ button.theme-btn-2:focus-visible,
   max-width: none;
 }
 
-/* Center phone/email SVG icons inside yellow circles (Agriva line-height doesn't center <img>) */
+/* Center phone/email SVG icons inside circles (Agriva line-height doesn't center <img>) */
 .footer-section-2 .footer-top-item .icon-item {
   align-items: center;
 }
@@ -363,6 +568,8 @@ button.theme-btn-2:focus-visible,
   line-height: 1 !important;
   padding: 0;
   overflow: hidden;
+  background-color: var(--theme3) !important;
+  color: var(--white);
 }
 
 .footer-section-2 .footer-top-item .icon-item .icon img {
@@ -371,6 +578,14 @@ button.theme-btn-2:focus-visible,
   height: 20px;
   margin: 0;
   object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* Footer social hover: yellow → green */
+.footer-section-2 .footer-top-item .social-icon a:hover {
+  background-color: var(--theme3) !important;
+  border-color: var(--theme3) !important;
+  color: var(--white) !important;
 }
 
 /* ─── Footer responsive — desktop (≥1400px) logo/spacing unchanged ─── */
@@ -599,6 +814,14 @@ button.theme-btn-2:focus-visible,
   height: 44px;
   max-width: 44px;
   object-fit: contain;
+  /* Yellow mask: force black (Agriva SVGs mix white strokes + dark fills) */
+  filter: brightness(0);
+  transition: filter 0.3s ease;
+}
+
+.feature-section-2 .feature-box-item-2.active .masking-shape .icon img {
+  /* Black mask on hover/active: force white */
+  filter: brightness(0) invert(1);
 }
 
 .feature-section-2 .feature-box-item-2 .masking-shape > img,
@@ -1659,10 +1882,7 @@ body.home-video-modal-open {
   }
 }
 
-/* Single-slide hero: hide pagination dots */
-.hero-section.hero-2 .pagi-item {
-  visibility: hidden;
-}
+/* Home hero has no pagination */
 
 .page-home .ds-skip-link {
   z-index: 99999;
@@ -1757,8 +1977,8 @@ body.page-home {
 
 .home-split-cta .about-button .theme-btn-2 {
   font-family: "Instrument Sans", sans-serif;
-  background-color: var(--theme2);
-  color: var(--header);
+  background-color: var(--theme3);
+  color: var(--white);
   text-transform: capitalize;
 }
 
@@ -2488,7 +2708,16 @@ body.page-home {
 :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content {
   position: relative;
   z-index: 2;
-  max-width: 640px;
+  width: 100%;
+  max-width: none;
+  align-items: flex-end;
+  gap: 28px;
+}
+
+:is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content .section-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-bottom: 0;
 }
 
 :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content .section-title .sub-title-3 {
@@ -2503,8 +2732,24 @@ body.page-home {
   max-width: 18ch;
 }
 
+/* Prevent Mac/Safari font metrics from wrapping "Contact Us" in a squeezed flex slot */
 :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__btn {
-  margin-top: 28px;
+  flex: 0 0 auto;
+  align-self: flex-end;
+  margin-top: 0;
+  white-space: nowrap;
+  min-width: max-content;
+  padding-inline: 32px;
+}
+
+@media (max-width: 1399.98px) {
+  :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content {
+    align-items: flex-start;
+  }
+
+  :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__btn {
+    align-self: flex-start;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2522,6 +2767,11 @@ body.page-home {
 
   :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content .section-title h2 {
     max-width: none;
+  }
+
+  :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__btn {
+    width: auto;
+    max-width: 100%;
   }
 }
 

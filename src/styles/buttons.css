@@ -94,10 +94,10 @@
     color: var(--color-white);
   }
 
-  /* Secondary — template .theme-btn-2 */
+  /* Secondary — aligned with green theme-btn-2 */
   .ds-btn--secondary {
-    color: var(--color-header);
-    background-color: var(--color-secondary);
+    color: var(--color-white);
+    background-color: var(--color-accent);
   }
 
   .ds-btn--secondary::before {

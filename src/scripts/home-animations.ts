@@ -121,11 +121,33 @@ function initTpFadeAnim(): void {
 }
 
 /** Heading char stagger — GSAP SplitText + ScrollTrigger (about-2.html .text-anim) */
+function toTitleCaseWords(value: string): string {
+  return value.replace(/[A-Za-z0-9][A-Za-z0-9']*/g, (word) => {
+    /* Keep short acronyms already in ALL CAPS (ESG, FZCO, CTA, etc.) */
+    if (/^[A-Z0-9]{2,6}$/.test(word)) return word;
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+}
+
+function applyTitleCaseToElement(element: HTMLElement): void {
+  const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+  const nodes: Text[] = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode as Text);
+  for (const node of nodes) {
+    if (node.nodeValue && /\S/.test(node.nodeValue)) {
+      node.nodeValue = toTitleCaseWords(node.nodeValue);
+    }
+  }
+}
+
 function initTextAnim(): void {
   const { gsap, ScrollTrigger } = window;
   gsap.registerPlugin(ScrollTrigger);
 
   document.querySelectorAll<HTMLElement>('.text-anim').forEach((element) => {
+    /* Title-case before SplitText — CSS capitalize breaks once each letter is its own node */
+    applyTitleCaseToElement(element);
+
     const animationSplitText = new window.SplitText(element, { type: 'chars, words' });
 
     gsap.set(animationSplitText.chars, { autoAlpha: 0, x: 20 });
@@ -149,13 +171,14 @@ function initTextAnim(): void {
 }
 
 export function initHomeAnimations(): void {
-  const isHome = document.body.classList.contains('page-home');
-  const isProducts = document.body.classList.contains('page-products');
-  if (!isHome && !isProducts) return;
-  if (prefersReducedMotion()) return;
+  if (prefersReducedMotion()) {
+    /* Still normalize casing when motion is off */
+    document.querySelectorAll<HTMLElement>('.text-anim').forEach(applyTitleCaseToElement);
+    return;
+  }
 
   initWow();
-  if (isHome) initAboutImageAnimations();
+  if (document.body.classList.contains('page-home')) initAboutImageAnimations();
 
   waitForGlobals(() => {
     initTextAnim();

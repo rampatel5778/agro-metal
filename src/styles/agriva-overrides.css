@@ -555,7 +555,7 @@ button.theme-btn-2:focus-visible,
 .footer-section-2 h2,
 .footer-section-2 h3,
 .footer-section-2 h4 {
-  text-transform: none;
+  text-transform: capitalize;
 }
 
 .hero-section.hero-2 .hero-portfolio-revealing-slide-heading,
@@ -982,12 +982,12 @@ button.theme-btn-2:focus-visible,
 .about-us-two-section h1,
 .about-us-two-section h3,
 .about-us-two-section h4,
-.about-us-two-section p {
-  text-transform: none;
-}
-
 .about-us-two-section .section-title h2 {
   text-transform: capitalize;
+}
+
+.about-us-two-section p {
+  text-transform: none;
 }
 
 .about-us-two-wrapper .about-us-image {
@@ -1087,7 +1087,10 @@ button.theme-btn-2:focus-visible,
   max-width: none;
 }
 
-.feature-box-item-2 .content h3,
+.feature-box-item-2 .content h3 {
+  text-transform: capitalize;
+}
+
 .feature-box-item-2 .content p {
   text-transform: none;
 }
@@ -1121,7 +1124,7 @@ button.theme-btn-2:focus-visible,
 .home-about-stats .count-item-2 p strong {
   display: block;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 16px;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
@@ -1300,14 +1303,14 @@ body.home-video-modal-open {
   object-fit: cover;
 }
 
-.home-product-cards .service-card-items-2 h3,
-.home-product-cards .service-card-items-2 .top-content p {
-  text-transform: none;
+.home-product-cards .service-card-items-2 h3 {
+  text-transform: capitalize;
   transition: color 0.4s ease;
 }
 
-.home-product-cards .service-card-items-2 h3 {
-  text-transform: capitalize;
+.home-product-cards .service-card-items-2 .top-content p {
+  text-transform: none;
+  transition: color 0.4s ease;
 }
 
 .home-product-cards .service-card-items-2 .top-content .tag-list span {
@@ -1350,7 +1353,7 @@ body.home-video-modal-open {
 .home-stats-section .count-item-2 p strong {
   display: block;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 16px;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
@@ -2941,7 +2944,7 @@ body.page-home {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.35;
-  text-transform: none;
+  text-transform: capitalize;
 }
 
 .page-product-category .product-trends__card .content p {
@@ -3024,7 +3027,7 @@ body.page-home {
 
 :is(.page-product-category, .page-service-detail, .page-sustainability, .page-contact) .product-closing-cta__content .section-title h2 {
   margin-bottom: 0;
-  text-transform: none;
+  text-transform: capitalize;
   font-size: clamp(1.75rem, 2.6vw, 2.75rem);
   line-height: 1.25;
   max-width: 18ch;
@@ -3271,7 +3274,7 @@ body.page-home {
 }
 
 .page-sustainability .sustainability-esg-intro__content .section-title h2 {
-  text-transform: none;
+  text-transform: capitalize;
   max-width: 16ch;
 }
 
@@ -3312,7 +3315,7 @@ body.page-home {
 .page-sustainability .sustainability-esg-intro__panel .about-right-item h3 {
   font-size: 28px;
   margin-bottom: 28px;
-  text-transform: none;
+  text-transform: capitalize;
 }
 
 .page-sustainability .sustainability-esg-intro__list {
@@ -3402,7 +3405,7 @@ body.page-home {
   font-size: clamp(1.35rem, 1.8vw, 1.65rem);
   line-height: 1.3;
   margin-bottom: 12px;
-  text-transform: none;
+  text-transform: capitalize;
 }
 
 .page-sustainability .sustainability-esg-pillars__card .pricing-header p {
@@ -3462,7 +3465,7 @@ body.page-home {
 }
 
 .page-sustainability .sustainability-looking-ahead__content .section-title h2 {
-  text-transform: none;
+  text-transform: capitalize;
   margin-bottom: 12px;
 }
 
@@ -3529,7 +3532,7 @@ body.page-home {
 }
 
 .page-contact .contact-info .section-title h2 {
-  text-transform: none;
+  text-transform: capitalize;
   max-width: 18ch;
 }
 
@@ -3539,8 +3542,11 @@ body.page-home {
 
 .page-contact .info-right-content .cont span,
 .page-contact .info-right-content .cont h3,
-.page-contact .contact-info-left-content .cont span,
 .page-contact .contact-info-left-content .cont h3 {
+  text-transform: capitalize;
+}
+
+.page-contact .contact-info-left-content .cont span {
   text-transform: none;
 }
 
@@ -3697,4 +3703,36 @@ body.page-home {
     min-height: 360px;
     height: 360px;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Sitewide heading casing — Title Case (first letter of each word)
+   Beats Agriva .sub-title-3 uppercase and any leftover none rules.
+   ═══════════════════════════════════════════════════════════ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title h2,
+.page-heading h1,
+.section-title .sub-title-3,
+.home-about-stats .count-item-2 p strong,
+.home-stats-section .count-item-2 p strong {
+  text-transform: capitalize;
+}
+
+/*
+ * GSAP SplitText wraps EACH letter in its own element. Inherited
+ * `capitalize` then capitalizes every letter (looks like ALL CAPS).
+ * Keep capitalize on the heading itself (inner pages without SplitText);
+ * disable it on SplitText child nodes only.
+ */
+.text-anim {
+  text-transform: capitalize !important;
+}
+
+.text-anim * {
+  text-transform: none !important;
 }

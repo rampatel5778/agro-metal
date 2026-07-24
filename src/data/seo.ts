@@ -7,7 +7,7 @@ const seoDefaultsData: SeoDefaults = {
   siteName: site.name,
   titleTemplate: '%s | Agrometal',
   defaultDescription: site.tagline,
-  defaultOgImage: `${ASSET_PATHS.agrometalImages}/2026/02/header-logo_agro_new-01.svg`,
+  defaultOgImage: `${ASSET_PATHS.agrometalImages}/2026/02/Logo.png`,
   locale: site.localeOg,
   twitterCard: 'summary_large_image',
   robots: 'index, follow',

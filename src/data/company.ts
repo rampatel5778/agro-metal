@@ -20,7 +20,7 @@ const companyData = {
     emailHref: 'mailto:info@agrometal.ae',
   },
   logos: {
-    header: `${ASSET_PATHS.agrometalImages}/2026/02/header-logo_agro_new-01.svg`,
+    header: `${ASSET_PATHS.agrometalImages}/2026/02/Logo.png`,
     footer: `${ASSET_PATHS.agrometalImages}/2026/03/footer-logo_agro_new-01-02.svg`,
   },
   mapEmbedUrl:

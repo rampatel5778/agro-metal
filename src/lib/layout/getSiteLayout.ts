@@ -46,7 +46,7 @@ export function getSiteLayout(path: string): BaseLayoutProps {
         src: company.logos.header,
         alt: `${company.name} logo`,
         href: '/',
-        width: 202,
+        width: 240,
         height: 56,
       },
       navigation: navigation.main,

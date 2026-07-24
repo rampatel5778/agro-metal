@@ -270,19 +270,19 @@ button.theme-btn-2:focus-visible,
   mask-repeat: no-repeat;
 }
 
-/* Soft top scrim so white menu stays readable over the photo */
+/* Same top shade as home hero so white menu stays readable over bright photos */
 .breadcrumb-wrapper:has(.breadcrumb-photo)::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto;
-  height: 140px;
+  inset: 0;
   z-index: 2;
   pointer-events: none;
   background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.55) 0%,
-    rgba(0, 0, 0, 0.22) 55%,
-    transparent 100%
+    180deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.72) 16%,
+    rgba(0, 0, 0, 0.35) 38%,
+    rgba(0, 0, 0, 0) 65%
   );
 }
 
@@ -597,6 +597,7 @@ button.theme-btn-2:focus-visible,
   border: 0;
 }
 
+/* Stronger top shade so white nav stays readable over bright video content */
 .home-hero__shade {
   position: absolute;
   inset: 0;
@@ -604,9 +605,10 @@ button.theme-btn-2:focus-visible,
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.35) 0%,
-    rgba(0, 0, 0, 0.1) 40%,
-    rgba(0, 0, 0, 0.55) 100%
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.72) 16%,
+    rgba(0, 0, 0, 0.35) 38%,
+    rgba(0, 0, 0, 0) 65%
   );
 }
 

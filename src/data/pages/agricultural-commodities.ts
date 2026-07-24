@@ -249,7 +249,7 @@ export const agriTrends = {
         'Growth in biofuels and renewable demand is expanding end-use opportunities for grains, oils, and related agricultural products.',
       imageSrc: img('Bio-Fuel.webp', '2026/03'),
       imageAlt: 'Growth in biofuels and renewable demand',
-      iconSrc: '/assets/img/home-1/icon/04.svg',
+      iconSrc: '/assets/img/home-1/icon/biofuel-renewable.svg',
     },
   ],
 } as const;
